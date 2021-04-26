@@ -3,7 +3,7 @@ name: Deploy docs to GitHub Pages via mkdocs
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
