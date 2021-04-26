@@ -1,0 +1,8 @@
+{
+    "editor.someSetting": true,
+    "markdownlint.config": {
+        "MD046": false,
+        "MD033": false,
+        "MD007": false
+    }
+}

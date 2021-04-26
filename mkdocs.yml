@@ -39,12 +39,18 @@ markdown_extensions:
       permalink: true
 
 nav:
-- Home: index.md
-- Setup: setup.md
-- Themes:
-    Sonarr: themes/sonarr.md
-- Addons: /themes/addons
-- Custom Themes: /themes/custom
+  - Home: index.md
+  - Setup:
+      Docker: '/setup/#docker-mods'
+      Subfilter: /setup/#subfilter-method
+  - Themes:
+      Sonarr: themes/sonarr.md
+      Radarr: themes/sonarr.md
+      Lidarr: themes/sonarr.md
+      Readarr: themes/sonarr.md
+      Bazarr: themes/sonarr.md    
+  - Addons: /themes/addons
+  - Custom Themes: /themes/custom
 
 theme:
   name: material
