@@ -3,22 +3,56 @@ site_description: Here you can find installation and setup details for all the t
 site_author: GilbN
 site_url: https://gilbn.github.io/tp-docs/
 
-repo_url: https://github.com/GilbN/tp-docs
-repo_name: GilbN/tp-docs
+repo_url: https://github.com/GilbN/theme.park
+repo_name: GilbN/theme.park
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite
+  - footnotes
+  - lightgallery
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+
+nav:
+- Home: index.md
+- Setup: setup.md
+- Themes:
+    Sonarr: themes/sonarr.md
+- Addons: /themes/addons
+- Custom Themes: /themes/custom
 
 theme:
   name: material
-  # custom_dir: mkdocs-material/material
-
-  # 404 page
-  static_templates:
-    - 404.html
-
-  # Necessary for search to work properly
-  include_search_page: false
-  search_index_only: true
-
-  # Default values, taken from mkdocs_theme.yml
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
   language: en
   font:
     text: Roboto
