@@ -1,0 +1,28 @@
+site_name: Theme.Park Docs
+site_description: Here you can find installation and setup details for all the themes in the GilbN/theme.park repo
+site_author: GilbN
+site_url: https://gilbn.github.io/tp-docs/
+
+repo_url: https://github.com/GilbN/tp-docs
+repo_name: GilbN/tp-docs
+
+theme:
+  name: material
+  custom_dir: mkdocs-material/material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Necessary for search to work properly
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
