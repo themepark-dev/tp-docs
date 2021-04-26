@@ -8,7 +8,7 @@ repo_name: GilbN/tp-docs
 
 theme:
   name: material
-  custom_dir: mkdocs-material/material
+  # custom_dir: mkdocs-material/material
 
   # 404 page
   static_templates:
