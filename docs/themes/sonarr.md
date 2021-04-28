@@ -1,13 +1,13 @@
-<h1 align="center"> <img src="https://raw.githubusercontent.com/Sonarr/Sonarr/phantom-develop/Logo/sonarr-simple.svg" alt="logo" width="30" height="30"> Sonarr</h1>
+<h1 align="center"> <img src="/assets/{{ page.title.lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title }}</h1>
 
-Custom [Sonarr](https://github.com/Sonarr/Sonarr) CSS
+Custom [{{ page.title }}](https://github.com/Sonarr/Sonarr) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/organizr-dark.png)
+![](/assets/{{ page.title.lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/sonarr/XXX.css
+https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -20,30 +20,47 @@ organizr-dark.css
 
 ### [Setup](/setup)
 
-### [[Sonarr 4K logo|Sonarr 4K logo]]
+{% set addons = extra.addons %}
+{% set title = page.title.lower() %}
+{% for app, addon_name in addons.items() %}
+    {% if app  ==  title %}
+
+### Addons
+
+        {% for el in addon_name.items() %}
+            {% set name =  el[0]  %}
+            {% for p in el[1].items() %}
+            {% set path = p[1] %}
+
+### [{{ name }}]({{ path }})
+
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
 
 ## Screenshots
 
-<p align="center"> Dark Theme </p>
+<p align="center">  
+<a href="/assets/{{ page.title.lower() }}/dark.png">Dark Theme<img src="/assets/{{ page.title.lower() }}/dark.png"></img>
+</p>
 
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/dark.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/dark.png"></img>
+<p align="center">  
+<a href="/assets/{{ page.title.lower() }}/space-gray.png">Space Gray Theme<img src="/assets/{{ page.title.lower() }}/space-gray.png"></img>
+</p>
 
-<p align="center"> Space Gray Theme </p>
+<p align="center">  
+<a href="/assets/{{ page.title.lower() }}/plex.png">Plex Theme<img src="/assets/{{ page.title.lower() }}/plex.png"></img>
+</p>
 
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/space-gray.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/space-gray.png"></img>
+<p align="center">
+<a href="/assets/{{ page.title.lower() }}/organizr-dark.png">Organizr Dark Theme<img src="/assets/{{ page.title.lower() }}/organizr-dark.png"></img>
+</p>
 
-<p align="center"> Plex Theme </p>
+<p align="center">
+<a href="/assets/{{ page.title.lower() }}/hotline.png">Hotline Theme<img src="/assets/{{ page.title.lower() }}/hotline.png"></img>
+</p>
 
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/plex.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/plex.png"></img>
-
-<p align="center"> Organizr Dark Theme </p>
-
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/organizr-dark.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/organizr-dark.png"></img>
-
-<p align="center"> Hotline Theme </p>
-
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/hotline.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/hotline.png"></img>
-
-<p align="center"> Aquamarine Theme </p>
-
-<a href="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/aquamarine.png"><img src="https://raw.githubusercontent.com/gilbN/theme.park/master/Screenshots/sonarr/aquamarine.png"></img>
+<p align="center">
+<a href="/assets/{{ page.title.lower() }}/aquamarine.png">Aquamarine Theme<img src="/assets/{{ page.title.lower() }}/aquamarine.png"></img>
+</p>

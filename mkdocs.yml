@@ -7,9 +7,9 @@ repo_url: https://github.com/GilbN/theme.park
 repo_name: GilbN/theme.park
 
 plugins:
-  - search
   - git-revision-date-localized
   - awesome-pages
+  - macros
 
 markdown_extensions:
   - admonition
@@ -40,16 +40,24 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Setup:
-      Docker: '/setup/#docker-mods'
-      Subfilter: /setup/#subfilter-method
+  - Setup: /setup
   - Themes:
       Sonarr: themes/sonarr.md
-      Radarr: themes/sonarr.md
-      Lidarr: themes/sonarr.md
-      Readarr: themes/sonarr.md
-      Bazarr: themes/sonarr.md    
-  - Addons: /themes/addons
+      Radarr: themes/radarr.md
+      Lidarr: themes/lidarr.md
+      Readarr: themes/readarr.md
+      Bazarr: themes/bazarr.md
+      Organizr: themes/organizr.md 
+  - Addons:
+      Sonarr: themes/addons/sonarr/index.md
+      Radarr: themes/addons/radarr/index.md
+      Bazarr: themes/addons/bazarr/index.md
+      Organizr: themes/addons/organizr/index.md
+      Unraid:
+        Alien: themes/addons/unraid/login-page/alien/index.md
+        Fallout: themes/addons/unraid/login-page/fallout/index.md
+        Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
+
   - Custom Themes: /themes/custom
 
 theme:
@@ -66,3 +74,25 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
+
+extra:
+  addons:
+    sonarr:
+      4K Logo: 
+        path: /themes/addons/sonarr
+    radarr:
+      4K Logo:
+        path: /themes/addons/radarr
+    bazarr:
+      4K Logo:
+        path: /themes/addons/bazarr
+    organizr:
+      Organizr Glass:
+        path: /themes/addons/organizr
+    unraid:
+      Alien:
+        path: /themes/addons/unraid/login-page/alien
+      Fallout:
+        path: /themes/addons/unraid/login-page/fallout
+      Retro Terminal:
+        path: /themes/addons/unraid/login-page/retro-terminal
