@@ -3,7 +3,7 @@ site_description: Here you can find installation and setup details for all the t
 site_author: GilbN
 site_url: https://gilbn.github.io/tp-docs
 
-repo_url: https://github.com/GilbN/theme.park
+repo_url: https://github.com/GilbN/theme.park/
 repo_name: GilbN/theme.park
 
 plugins:
