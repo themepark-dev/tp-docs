@@ -1,7 +1,7 @@
 site_name: Theme.Park Docs
 site_description: Here you can find installation and setup details for all the themes in the GilbN/theme.park repo
 site_author: GilbN
-site_url: https://gilbn.github.io/tp-docs/
+site_url: https://gilbn.github.io/tp-docs
 
 repo_url: https://github.com/GilbN/theme.park
 repo_name: GilbN/theme.park
@@ -80,20 +80,20 @@ extra:
   addons:
     sonarr:
       4K Logo: 
-        path: /themes/addons/sonarr
+        path: themes/addons/sonarr
     radarr:
       4K Logo:
-        path: /themes/addons/radarr
+        path: themes/addons/radarr
     bazarr:
       4K Logo:
-        path: /themes/addons/bazarr
+        path: themes/addons/bazarr
     organizr:
       Organizr Glass:
-        path: /themes/addons/organizr
+        path: themes/addons/organizr
     unraid:
       Alien:
-        path: /themes/addons/unraid/login-page/alien
+        path: themes/addons/unraid/login-page/alien
       Fallout:
-        path: /themes/addons/unraid/login-page/fallout
+        path: themes/addons/unraid/login-page/fallout
       Retro Terminal:
-        path: /themes/addons/unraid/login-page/retro-terminal
+        path: themes/addons/unraid/login-page/retro-terminal

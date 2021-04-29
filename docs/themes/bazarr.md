@@ -18,7 +18,7 @@ organizr-dark.css
 
 ## 🛠️ Installation
 
-### [Setup](/setup)
+### [Setup]({{ config.site_url }}setup)
 
 {% set addons = extra.addons %}
 {% set title = page.title.lower() %}
@@ -32,7 +32,7 @@ organizr-dark.css
             {% for p in el[1].items() %}
             {% set path = p[1] %}
 
-### [{{ name }}]({{ path }})
+### [{{ name }}]({{ config.site_url }}{{ path }})
 
             {% endfor %}
         {% endfor %}

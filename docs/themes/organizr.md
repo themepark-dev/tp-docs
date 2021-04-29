@@ -20,7 +20,7 @@ organizr-dark.css
 
 The themes can be found in the `Theme Marketplace` menu in Organizr.
 
-### [Setup](/setup)
+### [Setup]({{ config.site_url }}setup)
 
 {% set addons = extra.addons %}
 {% set title = page.title.lower() %}
@@ -34,7 +34,7 @@ The themes can be found in the `Theme Marketplace` menu in Organizr.
             {% for p in el[1].items() %}
             {% set path = p[1] %}
 
-### [{{ name }}]({{ path }})
+### [{{ name }}]({{ config.site_url }}{{ path }})
 
             {% endfor %}
         {% endfor %}
