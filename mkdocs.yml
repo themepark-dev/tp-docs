@@ -41,7 +41,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Setup: /setup
+  - Setup: setup.md
   - Themes:
       Sonarr: themes/sonarr.md
       Radarr: themes/radarr.md
