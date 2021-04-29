@@ -19,7 +19,8 @@ Example: `https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css`
 
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
-⚠️ Not all apps support this installation method. See the list to the right.
+!!! warning
+    Not all apps support this installation method. See the list to the left.
 
 [https://github.com/gilbN/theme.park/tree/docker-mods](https://github.com/gilbN/theme.park/tree/docker-mods)
 
@@ -33,7 +34,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 
 | Environment Variable | Example Value | Description |
 | -------------------- | ------------- | ----------- |
-| `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace \<app> |
+| `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `gilbn.github.io` | Defaults to the example. |
 | `TP_THEME` | `organizr-dark` | Defaults to the example. |
 | `TP_ADDON` | `radarr-4k-logo` | See addon [wiki](/themes/addons) for available addons |
@@ -130,17 +131,18 @@ docker run --rm \
 
 ## Subfilter method
 
-As  most of these apps doesn't have support for custom CSS, exception being [Ombi](https://github.com/gilbN/theme.park/wiki/Ombi), [Monitorr](https://github.com/gilbN/theme.park/wiki/Monitorr) and [Organizr](https://github.com/gilbN/theme.park/wiki/Organizr); You can get around that by using [subfilter](http://NGINX.org/en/docs/http/ngx_http_sub_module.html) in NGINX.
+As  most of these apps doesn't have support for custom CSS. You can get around that by using the [subfilter](http://nginx.org/en/docs/http/ngx_http_sub_module.html) module in NGINX or similar modules for other webservers.
 
-**If you don't know how to reverse proxy an application, please read this first. It's a really great article and will help you understand all the pieces!**
+!!! info
+    If you don't know how to reverse proxy an application, please read this first. It's a really great article and will help you understand all the pieces!
 
-<https://blog.linuxserver.io/2019/04/25/letsencrypt-NGINX-starter-guide/>
+    [https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/](https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/) and [https://docs.linuxserver.io/general/swag/](https://docs.linuxserver.io/general/swag/)
 
 ### Nginx
 
 Add this to your reverse proxy:
 
-!!! note "Note"
+!!! warning
     Make sure to add the config before any rewrites and not inside any **`/api`** location blocks!
 
 ```nginx
@@ -159,7 +161,7 @@ Where `APP_NAME` is the app you want to theme and `THEME.css` is the name of the
 ```nginx
 location /sonarr {
     proxy_pass http://localhost:8989/sonarr;
-    include /config/NGINX/proxy.conf;
+    include /config/nginx/proxy.conf;
     proxy_set_header Accept-Encoding "";
     sub_filter
     '</head>'
@@ -177,7 +179,7 @@ You can also setup NGINX to use variables to change the themes. This will update
 
 In your http block add the following:
 
-```NGINX
+```nginx
 # THEME.PARK
 map $host $theme {
     default <theme>; # e.g. default organizr-dark
@@ -198,7 +200,8 @@ Available themes are:
 
 Next create a new file called `theme-park.conf` and add the following code: (Note: It's not really necessary to create the conf file but I think it looks cleaner in the location blocks)
 
-!!! note "Note" Make sure to add the config before any rewrites and not inside any /api location blocks!
+!!! warning
+    Make sure to add the config before any rewrites and not inside any /api location blocks!
 
 ```nginx
     proxy_set_header Accept-Encoding "";
@@ -214,16 +217,16 @@ The `$theme` variable is set in the http block and will affect all server blocks
 
 #### Location blocks
 
-Now in the location block use the include syntax and include the theme-park.conf file and set the $app variable, like so:
+Now in the location block use the include syntax and include the theme-park.conf file and set the `$app` variable, like so:
 
-```NGINX
+```nginx
     set $app <app>;
-    include /config/NGINX/theme-park.conf;
+    include /config/nginx/theme-park.conf;
 ```
 
 #### Sonarr Example
 
-```NGINX
+```nginx
 location /sonarr {
     proxy_pass http://192.168.1.34:8990/sonarr;
     proxy_set_header X-Real-IP $remote_addr;
@@ -234,7 +237,7 @@ location /sonarr {
     proxy_http_version 1.1;
     proxy_no_cache $cookie_session;
     set $app sonarr;
-    include /config/NGINX/theme-park.conf;
+    include /config/nginx/theme-park.conf;
 }
 ```
 
@@ -250,7 +253,7 @@ If you're using Nginx Proxy Manager you can follow these steps:
 4. Click the cog so you can enter your custom NGINX configuration.
 5. Enter the code you find above under `Add this to your reverse proxy`. Don't forget to replace the app and theme name.
 
-![text](https://i.imgur.com/QNulUxZ.png)
+![text](site_assets/setup/npm.png)
 
 ### Apache
 
@@ -296,7 +299,7 @@ proxy /tautulli 127.0.0.1:8181 {
         content_type text/html.*
         search_pattern </head>
         replacement "<link rel='stylesheet' type='text/css' href='https://gilbn.github.io/theme.park/CSS/themes/tautulli/dark.css'></head>"
-}
+        }
     }
 ```
 
@@ -311,7 +314,9 @@ proxy /tautulli 127.0.0.1:8181 {
 
 ### Caddy v2
 
->Thank you [jef](https://github.com/jef) for the write up!
+>
+!!! info
+    Thank you [jef](https://github.com/jef) for the write up!
 
 We rely on sjtug's [caddy2-filter](https://github.com/sjtug/caddy2-filter) as Caddy v2 does not have filtering as of now.
 
@@ -341,7 +346,8 @@ Then run `docker build -t caddy:latest .` to build the image. After we update th
 
 #### Bare metal
 
-Make sure you install [xcaddy](https://github.com/caddyserver/xcaddy) to add modules to Caddy.
+!!! info
+    Make sure you install [xcaddy](https://github.com/caddyserver/xcaddy) to add modules to Caddy.
 
 Then install the `caddy2-filter` module by using:
 
@@ -356,7 +362,7 @@ You can confirm the module is available by using `xcaddy list-modules`.
 
 Almost like Caddy v1, here is an example `filter` we need to include in the all the services we want themed:
 
-```NGINX
+```nginx
 filter {
     content_type text/html.*
     search_pattern </head>
@@ -366,7 +372,7 @@ filter {
 
 With `caddy2-filter`, we need to also add this option in the global option block:
 
-```NGINX
+```nginx
 {
 order filter after encode
 }
@@ -376,25 +382,28 @@ And if you're using a reverse proxy, you also need to include `header_up -Accept
 
 ??? example "Full example of a Caddyfile"
     === "caddy"
-        ```nginx
-            {
-                order filter after encode
-            }
-                radarr.example.com {
-                encode zstd gzip
-                reverse_proxy 127.0.0.1:7878 {
-                header_up -Accept-Encoding
-            }
-            filter {
-                content_type text/html.*
-                search_pattern </head>
-                replacement "<link rel='stylesheet' type='text/css' href='https://gilbn.github.io/theme.park/CSS/themes/radarr/space-gray.css'></head>"
-                }
-        }```
 
-> :point_right: If your service requires you to ignore a header, use the `header_down` subdirective in the `reverse_proxy` directive. For example, qBittorrent usage would look like this:
+    ```nginx
+        {
+            order filter after encode
+        }
+            radarr.example.com {
+            encode zstd gzip
+            reverse_proxy 127.0.0.1:7878 {
+            header_up -Accept-Encoding
+        }
+        filter {
+            content_type text/html.*
+            search_pattern </head>
+            replacement "<link rel='stylesheet' type='text/css' href='https://gilbn.github.io/theme.park/CSS/themes/radarr/space-gray.css'></head>"
+            }
+    }
+    ```
 
-```NGINX
+!!! note
+    :point_right: If your service requires you to ignore a header, use the `header_down` subdirective in the `reverse_proxy` directive. For example, qBittorrent usage would look like this:
+
+```nginx
 reverse_proxy 127.0.0.1:8080 {
     header_up -Accept-Encoding
     header_down -x-webkit-csp
@@ -404,7 +413,7 @@ reverse_proxy 127.0.0.1:8080 {
 
 #### Subfolder/directory example
 
-```NGINX
+```nginx
     route /sonarr/* {
         filter {
             content_type text/html.*
@@ -434,12 +443,21 @@ Add this in the style page:
 @import "https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/THEME.css";
 ```
 
-Example:  `@import "https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css";`
+Example:
 
-![example](https://selfhosted.app/f3c10/LalOfIxo48.png/raw)
+```css
+@import "https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css";
+```
 
-Link to Chrome extention: [https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
-Link to Firefox extention: [https://addons.mozilla.org/en-US/firefox/addon/styl-us/](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+![example](site_assets/setup/stylus.png)
+
+Link to Chrome extention:
+
+[https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
+
+Link to Firefox extention:
+
+[https://addons.mozilla.org/en-US/firefox/addon/styl-us/](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 
 ## Blackberry Theme Installer method
 
@@ -454,18 +472,3 @@ $.getScript('https://archmonger.github.io/Blackberry-Themes/Extras/theme_install
     themeInstaller("<TAB_NAME>","https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/<THEME_NAME>.css");
 });
 ```
-
-## Qbittorrent
-
-As Qbittorrent will block the theme with its content security policy you need to change or remove the CSP header.
-
-Add this in your reverse proxy to remove the headers:
-
-```NGINX
-proxy_hide_header   "x-webkit-csp";
-proxy_hide_header   "content-security-policy";
-```
-
-## Pi-hole
-
-See: [Pihole](/themes/pihole.md)
