@@ -19,9 +19,9 @@ Here you will find an overview over all the themes in the repo and the documenta
 
 ⚠️ = Applications that require special setup.
 
-<img src="https://avatars.githubusercontent.com/u/12324908?s=20&v=4"> = Applications that support **[Docker Mods]({{ config.site_url }}setup/#docker-mods)** installation.
+<img src="https://avatars.githubusercontent.com/u/12324908?s=20&v=4"> = Applications that support **[Docker Mods]({{ config.site_url }}/setup/#docker-mods)** installation.
 
-<img src="https://hotio.dev/img/favicon.ico" width="20px"> = Applications that support **[Custom scripts]({{ config.site_url }}setup/#hotio-containers)** installation.
+<img src="https://hotio.dev/img/favicon.ico" width="20px"> = Applications that support **[Custom scripts]({{ config.site_url }}/setup/#hotio-containers)** installation.
 
 | | | |||
 |------------------------|----------------------------------|--------------------------------|------------------------------|------------------------------|

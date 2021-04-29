@@ -149,7 +149,7 @@ If you use stylus you can just replace a variable you want to change.
 
 The themes can also be added using the Stylus plugin or subfiltering with a webserver
 
-Link to wiki: [Setup]({{ config.site_url }}setup)
+Link to wiki: [Setup]({{ config.site_url }}/setup)
 
 #### Screenshots
 
