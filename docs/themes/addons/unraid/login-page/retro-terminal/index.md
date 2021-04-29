@@ -160,7 +160,7 @@ Fork it and change the `--logo` variable or if you're using stylus ect, just add
 
 The themes can also be added using the Stylus plugin or subfiltering with a webserver.
 
-Link to wiki: [Setup]({{ config.site_url }}/setup)
+Link to wiki: [Setup](/setup)
 
 #### Screenshots
 

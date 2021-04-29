@@ -37,7 +37,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `gilbn.github.io` | Defaults to the example. |
 | `TP_THEME` | `organizr-dark` | Defaults to the example. |
-| `TP_ADDON` | `radarr-4k-logo` | See addon [wiki]({{ config.site_url }}/themes/addons) for available addons |
+| `TP_ADDON` | `radarr-4k-logo` | See addon [wiki](/themes/addons) for available addons |
 | `TP_HOTIO` | `true` | See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 
 #### LSIO Example
