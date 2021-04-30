@@ -4,8 +4,8 @@
 <p align="center">
     <a href="login.png" rel="noopener"><img src="login.png" alt="Screen Shot 1" width="49.15%" /></a>
     <a href="lockscreen.png" rel="noopener"><img src="lockscreen.png" alt="Screen Shot 2" width="49.15%" /></a>
-    <a href="homepage.jpg" rel="noopener"><img src="homepage.jpg" alt="Screen Shot 3" width="49.15%" /></a>
-    <a href="settings.jpg" rel="noopener"><img src="settings.jpg" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="homepage.png" rel="noopener"><img src="homepage.png" alt="Screen Shot 3" width="49.15%" /></a>
+    <a href="settings.png" rel="noopener"><img src="settings.png" alt="Screen Shot 4" width="49.15%" /></a>
 </p>
 
 * [Full](#full)
@@ -27,7 +27,7 @@
 ```css
 @import "https://gilbn.github.io/theme.park/CSS/addons/organizr/glass/glass-base.css"; 
 :root {
-    --main-bg-color: url(https://gilbn.github.io/theme.park/CSS/addons/organizr/glass/example.jpg) center center/cover no-repeat fixed;
+    --main-bg-color: url(https://gilbn.github.io/theme.park/CSS/addons/organizr/glass/example.png) center center/cover no-repeat fixed;
     --mobile-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
 
     --link-color: #fff;

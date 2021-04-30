@@ -128,7 +128,7 @@ If you use stylus you can just replace a variable you want to change.
 ```css
 :root {
     --main-bg-color: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png),
-    url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/terminal.jpg) center center/cover no-repeat fixed;
+    url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/terminal.png) center center/cover no-repeat fixed;
     --logo: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/logo/vault-tec_green.png) center no-repeat;
     --text-color: #14F074;
     --input-color: #14F074;

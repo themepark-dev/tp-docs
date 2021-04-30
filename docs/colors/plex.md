@@ -10,6 +10,6 @@
     <a href="/site_assets/gitea/plex.png" rel="noopener"><img src="/site_assets/gitea/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
     <a href="/site_assets/nzbget/plex.png" rel="noopener"><img src="/site_assets/nzbget/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
     <a href="/site_assets/deluge/plex.png" rel="noopener"><img src="/site_assets/deluge/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/plex/plex.png" rel="noopener"><img src="/site_assets/plex/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/site_assets/flood/plex.png" rel="noopener"><img src="/site_assets/flood/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
     <a href="/site_assets/duplicacy/plex.png" rel="noopener"><img src="/site_assets/duplicacy/plex.png" alt="Screen Shot 4" width="49.15%" /></a>
 </p>
