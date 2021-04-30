@@ -19,21 +19,21 @@ Here you will find an overview over all the themes in the repo and the documenta
 
 ⚠️ = Applications that require special setup.
 
-![](../site_assets/lsio.png) = Applications that support **[Docker Mods](/setup/#docker-mods)** installation.
+![](site_assets/lsio.png) = Applications that support **[Docker Mods](/setup/#docker-mods)** installation.
 
-![](../site_assets/hotio.png) = Applications that support **[Custom scripts](/setup/#hotio-containers)** installation.
+![](site_assets/hotio.png) = Applications that support **[Custom scripts](/setup/#hotio-containers)** installation.
 
 | | | |||
 |------------------------|----------------------------------|--------------------------------|------------------------------|------------------------------|
-| [Sonarr][sonarr] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)        | [qBittorrent][qbit] ⚠️ ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)          | [Gitea][gitea] ⚙️               | [Transmission][transmission] ![](../site_assets/lsio.png) | [Bitwarden][bitwarden]      |
-| [Radarr][radarr] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)        | [Guacamole][guacamole]           | [The Lounge][thelounge] ![](../site_assets/lsio.png)     | [Requestrr][requestrr]       | [Duplicacy][duplicacy]       |
-| [Lidarr][lidarr] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)       | [ruTorrent][rutorrent] ![](../site_assets/lsio.png)         | [Portainer][portainer]         | [Pi-hole][pihole] ⚠️          | [Kitana][kitana]             |
-| [Bazarr][bazarr] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)       |               | [Lazylibrarian][lazylibrarian] ![](../site_assets/lsio.png) | [Adguard][adguard]           | [Webtools][webtools]         |
-| [Readarr][readarr] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)      | [Jackett][jackett] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)           | [Calibre-web][calibreweb] ![](../site_assets/lsio.png)    | [Gaps][gaps]                 | [Resilio-Sync][resilio-sync] |
-| [Plex][plex] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)        | [Librespeed][html5speedtest] ![](../site_assets/lsio.png) | [Monitorr][monitorr] ⚙️         | [PLPP][plpp]                 | [NZBHydra 2][nzbhydra2]      |
-| [Jellyfin/Emby][jelly] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png) | [Filebrowser][filebrowser] ⚙️     | [Logarr][logarr] ⚙️             | [Synclounge][synclounge] ![](../site_assets/lsio.png)   | [Deluge][deluge] ![](../site_assets/lsio.png)           |
-| [Ombi][ombi] ⚙️         | [NZBGet][nzbget] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)             | [SABnzbd][sabnzbd] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png)         | [Grafana][grafana] ⚙️         | [Organizr][organizr] ⚙️       |
-| [Tautulli][tautulli] ![](../site_assets/lsio.png) ![](../site_assets/hotio.png) |  [Unraid][unraid] ⚙️                                | [Petio][petio]     |    [Flood][flood]       |    [Netdata][netdata]                          |
+| [Sonarr][sonarr] ![](site_assets/lsio.png) ![](site_assets/hotio.png)        | [qBittorrent][qbit] ⚠️ ![](site_assets/lsio.png) ![](site_assets/hotio.png)          | [Gitea][gitea] ⚙️               | [Transmission][transmission] ![](site_assets/lsio.png) | [Bitwarden][bitwarden]      |
+| [Radarr][radarr] ![](site_assets/lsio.png) ![](site_assets/hotio.png)        | [Guacamole][guacamole]           | [The Lounge][thelounge] ![](site_assets/lsio.png)     | [Requestrr][requestrr]       | [Duplicacy][duplicacy]       |
+| [Lidarr][lidarr] ![](site_assets/lsio.png) ![](site_assets/hotio.png)       | [ruTorrent][rutorrent] ![](site_assets/lsio.png)         | [Portainer][portainer]         | [Pi-hole][pihole] ⚠️          | [Kitana][kitana]             |
+| [Bazarr][bazarr] ![](site_assets/lsio.png) ![](site_assets/hotio.png)       |               | [Lazylibrarian][lazylibrarian] ![](site_assets/lsio.png) | [Adguard][adguard]           | [Webtools][webtools]         |
+| [Readarr][readarr] ![](site_assets/lsio.png) ![](site_assets/hotio.png)      | [Jackett][jackett] ![](site_assets/lsio.png) ![](site_assets/hotio.png)           | [Calibre-web][calibreweb] ![](site_assets/lsio.png)    | [Gaps][gaps]                 | [Resilio-Sync][resilio-sync] |
+| [Plex][plex] ![](site_assets/lsio.png) ![](site_assets/hotio.png)        | [Librespeed][html5speedtest] ![](site_assets/lsio.png) | [Monitorr][monitorr] ⚙️         | [PLPP][plpp]                 | [NZBHydra 2][nzbhydra2]      |
+| [Jellyfin/Emby][jelly] ![](site_assets/lsio.png) ![](site_assets/hotio.png) | [Filebrowser][filebrowser] ⚙️     | [Logarr][logarr] ⚙️             | [Synclounge][synclounge] ![](site_assets/lsio.png)   | [Deluge][deluge] ![](site_assets/lsio.png)           |
+| [Ombi][ombi] ⚙️         | [NZBGet][nzbget] ![](site_assets/lsio.png) ![](site_assets/hotio.png)             | [SABnzbd][sabnzbd] ![](site_assets/lsio.png) ![](site_assets/hotio.png)         | [Grafana][grafana] ⚙️         | [Organizr][organizr] ⚙️       |
+| [Tautulli][tautulli] ![](site_assets/lsio.png) ![](site_assets/hotio.png) |  [Unraid][unraid] ⚙️                                | [Petio][petio]     |    [Flood][flood]       |    [Netdata][netdata]                          |
 
 [sonarr]: themes/Sonarr
 [radarr]: themes/Radarr

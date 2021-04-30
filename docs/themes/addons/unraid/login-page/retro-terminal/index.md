@@ -1,6 +1,13 @@
 # Retro Terminal
 
 Animated custom css for the Unraid login page.
+<a href="screenshots/green.png" rel="noopener"><img src="screenshots/green.png" alt="Screen Shot 1" width="100%" /></a>
+<p align="center">
+<a href="screenshots/red.png" rel="noopener"><img src="screenshots/red.png" alt="Screen Shot 1" width="49.15%" /></a>
+<a href="screenshots/blue.png" rel="noopener"><img src="screenshots/blue.png" alt="Screen Shot 2" width="49.15%" /></a>
+<a href="screenshots/white.png" rel="noopener"><img src="screenshots/white.png" alt="Screen Shot 3" width="49.15%" /></a>
+<a href="screenshots/amber.png" rel="noopener"><img src="screenshots/amber.png" alt="Screen Shot 4" width="49.15%" /></a>
+</p>
 
 ## 🛠️ Installation
 

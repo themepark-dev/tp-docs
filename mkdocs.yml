@@ -55,9 +55,9 @@ nav:
       Bazarr: themes/addons/bazarr/index.md
       Organizr: themes/addons/organizr/index.md
       Unraid:
+        Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
         Alien: themes/addons/unraid/login-page/alien/index.md
         Fallout: themes/addons/unraid/login-page/fallout/index.md
-        Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
   - Colors:
       Organizr Dark: colors/organizr-dark.md
       Dark: colors/dark.md
@@ -81,6 +81,17 @@ theme:
     code: Roboto Mono
   favicon: site_assets/favicon.ico
   logo: site_assets/logo.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: teal
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: teal
 
 extra:
   homepage: https://github.com/GilbN/theme.park
