@@ -1,4 +1,4 @@
-site_name: Theme.Park Docs
+site_name: theme.park Docs
 site_description: Here you can find installation and setup details for all the themes in the GilbN/theme.park repo
 site_author: GilbN
 site_url: https://docs.theme-park.dev
@@ -11,6 +11,13 @@ plugins:
   - git-revision-date-localized
   - awesome-pages
   - macros
+  - redirects:
+      redirect_maps:
+        discord.md: https://discord.gg/HM5uUKU
+        dockerhub.md: 'https://hub.docker.com/u/gilbn'
+        github.md: 'https://github.com/gilbn'
+        ghcr.md: 'https://github.com/users/GilbN/packages/container/package/theme.park'
+        donate.md: 'https://docs.theme-park.dev//#donation'
 
 markdown_extensions:
   - admonition
@@ -46,10 +53,10 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
-      Apps that support custom css ⚙️: themes/sonarr.md
-      Apps that require special setup ⚠️: themes/sonarr.md
-      Apps that support Docker Mods 🐳: themes/sonarr.md
-      Apps that support Custom scripts 🔥: themes/sonarr.md
+      Supports custom CSS ⚙️: themes/sonarr.md
+      Require Special Setup ⚠️: themes/sonarr.md
+      Supports Docker Mods 🐳: themes/sonarr.md
+      Supports Hotio Scripts 🔥: themes/sonarr.md
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
       Lidarr 🐳🔥: themes/lidarr.md
@@ -112,8 +119,9 @@ nav:
       Space Gray: colors/space-gray.md
       Plex: colors/plex.md
       Hotline: colors/hotline.md
-
-  - Custom Themes: /themes/custom
+  - Custom Themes: custom/index.md
+  - Support: /discord
+  - Donate: /donate
 
 theme:
   name: material
@@ -126,6 +134,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
   favicon: site_assets/favicon.ico
   logo: site_assets/logo.png
   palette:
@@ -143,6 +153,19 @@ theme:
 
 extra:
   homepage: https://github.com/GilbN/theme.park
+  social:
+  - icon: fontawesome/solid/heart
+    link: 'https://docs.theme-park.dev/donate'
+    name: Donate
+  - icon: fontawesome/brands/discord
+    link: 'https://docs.theme-park.dev/discord'
+    name: Discord
+  - icon: fontawesome/brands/docker
+    link: 'https://github.com/users/GilbN/packages/container/package/theme.park'
+    name: Docker
+  - icon: fontawesome/brands/github
+    link: 'https://github.com/gilbn'
+    name: GitHub
   addons:
     sonarr:
       4K Logo:
