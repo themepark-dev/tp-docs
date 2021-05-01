@@ -17,7 +17,7 @@ plugins:
         dockerhub.md: 'https://hub.docker.com/u/gilbn'
         github.md: 'https://github.com/gilbn'
         ghcr.md: 'https://github.com/users/GilbN/packages/container/package/theme.park'
-        donate.md: 'https://docs.theme-park.dev//#donation'
+        donate.md: 'https://docs.theme-park.dev/#donation'
 
 markdown_extensions:
   - admonition
@@ -53,10 +53,10 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
-      Supports custom CSS ⚙️: themes/sonarr.md
-      Require Special Setup ⚠️: themes/sonarr.md
-      Supports Docker Mods 🐳: themes/sonarr.md
-      Supports Hotio Scripts 🔥: themes/sonarr.md
+      ⚙️ Supports custom CSS: themes/sonarr.md
+      ⚠️ Require Special Setup: themes/sonarr.md
+      🐳 Supports Docker Mods: themes/sonarr.md
+      🔥 Supports Hotio Scripts: themes/sonarr.md
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
       Lidarr 🐳🔥: themes/lidarr.md
