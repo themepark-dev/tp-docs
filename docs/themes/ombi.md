@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/Ombi-app/Ombi) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -26,7 +26,7 @@ organizr-dark.css
 Add
 
 ```css
-@import "https://gilbn.github.io/theme.park/CSS/themes/ombi/THEME_NAME.css";
+@import "https://theme-park.dev/CSS/themes/ombi/THEME_NAME.css";
 ```
 
 in custom css.
@@ -34,7 +34,7 @@ in custom css.
 E.g.
 
 ```css
-@import "https://gilbn.github.io/theme.park/CSS/themes/ombi/plex.css";
+@import "https://theme-park.dev/CSS/themes/ombi/plex.css";
 
 ```
 

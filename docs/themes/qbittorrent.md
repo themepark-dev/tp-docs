@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/qbittorrent/qbittorrent)
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -61,7 +61,7 @@ You need to subfilter the `<noscript>` tag instead of the `</head>` tag.
 proxy_set_header Accept-Encoding "";
 sub_filter
 '<noscript>'
-'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/<APP_NAME>/THEME.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/THEME.css">
 <noscript>';
 sub_filter_once on;
 ```

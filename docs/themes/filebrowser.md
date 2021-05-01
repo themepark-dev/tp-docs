@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/filebrowser/filebrowser)
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -22,7 +22,7 @@ organizr-dark.css
 
 Can also be installed locally: [https://filebrowser.xyz/configuration/custom-branding](https://filebrowser.xyz/configuration/custom-branding)
 
-In the `custom.css` file add `@import "https://gilbn.github.io/theme.park/CSS/themes/filebrowser/<THEME-NAME>.css";`
+In the `custom.css` file add `@import "https://theme-park.dev/CSS/themes/filebrowser/<THEME-NAME>.css";`
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}

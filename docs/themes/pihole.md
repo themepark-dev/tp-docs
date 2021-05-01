@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/pihole/pihole) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/aquamarine.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -35,7 +35,7 @@ sub_filter
 '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://gilbn.github.io \'unsafe-inline\'">';
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://gilbn.github.io/theme.park/CSS/themes/pihole/<THEME>.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/pihole/<THEME>.css">
 </head>';
 sub_filter_once on;
 ```

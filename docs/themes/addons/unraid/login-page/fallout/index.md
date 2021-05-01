@@ -128,7 +128,7 @@ To change the colors,background, logo ect you need to edit the css file. Now sin
 If you use stylus you can just replace a variable you want to change.
 
 ```css
-@import url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/terminal.css);
+@import url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/terminal.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -138,9 +138,9 @@ If you use stylus you can just replace a variable you want to change.
 
 ```css
 :root {
-    --main-bg-color: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png),
-    url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/wallpaper/terminal.png) center center/cover no-repeat fixed;
-    --logo: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/fallout/logo/vault-tec_green.png) center no-repeat;
+    --main-bg-color: url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png),
+    url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/wallpaper/terminal.png) center center/cover no-repeat fixed;
+    --logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/logo/vault-tec_green.png) center no-repeat;
     --text-color: #14F074;
     --input-color: #14F074;
     --link-color: #14F074;

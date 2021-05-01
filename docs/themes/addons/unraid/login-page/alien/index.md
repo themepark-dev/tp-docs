@@ -120,7 +120,7 @@ To change the colors,background, logo ect you need to edit the css file. Now sin
 If you use stylus you can just replace a variable you want to change.
 
 ```css
-@import url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/alien/isolation.css);
+@import url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/isolation.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -131,8 +131,8 @@ If you use stylus you can just replace a variable you want to change.
 ```css
 :root {
     --main-bg: radial-gradient(ellipse at center,rgba(0, 255, 119, 0.1) 0,rgba(0,255,119,0) 100%) center center/cover no-repeat fixed, 
-    url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/alien/wallpaper/hallway.png) center center/cover no-repeat fixed;
-    --logo: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
+    url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/wallpaper/hallway.png) center center/cover no-repeat fixed;
+    --logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
     --text-color: #37f592;
     --input-color: #37f592;
     --link-color: #37f592;

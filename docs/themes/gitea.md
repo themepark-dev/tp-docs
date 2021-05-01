@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/go-gitea/gitea) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -30,10 +30,10 @@ The theme is built on top of the `Gitea` theme, so make sure that is selected in
 
 In the Gitea installation folder add a `styles.css` file inside the `public` folder.
 If `public` doesn't exists, create it.
-In the styles.css file add: `@import url("https://gilbn.github.io/theme.park/CSS/themes/gitea/<YOUR_THEME>.css");` e.g.
+In the styles.css file add: `@import url("https://theme-park.dev/CSS/themes/gitea/<YOUR_THEME>.css");` e.g.
 
 ```css
-@import url("https://gilbn.github.io/theme.park/CSS/themes/gitea/organizr-dark.css");
+@import url("https://theme-park.dev/CSS/themes/gitea/organizr-dark.css");
 ```
 
 In the `templates` folder create a folder called `custom` and add a file called `header.tmpl` with the contents: `<link rel="stylesheet" href="{{AppSubUrl}}/styles.css">`

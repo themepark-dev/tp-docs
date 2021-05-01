@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://unraid.net) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
 
 ```css
-https://gilbn.github.io/theme.park/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -32,7 +32,7 @@ organizr-dark.css
 7. **Optional:** Go to `Settings` -> `Display Settings` and set `Header custom text color:` to `FFF` and `Header custom background color:` to `000`
 
 ```html
-</style><link type="text/css" rel="Stylesheet" href="https://gilbn.github.io/theme.park/CSS/themes/unraid/<THEME>.css" />
+</style><link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/unraid/<THEME>.css" />
 ```
 
 {% set addons = extra.addons %}

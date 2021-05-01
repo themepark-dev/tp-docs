@@ -126,7 +126,7 @@ Set the `--body-before` and `--body-after` root variables to `none`
 Fork it and change the `--logo` variable or if you're using stylus ect, just add a new `--logo` root variable below the import line.
 
 ```css
-@import url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/retro-terminal/red.css);
+@import url(https://theme-park.dev/CSS/addons/unraid/login-page/retro-terminal/red.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -140,7 +140,7 @@ Fork it and change the `--logo` variable or if you're using stylus ect, just add
 --body-before:#00ff771a;
 --body-after: #00ff7733;
 --body-animation: flicker;
---logo: url(https://gilbn.github.io/theme.park/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
+--logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
 --text-color: #37f592;
 --input-color: #37f592;
 --link-color: #37f592;
