@@ -20,7 +20,7 @@ Example: `https://gilbn.github.io/theme.park/CSS/themes/sonarr/dark.css`
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
 !!! warning
-    Not all apps support this installation method. See the list to the left.
+    Not all apps support this installation method. See the list to the left on the [themes](themes) overview.
 
 [https://github.com/gilbN/theme.park/tree/docker-mods](https://github.com/gilbN/theme.park/tree/docker-mods)
 
@@ -40,7 +40,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `TP_ADDON` | `radarr-4k-logo` | See addon [wiki](/themes/addons) for available addons |
 | `TP_HOTIO` | `true` | See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 
-#### LSIO Example
+#### ![lsio](/site_assets/lsio.png) LSIO Example
 
 ```yaml
 version: "2.1"
@@ -75,7 +75,11 @@ docker run -d \
   ghcr.io/linuxserver/sonarr
 ```
 
-#### Hotio containers
+### ![hotio](/site_assets/hotio.png) Hotio containers
+
+!!! warning
+    `DOCKER_MODS` does not work on Hotio Containers!
+    The scripts must be mounted using a volume mount.
 
 Mount your script with the volume `/docker/host/98-themepark:/etc/cont-init.d/99-themepark` to execute your script on container start
 
@@ -84,12 +88,10 @@ The script will then use the correct file path inside the Hotio container.
 
 Use the different [Environment variables](#enviroment-variables) above.
 
-**NOTE: `DOCKER_MODS` does not work on Hotio Containers**
-
 The scripts are located in the `docker-mods` branch. [https://github.com/GilbN/theme.park/tree/docker-mods/](https://github.com/GilbN/theme.park/tree/docker-mods/)
 Go to `<app>/root/etc/cont-init.d/` to find the different scripts.
 
-##### Hotio Example
+#### Hotio Example
 
 ```yaml
 version: "3.7"
@@ -136,7 +138,7 @@ As  most of these apps doesn't have support for custom CSS. You can get around t
 !!! info
     If you don't know how to reverse proxy an application, please read this first. It's a really great article and will help you understand all the pieces!
 
-    [https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/](https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/) and [https://docs.linuxserver.io/general/swag/](https://docs.linuxserver.io/general/swag/)
+    [https://blog.linuxserver.io/2019/04/25 letsencrypt-nginx-starter-guide/](https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/) and [https://docs.linuxserver.io/general/swag/](https://docs.linuxserver.io/general/swag/)
 
 ### Nginx
 

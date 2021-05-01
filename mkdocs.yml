@@ -18,6 +18,7 @@ plugins:
         github.md: 'https://github.com/gilbn'
         ghcr.md: 'https://github.com/users/GilbN/packages/container/package/theme.park'
         donate.md: 'https://docs.theme-park.dev/#donation'
+        themes.md: https://docs.theme-park.dev/themes/sonarr/
 
 markdown_extensions:
   - admonition
