@@ -145,7 +145,7 @@ extra:
   homepage: https://github.com/GilbN/theme.park
   addons:
     sonarr:
-      4K Logo: 
+      4K Logo:
         path: themes/addons/sonarr
     radarr:
       4K Logo:
