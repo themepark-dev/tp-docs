@@ -154,18 +154,18 @@ theme:
 extra:
   homepage: https://github.com/GilbN/theme.park
   social:
-  - icon: fontawesome/solid/heart
-    link: 'https://docs.theme-park.dev/donate'
-    name: Donate
-  - icon: fontawesome/brands/discord
-    link: 'https://docs.theme-park.dev/discord'
-    name: Discord
-  - icon: fontawesome/brands/docker
-    link: 'https://github.com/users/GilbN/packages/container/package/theme.park'
-    name: Docker
-  - icon: fontawesome/brands/github
-    link: 'https://github.com/gilbn'
-    name: GitHub
+    - icon: fontawesome/solid/heart
+      link: 'https://docs.theme-park.dev/donate'
+      name: Donate
+    - icon: fontawesome/brands/discord
+      link: 'https://docs.theme-park.dev/discord'
+      name: Discord
+    - icon: fontawesome/brands/docker
+      link: 'https://github.com/users/GilbN/packages/container/package/theme.park'
+      name: Docker
+    - icon: fontawesome/brands/github
+      link: 'https://github.com/gilbn'
+      name: GitHub
   addons:
     sonarr:
       4K Logo:
