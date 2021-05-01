@@ -26,13 +26,13 @@ organizr-dark.css
 
 !!! warning "CSP"
     Because Pi-hole uses CSP it will block any attempts to inject stylesheets.
-    This will add `https://raw.githubusercontent.com` and `https://gilbn.github.io` to the CSP meta tag in the HTML. Allowing you to load the custom css.
+    This will add `https://raw.githubusercontent.com` and `https://theme-park.dev` to the CSP meta tag in the HTML. Allowing you to load the custom css.
 
 ```nginx
 proxy_set_header Accept-Encoding "";
 sub_filter
 '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\'; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'">'
-'<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://gilbn.github.io \'unsafe-inline\'">';
+'<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://theme-park.dev \'unsafe-inline\'">';
 sub_filter
 '</head>'
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/pihole/<THEME>.css">

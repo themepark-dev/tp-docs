@@ -4,7 +4,7 @@ To create your own themes you only need the change the color variables in each t
 
 You can either fork the repo and setup a [Github pages](https://pages.github.com/) site or clone it to your web server and serve the files that way.
 
-You can't use the raw link as Github doesn't pass the mime types. That's why all my theme urls use the https://gilbn.github.io / https://theme-park.dev site.
+You can't use the raw link as Github doesn't pass the mime types. That's why all my theme urls use the https://theme-park.dev site.
 
 ***
 
@@ -14,7 +14,7 @@ Open the theme css file you  want to change and look at the variables available.
 Copy them to a new file. Remember to also include the `@import` line.
 
 !!! info
-    If you have forked the repo and want to stay up to date with any changes I make, use the `https://gilbn.github.io` URL and not your own!
+    If you have forked the repo and want to stay up to date with any changes I make, use the `https://theme-park.dev` URL and not your own!
 
 Add the theme to your service and load the page.
 If you press `F12` and go to the `Elements` tab and scroll down you should see the variables in the root pseudo-class.

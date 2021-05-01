@@ -40,7 +40,7 @@ Remember to also set `ADD_JS` to `false` if you are not using the `isolation_vid
 ```bash
 TYPE="alien"
 THEME="hallway2.css"
-DOMAIN="gilbn.github.io"
+DOMAIN="theme-park.dev"
 ADD_JS="false"
 JS="isolation.js"
 DISABLE_THEME="false"

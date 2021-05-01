@@ -41,7 +41,7 @@ The default values are the ones below
 ```bash
 TYPE="retro-terminal"
 THEME="green.css"
-DOMAIN="gilbn.github.io"
+DOMAIN="theme-park.dev"
 ADD_JS="true"
 JS="custom_text_header.js"
 DISABLE_THEME="false"

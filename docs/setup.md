@@ -35,7 +35,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | Environment Variable | Example Value | Description |
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
-| `TP_DOMAIN` | `gilbn.github.io` | Defaults to the example. |
+| `TP_DOMAIN` | `theme-park.dev` | Defaults to the example. |
 | `TP_THEME` | `organizr-dark` | Defaults to the example. |
 | `TP_ADDON` | `radarr-4k-logo` | See addon [wiki](/themes/addons) for available addons |
 | `TP_HOTIO` | `true` | See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
