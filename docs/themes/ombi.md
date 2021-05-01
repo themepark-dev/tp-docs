@@ -1,6 +1,6 @@
 <h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
 
-Custom [{{ page.title.split()[0] }}](https://github.com/Readarr/Readarr) CSS
+Custom [{{ page.title.split()[0] }}](https://github.com/Ombi-app/Ombi) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
@@ -19,6 +19,26 @@ organizr-dark.css
 ## 🛠️ Installation
 
 ### [Setup](/setup)
+
+!!! info
+    Ombi v3.x Supported
+
+Add
+
+```css
+@import "https://gilbn.github.io/theme.park/CSS/themes/ombi/THEME_NAME.css";
+```
+
+in custom css.
+
+E.g.
+
+```css
+@import "https://gilbn.github.io/theme.park/CSS/themes/ombi/plex.css";
+
+```
+
+![custom css](/site_assets/ombi/custom_css.png)
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}

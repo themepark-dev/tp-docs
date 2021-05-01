@@ -1,6 +1,6 @@
 <h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
 
-Custom [{{ page.title.split()[0] }}](https://github.com/Readarr/Readarr) CSS
+Custom [{{ page.title.split()[0] }}](https://github.com/amir20/dozzle) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
@@ -19,6 +19,37 @@ organizr-dark.css
 ## 🛠️ Installation
 
 ### [Setup](/setup)
+
+!!! warning  "CSP"
+    As dozzle will block the theme with its content security policy you need to change or remove the CSP header.
+    Add this in your reverse proxy to remove the headers:
+
+```nginx
+proxy_hide_header "x-webkit-csp";
+proxy_hide_header "content-security-policy";
+```
+
+#### Nginx variable example
+
+```nginx
+      server {
+        ...
+
+        location / {
+            proxy_pass http://<dozzle.container.ip.address>:8080;
+            set $app dozzle;
+            include /config/nginx/theme-park.conf;
+            proxy_hide_header "x-webkit-csp";
+            proxy_hide_header "content-security-policy";
+        }
+
+        location /api {
+            proxy_pass http://<dozzle.container.ip.address>:8080;
+            proxy_buffering off;
+            proxy_cache off;
+        }
+    }
+```
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}

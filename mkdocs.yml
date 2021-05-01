@@ -27,6 +27,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -43,12 +46,56 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
-      Sonarr: themes/sonarr.md
-      Radarr: themes/radarr.md
-      Lidarr: themes/lidarr.md
-      Readarr: themes/readarr.md
-      Bazarr: themes/bazarr.md
-      Organizr: themes/organizr.md 
+      Apps that support custom css ⚙️: themes/sonarr.md
+      Apps that require special setup ⚠️: themes/sonarr.md
+      Apps that support Docker Mods 🐳: themes/sonarr.md
+      Apps that support Custom scripts 🔥: themes/sonarr.md
+      Sonarr 🐳🔥: themes/sonarr.md
+      Radarr 🐳🔥: themes/radarr.md
+      Lidarr 🐳🔥: themes/lidarr.md
+      Readarr 🐳🔥: themes/readarr.md
+      Bazarr 🐳🔥: themes/bazarr.md
+      Plex 🐳🔥: themes/plex.md
+      Jellyfin 🐳🔥: themes/jellyfin.md
+      Tautulli 🐳🔥: themes/tautulli.md
+      Nzbget 🐳🔥: themes/nzbget.md
+      Deluge 🐳🔥: themes/deluge.md
+      ruTorrent 🐳🔥: themes/rutorrent.md
+      Jackett 🐳🔥: themes/jackett.md
+      Librespeed 🐳🔥: themes/librespeed.md
+      Synclounge 🐳🔥: themes/synclounge.md
+      TheLounge 🐳🔥: themes/thelounge.md
+      Lazylibrarian 🐳🔥: themes/lazylibrarian.md
+      CalibreWeb 🐳🔥: themes/calibreweb.md
+      Transmission 🐳🔥: themes/transmission.md
+      Sabnzbd 🐳🔥⚠️: themes/sabnzbd.md
+      qBittorrent 🐳🔥⚠️: themes/qbittorrent.md
+      Pihole ⚠️: themes/pihole.md
+      Dozzle ⚠️: themes/dozzle.md
+      Organizr ⚙️: themes/organizr.md
+      Unraid ⚙️: themes/unraid.md
+      Ombi ⚙️: themes/ombi.md
+      Grafana ⚙️: themes/grafana.md
+      Filebrowser ⚙️: themes/filebrowser.md
+      Monitorr ⚙️: themes/monitorr.md
+      Logarr ⚙️: themes/logarr.md
+      Gitea ⚙️: themes/gitea.md
+      Nzbhydra2: themes/nzbhydra2.md
+      Portainer: themes/portainer.md
+      Guacamole: themes/guacamole.md
+      Netdata: themes/netdata.md
+      PLPP: themes/plpp.md
+      Requestrr: themes/requestrr.md
+      Adguard: themes/adguard.md
+      Gaps: themes/gaps.md
+      Bitwarden: themes/bitwarden.md
+      Duplicacy: themes/duplicacy.md
+      Kitana: themes/kitana.md
+      Webtools: themes/webtools.md
+      Resilio-Sync: themes/resilio-sync.md
+      Moviematch: themes/moviematch.md
+      Petio: themes/petio.md
+      Flood: themes/flood.md
   - Addons:
       Sonarr: themes/addons/sonarr/index.md
       Radarr: themes/addons/radarr/index.md
@@ -91,7 +138,8 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-      primary: teal
+      primary: red
+      accent: light green
 
 extra:
   homepage: https://github.com/GilbN/theme.park

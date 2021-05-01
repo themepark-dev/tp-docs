@@ -1,6 +1,6 @@
 <h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
 
-Custom [{{ page.title.split()[0] }}](https://github.com/Readarr/Readarr) CSS
+Custom [{{ page.title.split()[0] }}](https://github.com/sabnzbd/sabnzbd) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
@@ -19,6 +19,11 @@ organizr-dark.css
 ## 🛠️ Installation
 
 ### [Setup](/setup)
+
+!!! warning
+    SABnzbd theme must be set to `Glitter Light`!
+
+![glitter](/site_assets/sabnzbd/glitter.png)
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
