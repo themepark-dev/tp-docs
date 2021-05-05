@@ -27,7 +27,7 @@
 ```css
 @import "https://theme-park.dev/CSS/addons/organizr/glass/glass-base.css"; 
 :root {
-    --main-bg-color: url(https://theme-park.dev/CSS/addons/organizr/glass/example.png) center center/cover no-repeat fixed;
+    --main-bg-color: url(https://theme-park.dev/CSS/addons/organizr/glass/example.jpg) center center/cover no-repeat fixed;
     --mobile-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
 
     --link-color: #fff;
