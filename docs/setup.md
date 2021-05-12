@@ -1,5 +1,29 @@
 # Setup
 
+## Methods
+
+<ul>
+    <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods</a><small> Adds the theme locally</small></li>
+        <ul><li><a href="#hotio-containers"><img src="/site_assets/hotio.png"> Hotio containers</a></li></ul>
+    <li><a href="#subfilter-method">Subfilter Method</a><small> Injects the theme through a proxy</small></li>
+    <ul>
+        <li><a href="#nginx">Nginx</a></li>
+        <ul>
+            <li><a href="#nginx-variable">Nginx Variable</a><small> For easy switching in nginx</small></li>
+            <li><a href="#nginx-proxy-manager">Nginx Proxy Manager</a></li>
+        </ul>
+        <li><a href="#apache">Apache</a></li>
+        <li><a href="#caddy">Caddy</a></li>
+        <li><a href="#caddy-v2">Caddy V2</a></li>
+        <li><a href="https://github.com/traefik/plugin-rewritebody">Traefik:</a> <a
+                href="https://github.com/gilbN/theme.park/issues/42">See this issue</a></li>
+    </ul>
+    <li><a href="#stylus-method">Stylus Method</a></li>
+    <li><a href="#blackberry-theme-installer-method">Blackberry Theme Installer</a></li>
+</ul>
+
+***
+
 All apps have 6 themes to choose from.
 
 `https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME_NAME>.css`
