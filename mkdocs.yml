@@ -66,19 +66,20 @@ nav:
       Bazarr 🐳🔥: themes/bazarr.md
       Plex 🐳🔥: themes/plex.md
       Jellyfin 🐳🔥: themes/jellyfin.md
+      Emby 🐳: themes/emby.md
       Tautulli 🐳🔥: themes/tautulli.md
       Nzbget 🐳🔥: themes/nzbget.md
-      Deluge 🐳🔥: themes/deluge.md
       ruTorrent 🐳🔥: themes/rutorrent.md
-      Jackett 🐳🔥: themes/jackett.md
-      Librespeed 🐳🔥: themes/librespeed.md
-      Synclounge 🐳🔥: themes/synclounge.md
-      TheLounge 🐳🔥: themes/thelounge.md
-      Lazylibrarian 🐳🔥: themes/lazylibrarian.md
-      CalibreWeb 🐳🔥: themes/calibreweb.md
-      Transmission 🐳🔥: themes/transmission.md
       Sabnzbd 🐳🔥⚠️: themes/sabnzbd.md
       qBittorrent 🐳🔥⚠️: themes/qbittorrent.md
+      Deluge 🐳: themes/deluge.md
+      Jackett 🐳: themes/jackett.md
+      Librespeed 🐳: themes/librespeed.md
+      Synclounge 🐳: themes/synclounge.md
+      TheLounge 🐳: themes/thelounge.md
+      Lazylibrarian 🐳: themes/lazylibrarian.md
+      CalibreWeb 🐳: themes/calibreweb.md
+      Transmission 🐳: themes/transmission.md
       Pihole ⚠️: themes/pihole.md
       Dozzle ⚠️: themes/dozzle.md
       Organizr ⚙️: themes/organizr.md
