@@ -20,7 +20,7 @@ organizr-dark.css
 
 ### [Setup](/setup)
 
-!!! warning "CSP"
+!!! warning "Subfilter CSP"
     As Qbittorrent will block the theme with its content security policy you need to change or remove the CSP header.
     Add this in your reverse proxy to remove the headers:
 
