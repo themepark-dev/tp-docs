@@ -18,8 +18,8 @@
         <li><a href="https://github.com/traefik/plugin-rewritebody">Traefik:</a> <a
                 href="https://github.com/gilbN/theme.park/issues/42">See this issue</a></li>
     </ul>
-    <li><a href="#stylus-method">Stylus Method</a></li>
-    <li><a href="#blackberry-theme-installer-method">Blackberry Theme Installer</a></li>
+    <li><a href="#stylus-method">Stylus Method</a><small> Injects the theme through a browser extension</small></li>
+    <li><a href="#blackberry-theme-installer-method">Blackberry Theme Installer</a><small> Injects the theme using Javascript (Made for Organizr)</small></li>
 </ul>
 
 ***
@@ -44,7 +44,7 @@ Example: `https://theme-park.dev/CSS/themes/sonarr/dark.css`
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
 !!! warning
-    Not all apps support this installation method. See the list to the left on the [themes](themes) overview.
+    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview.
 
 [https://github.com/gilbN/theme.park/tree/docker-mods](https://github.com/gilbN/theme.park/tree/docker-mods)
 
@@ -59,10 +59,10 @@ These are the **default** values for all envs. So if you want to use the `organi
 | Environment Variable | Example Value | Description |
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
-| `TP_DOMAIN` | `theme-park.dev` | Defaults to the example. |
-| `TP_THEME` | `organizr-dark` | Defaults to the example. |
-| `TP_ADDON` | `radarr-4k-logo` | See addon [wiki](/themes/addons) for available addons |
-| `TP_HOTIO` | `true` | See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
+| `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
+| `TP_THEME` | `organizr-dark` | `Optional` Defaults to the example. |
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/sonarr/) for available addons |
+| `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 
 #### ![lsio](/site_assets/lsio.png) LSIO Example
 
@@ -102,8 +102,13 @@ docker run -d \
 ### ![hotio](/site_assets/hotio.png) Hotio containers
 
 !!! warning
-    `DOCKER_MODS` does not work on Hotio Containers!
-    The scripts must be mounted using a volume mount.
+    The `DOCKER_MODS` variable does not work on Hotio Containers!
+    The script must be mounted using a volume mount.
+
+!!! info
+    The scripts are located in the `docker-mods` branch. [https://github.com/GilbN/theme.park/tree/docker-mods/](https://github.com/GilbN/theme.park/tree/docker-mods/)
+
+    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
 Mount your script with the volume `/docker/host/98-themepark:/etc/cont-init.d/99-themepark` to execute your script on container start
 
@@ -111,9 +116,6 @@ Add the variable `TP_HOTIO` and set it to `true`.
 The script will then use the correct file path inside the Hotio container.
 
 Use the different [Environment variables](#enviroment-variables) above.
-
-The scripts are located in the `docker-mods` branch. [https://github.com/GilbN/theme.park/tree/docker-mods/](https://github.com/GilbN/theme.park/tree/docker-mods/)
-Go to `<app>/root/etc/cont-init.d/` to find the different scripts.
 
 #### Hotio Example
 
