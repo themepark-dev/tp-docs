@@ -106,6 +106,7 @@ nav:
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
       Flood: themes/flood.md
+      VueTorrent: themes/vuetorrent.md
   - Addons:
       Sonarr: themes/addons/sonarr/index.md
       Radarr: themes/addons/radarr/index.md
