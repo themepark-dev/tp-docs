@@ -24,7 +24,7 @@ organizr-dark.css
     Tested on Web Interface v5.1
      Set theme to dark in the Web  interface menu.
 
-!!! warning "CSP"
+!!! warning "Subfilter CSP"
     Because Pi-hole uses CSP it will block any attempts to inject stylesheets.
     This will add `https://raw.githubusercontent.com` and `https://theme-park.dev` to the CSP meta tag in the HTML. Allowing you to load the custom css.
 

@@ -23,7 +23,7 @@ organizr-dark.css
 
 ### [Setup](/setup)
 
-If you want to add the theme with subfilter ect, click here: [https://github.com/gilbN/theme.park/wiki/Setup#methods](https://github.com/gilbN/theme.park/wiki/Setup#methods)
+If you want to add the theme with subfilter ect, click here: [https://docs.theme-park.dev/setup/#methods](https://docs.theme-park.dev/setup/#methods)
 
 The theme is built on top of the `Gitea` theme, so make sure that is selected in user settings.
 ![select](/site_assets/gitea/select_theme.png)

@@ -20,6 +20,8 @@ plugins:
         donate.md: 'https://docs.theme-park.dev/#donation'
         themes.md: 'https://docs.theme-park.dev/themes/sonarr/'
         addons.md: 'https://docs.theme-park.dev/themes/addons/sonarr'
+        docker-mods.md: 'https://docs.theme-park.dev/setup/#docker-mods'
+        hotio.md: 'https://docs.theme-park.dev/setup/#hotio-containers'
 
 markdown_extensions:
   - admonition
@@ -57,8 +59,8 @@ nav:
   - Themes:
       ⚙️ Supports custom CSS: /themes/
       ⚠️ Require Special Setup: /themes/
-      🐳 Supports Docker Mods: /themes/
-      🔥 Supports Hotio Scripts: /themes/
+      🐳 Supports Docker Mods: /docker-mods/
+      🔥 Supports Hotio Scripts: /hotio/
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
       Lidarr 🐳🔥: themes/lidarr.md
