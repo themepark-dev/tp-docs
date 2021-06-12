@@ -18,10 +18,13 @@ organizr-dark.css
 
 ## 🛠️ Installation
 
-### [Setup](/setup)
+### Setup
 
 !!! info
     Ombi v4.x Supported
+
+!!! note
+    Subfilter method not supported!
 
 Add
 
