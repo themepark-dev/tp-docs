@@ -21,7 +21,7 @@ organizr-dark.css
 ### [Setup](/setup)
 
 !!! info
-    Ombi v3.x Supported
+    Ombi v4.x Supported
 
 Add
 
