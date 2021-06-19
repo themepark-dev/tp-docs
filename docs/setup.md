@@ -133,7 +133,7 @@ services:
       - PGID=1000
       - UMASK=002
       - TZ=Etc/UTC
-      - TP_HOTIO=true
+      - TP_HOTIO="true"
       - TP_THEME=plex
     volumes:
       - /<host_folder_config>:/config
@@ -148,7 +148,7 @@ docker run --rm \
     -e PGID=1000 \
     -e UMASK=002 \
     -e TZ="Etc/UTC" \
-    -e TP_HOTIO=true \
+    -e TP_HOTIO="true" \
     -e TP_THEME=plex \
     -v /<host_folder_config>:/config \
     -v /docker/host/98-themepark:/etc/cont-init.d/99-themepark \
