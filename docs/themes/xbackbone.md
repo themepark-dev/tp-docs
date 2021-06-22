@@ -21,7 +21,8 @@ organizr-dark.css
 ### Setup
 
 1. Go to the `System` menu
-2. Add the HTML below in the `Custom HTML Head content` textarea. Remember to change `<THEME>` to the theme you want.
+2. Set theme to `Default - Bootstrap 4 default theme`
+3. Add the HTML below in the `Custom HTML Head content` textarea. Remember to change `<THEME>` to the theme you want.
 
 ```html
 </style><link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/xbackbone/<THEME>.css" />
