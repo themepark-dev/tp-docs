@@ -74,6 +74,7 @@ nav:
       Nzbget 🐳🔥: themes/nzbget.md
       ruTorrent 🐳🔥: themes/rutorrent.md
       Sabnzbd 🐳🔥⚠️: themes/sabnzbd.md
+      VueTorrent 🐳⚠️: themes/vuetorrent.md
       qBittorrent 🐳🔥⚠️: themes/qbittorrent.md
       Deluge 🐳: themes/deluge.md
       Jackett 🐳🔥: themes/jackett.md
@@ -110,7 +111,6 @@ nav:
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
       Flood: themes/flood.md
-      VueTorrent ⚠️: themes/vuetorrent.md
   - Addons:
       Sonarr: themes/addons/sonarr/index.md
       Radarr: themes/addons/radarr/index.md
