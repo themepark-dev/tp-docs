@@ -18,7 +18,15 @@ organizr-dark.css
 
 ## 🛠️ Installation
 
-### [Setup](/setup)
+### Setup
+
+Go to `Dashboard` -> `General` and scroll down to `Branding`
+
+In the custom CSS input field add: `@import url("https://theme-park.dev/CSS/themes/jellyfin/<THEME>.css");` and hit save.
+
+i.e. `@import url("https://theme-park.dev/CSS/themes/jellyfin/space-gray.css");`
+
+<img src="/site_assets/{{ page.title.split()[0].lower() }}/example.png"></img>
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
