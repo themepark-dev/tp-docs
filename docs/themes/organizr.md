@@ -18,9 +18,11 @@ organizr-dark.css
 
 ## 🛠️ Installation
 
-The themes can be found in the `Theme Marketplace` menu in Organizr.
+The themes can be found in the `Marketplace` menu in Organizr.
 
-### [Setup](/setup)
+1. Go to `Settings`-> `Marketplace` -> Click install on wanted theme.
+
+2. To activate a theme go to `Settings` -> `Customize` -> `Appearance` -> `Colors & Themes` -> Select the theme in the dropdown.
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
