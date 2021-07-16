@@ -19,12 +19,11 @@
 
 ## Full
 
-1. Set the Organizr theme to either Aquamarine, Hotline or Space Gray
-
-2. Import the `glass-base.css` and root variables in the Custom Theme CSS box like below.
+1. Import the `glass-base.css` and root variables in the Custom Theme CSS box like below.
   Replace `--main-bg-color` with a wallpaper you have uploaded to Organizr
 
 ```css
+@import "https://theme-park.dev/CSS/themes/organizr/organizr-base-old.css"; 
 @import "https://theme-park.dev/CSS/addons/organizr/glass/glass-base.css"; 
 :root {
     --main-bg-color: url(https://theme-park.dev/CSS/addons/organizr/glass/example.jpg) center center/cover no-repeat fixed;
