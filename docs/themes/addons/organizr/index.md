@@ -19,7 +19,7 @@
 
 ## Full
 
-1. Set the Organizr theme to either Aquamarine, Hotline or Space Gray
+1. Set the Organizr theme to the default `Organizr` theme.
 
 2. Import the `glass-base.css` and root variables in the Custom Theme CSS box like below.
   Replace `--main-bg-color` with a wallpaper you have uploaded to Organizr
