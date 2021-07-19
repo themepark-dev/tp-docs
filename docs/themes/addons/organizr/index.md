@@ -11,6 +11,9 @@
 * [Full](#full)
 * [Login - Lockscreen only](#login-lockscreen-only)
 
+!!! error "Deprecated"
+    The **Full** version has been deprecated. It may work, but I won't be making any fixes on the old base CSS.
+
 !!! info "Tip"
     If you're on Docker use the `php-fpm` tag to speed up load times, like so: `organizrtools/organizr-v2:php-fpm`
 
