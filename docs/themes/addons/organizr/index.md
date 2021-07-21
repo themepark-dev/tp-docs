@@ -14,9 +14,6 @@
 !!! error "Deprecated"
     The **Full** version has been deprecated. It may work, but I won't be making any fixes on the old base CSS.
 
-!!! info "Tip"
-    If you're on Docker use the `php-fpm` tag to speed up load times, like so: `organizrtools/organizr-v2:php-fpm`
-
 !!! warning "Firefox"
     From version 70: this feature is behind thelayout.css.backdrop-filter.enabled preferences (needs to be set to true) and the gfx.webrender.all preferences (needs to be set to true). To change preferences in Firefox, visit about:config
 
