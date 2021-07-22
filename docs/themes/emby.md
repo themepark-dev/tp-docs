@@ -18,6 +18,18 @@ organizr-dark.css
 
 ## 🛠️ Installation
 
+!!! warning Subfiltering
+    You need to subfilter the `</body>` instead of the `</head>` tag. See example below.
+
+```nginx
+proxy_set_header Accept-Encoding "";
+sub_filter
+'</body>'
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/emby/aquamarine.css">
+</body>';
+sub_filter_once on;
+```
+
 ### [Setup](/setup)
 
 {% set addons = extra.addons %}
