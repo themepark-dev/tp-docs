@@ -133,7 +133,7 @@ services:
       - PGID=1000
       - UMASK=002
       - TZ=Etc/UTC
-      - TP_HOTIO="true"
+      - TP_HOTIO=true
       - TP_THEME=plex
     volumes:
       - /<host_folder_config>:/config
