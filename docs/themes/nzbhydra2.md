@@ -20,6 +20,13 @@ organizr-dark.css
 
 ### [Setup](/setup)
 
+!!! note
+    Set the theme to grey in `Config` -> `Main` -> `UI`
+
+![](/site_assets/{{ page.title.split()[0].lower() }}/theme_gray.png)
+
+
+Check out my Varken dashboard here: https://grafana.com/dashboards/9558
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
 {% for app, addon_name in addons.items() %}
