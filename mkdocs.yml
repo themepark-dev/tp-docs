@@ -114,6 +114,7 @@ nav:
   - Addons:
       Sonarr: themes/addons/sonarr/index.md
       Radarr: themes/addons/radarr/index.md
+      Readarr: themes/addons/readarr/index.md
       Bazarr: themes/addons/bazarr/index.md
       Organizr: themes/addons/organizr/index.md
       Unraid:
@@ -181,6 +182,9 @@ extra:
     radarr:
       4K Logo:
         path: themes/addons/radarr
+    readarr:
+      Alternative Audiobook Logo:
+        path: themes/addons/readarr
     bazarr:
       4K Logo:
         path: themes/addons/bazarr
