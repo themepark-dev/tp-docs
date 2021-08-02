@@ -24,17 +24,15 @@
 
 ***
 
-All apps have 6 themes to choose from.
+All apps have 7 themes to choose from.
 
 `https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME_NAME>.css`
 
 ```css
-aquamarine.css
-hotline.css
-dark.css
-plex.css
-space-gray.css
-organizr-dark.css
+{% set themes = config.extra.themes %}
+{% for theme in themes %}
+{{ theme }}.css
+{% endfor %}
 ```
 
 Example: `https://theme-park.dev/CSS/themes/sonarr/dark.css`
@@ -60,9 +58,10 @@ These are the **default** values for all envs. So if you want to use the `organi
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
-| `TP_THEME` | `organizr-dark` | `Optional` Defaults to the example. |
-| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/sonarr/) for available addons |
+| `TP_THEME` | `organizr-dark` | `Optional` The theme you want to use. Defaults to the example. |
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/sonarr/) 
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
+| `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
 
 #### ![lsio](/site_assets/lsio.png) LSIO Example
 
@@ -177,12 +176,13 @@ Add this to your reverse proxy:
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/THEME.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
 </head>';
 sub_filter_once on;
 ```
 
-Where `APP_NAME` is the app you want to theme and `THEME.css` is the name of the theme. e.g. `aquamarine.css`
+Where `APP_NAME` is the app you want to theme and `THEME` is the name of the theme. e.g. `aquamarine`
 
 #### Nginx Example
 
@@ -193,7 +193,8 @@ location /sonarr {
     proxy_set_header Accept-Encoding "";
     sub_filter
     '</head>'
-    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/plex.css">
+    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css">
+    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/plex.css">
     </head>';
     sub_filter_once on;
   }
@@ -216,14 +217,6 @@ map $host $theme {
 
 Change `<theme>` to the theme you want on all your apps. e.g. `default dark;`
 
-Available themes are:
-    `aquamarine`
-    `hotline`
-    `plex`
-    `dark`
-    `space-gray`
-    `organizr-dark`
-
 #### theme-park.conf
 
 Next create a new file called `theme-park.conf` and add the following code: (Note: It's not really necessary to create the conf file but I think it looks cleaner in the location blocks)
@@ -235,17 +228,18 @@ Next create a new file called `theme-park.conf` and add the following code: (Not
     proxy_set_header Accept-Encoding "";
     sub_filter
     '</head>'
-    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/$app/$theme.css">
+    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/$app/$app-base.css">
+    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/$theme.css">
     </head>';
     sub_filter_once on;
 ```
 
-As you can see the URL has variables in it `/$app/$theme.css`
+As you can see the URL has variables in it `$app.css` and `$theme.css`
 The `$theme` variable is set in the http block and will affect all server blocks. And the `$app` variable is set in the location block.
 
 #### Location blocks
 
-Now in the location block use the include syntax and include the theme-park.conf file and set the `$app` variable, like so:
+Now in the location block use the include syntax and include the `theme-park.conf` file and set the `$app` variable, like so:
 
 ```nginx
     set $app <app>;
@@ -288,7 +282,8 @@ If you're using Nginx Proxy Manager you can follow these steps:
 ```apache
 RequestHeader unset Accept-Encoding
 AddOutputFilterByType SUBSTITUTE text/html
-Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/THEME.css"></head>|ni'
+Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css"></head>|ni'
 ```
 
 #### Apache Example
@@ -299,7 +294,8 @@ Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme
     ProxyPassReverse http://localhost:8989/sonarr
     RequestHeader unset Accept-Encoding
     AddOutputFilterByType SUBSTITUTE text/html
-     Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/organizr-dark.css"></head>|ni'
+     Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css">
+     <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/organizr-dark.css"></head>|ni'
   </Location>
 ```
 
@@ -309,7 +305,8 @@ Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme
 filter rule {
     content_type text/html.*
     search_pattern </head>
-    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME>.css'></head>"
+    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css'>
+    <link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/<THEME>.css'></head>"
 }
 ```
 
@@ -326,7 +323,8 @@ proxy /tautulli 127.0.0.1:8181 {
     filter rule {
         content_type text/html.*
         search_pattern </head>
-        replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/tautulli/dark.css'></head>"
+        replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/tautulli/tautulli-base.css'>
+        <link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/dark.css'></head>"
         }
     }
 ```
@@ -337,7 +335,8 @@ proxy /tautulli 127.0.0.1:8181 {
 "caddy.filter": "rule"
 "caddy.filter.content_type": "text/html.*"
 "caddy.filter.search_pattern": "</head>"
-"caddy.filter.replacement": "\"<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/tautulli/dark.css'></head>\""
+"caddy.filter.replacement": "\"<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/tautulli/tautulli-base.css'>
+<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/dark.css'></head>\""
 ```
 
 ### Caddy v2
@@ -394,7 +393,8 @@ Almost like Caddy v1, here is an example `filter` we need to include in the all 
 filter {
     content_type text/html.*
     search_pattern </head>
-    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME>.css'></head>"
+    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css'>
+    <link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/<THEME>.css'></head>"
 }
 ```
 
@@ -423,7 +423,8 @@ And if you're using a reverse proxy, you also need to include `header_up -Accept
         filter {
             content_type text/html.*
             search_pattern </head>
-            replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/radarr/space-gray.css'></head>"
+            replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/radarr/radarr-base.css'>
+            <link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/space-gray.css'></head>"
             }
     }
     ```
@@ -446,7 +447,8 @@ reverse_proxy 127.0.0.1:8080 {
         filter {
             content_type text/html.*
             search_pattern </head>
-            replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/sonarr/plex.css'></head>"
+            replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css'>
+            <link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/variables/plex.css'></head>"
         }
 
         reverse_proxy /sonarr/* http://sonarr:8989 {
@@ -468,13 +470,15 @@ Stylus is a browser extention that can inject custom css to the webpage of your 
 Add this in the style page:
 
 ```css
-@import "https://theme-park.dev/CSS/themes/<APP_NAME>/THEME.css";
+@import "https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css";
+@import "https://theme-park.dev/CSS/variables/THEME.css";
 ```
 
 Example:
 
 ```css
-@import "https://theme-park.dev/CSS/themes/sonarr/dark.css";
+@import "https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css";
+@import "https://theme-park.dev/CSS/variables/dark.css";
 ```
 
 ![example](site_assets/setup/stylus.png)
@@ -494,7 +498,8 @@ Link to Firefox extention:
 ```js
 $.getScript('https://archmonger.github.io/Blackberry-Themes/Extras/theme_installer.js', function(){
     // First variable is your Organizr tab name. Second variable is a link to the theme you want to apply.
-    themeInstaller("<TAB_NAME>","https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME_NAME>.css");
+    themeInstaller("<TAB_NAME>","https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css");
+    themeInstaller("<TAB_NAME>","https://theme-park.dev/CSS/variables/<THEME_NAME>.css");
 
     // You can also use this for multiple themes at once by simply calling themeInstaller again!
     themeInstaller("<TAB_NAME>","https://theme-park.dev/CSS/themes/<APP_NAME>/<THEME_NAME>.css");
