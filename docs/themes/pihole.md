@@ -7,13 +7,11 @@ Custom [{{ page.title.split()[0] }}](https://github.com/pihole/pihole) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/aquamarine.png)
 
 ```css
+{% set themes = config.extra.themes %}
 https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
-aquamarine.css
-hotline.css
-plex.css
-dark.css
-space-gray.css
-organizr-dark.css
+{% for theme in themes %}
+{{ theme }}.css
+{% endfor %}
 ```
 
 ## 🛠️ Installation
@@ -21,7 +19,7 @@ organizr-dark.css
 ### [Setup](/setup)
 
 !!! note
-    Tested on Web Interface v5.1
+    Tested on Web Interface v5.5
      Set theme to dark in the Web  interface menu.
 
 !!! warning "Subfilter CSP"
@@ -61,18 +59,9 @@ sub_filter_once on;
 
 ## Screenshots
 
+{% set themes = config.extra.themes %}
+{% for theme in themes %}
 <p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/dark.png">Dark Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/dark.png"></img>
+<a href="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png"></img>
 </p>
-
-<p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/space-gray.png">Space Gray Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/space-gray.png"></img>
-</p>
-
-<p align="center">
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/hotline.png">Hotline Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/hotline.png"></img>
-</p>
-
-<p align="center">
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/aquamarine.png">Aquamarine Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/aquamarine.png"></img>
-</p>
+{% endfor %}

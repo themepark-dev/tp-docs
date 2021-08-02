@@ -61,6 +61,7 @@ nav:
       ⚠️ Require Special Setup: /themes/
       🐳 Supports Docker Mods: /docker-mods/
       🔥 Supports Hotio Scripts: /hotio/
+      ❌ Deprecated: /themes/
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
       Lidarr 🐳🔥: themes/lidarr.md
@@ -80,7 +81,7 @@ nav:
       Jackett 🐳🔥: themes/jackett.md
       Librespeed 🐳: themes/librespeed.md
       Synclounge 🐳: themes/synclounge.md
-      TheLounge 🐳: themes/thelounge.md
+      TheLounge ❌🐳: themes/thelounge.md
       Lazylibrarian 🐳: themes/lazylibrarian.md
       CalibreWeb 🐳: themes/calibreweb.md
       Transmission 🐳: themes/transmission.md
@@ -90,23 +91,23 @@ nav:
       Organizr ⚙️: themes/organizr.md
       Unraid ⚙️: themes/unraid.md
       Ombi ⚙️: themes/ombi.md
-      Grafana ⚙️: themes/grafana.md
+      Grafana ❌⚙️: themes/grafana.md
       Filebrowser ⚙️: themes/filebrowser.md
-      Monitorr ⚙️: themes/monitorr.md
-      Logarr ⚙️: themes/logarr.md
+      Monitorr ❌⚙️: themes/monitorr.md
+      Logarr ❌⚙️: themes/logarr.md
       Gitea ⚙️: themes/gitea.md
       Nzbhydra2: themes/nzbhydra2.md
       Portainer: themes/portainer.md
       Guacamole: themes/guacamole.md
       Netdata: themes/netdata.md
-      PLPP: themes/plpp.md
+      PLPP ❌: themes/plpp.md
       Requestrr: themes/requestrr.md
       Adguard: themes/adguard.md
       Gaps: themes/gaps.md
       Bitwarden: themes/bitwarden.md
       Duplicacy: themes/duplicacy.md
       Kitana: themes/kitana.md
-      Webtools: themes/webtools.md
+      Webtools ❌: themes/webtools.md
       Resilio-Sync: themes/resilio-sync.md
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
@@ -124,6 +125,7 @@ nav:
   - Colors:
       Organizr Dark: colors/organizr-dark.md
       Dark: colors/dark.md
+      Dracula: colors/dracula.md
       Aquamarine: colors/aquamarine.md
       Space Gray: colors/space-gray.md
       Plex: colors/plex.md
@@ -198,3 +200,10 @@ extra:
         path: themes/addons/unraid/login-page/fallout
       Retro Terminal:
         path: themes/addons/unraid/login-page/retro-terminal
+  themes:
+    - aquamarine
+    - hotline
+    - dracula
+    - dark
+    - organizr-dark
+    - space-gray
