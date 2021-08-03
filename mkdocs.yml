@@ -130,6 +130,7 @@ nav:
       Space Gray: colors/space-gray.md
       Plex: colors/plex.md
       Hotline: colors/hotline.md
+      Overseer: colors/overseer.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
@@ -207,3 +208,4 @@ extra:
     - dark
     - organizr-dark
     - space-gray
+    - overseer
