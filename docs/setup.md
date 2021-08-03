@@ -177,7 +177,7 @@ proxy_set_header Accept-Encoding "";
 sub_filter
 '</head>'
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css">
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
 </head>';
 sub_filter_once on;
 ```
@@ -194,7 +194,7 @@ location /sonarr {
     sub_filter
     '</head>'
     '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css">
-    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/plex.css">
+    <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/plex.css">
     </head>';
     sub_filter_once on;
   }
@@ -229,7 +229,7 @@ Next create a new file called `theme-park.conf` and add the following code: (Not
     sub_filter
     '</head>'
     '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/$app/$app-base.css">
-    '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/$theme.css">
+    <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/$theme.css">
     </head>';
     sub_filter_once on;
 ```
