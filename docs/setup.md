@@ -105,7 +105,7 @@ docker run -d \
     The script must be mounted using a volume mount.
 
 !!! info
-    The scripts are located in the `docker-mods` branch. [https://github.com/GilbN/theme.park/tree/docker-mods/](https://github.com/GilbN/theme.park/tree/docker-mods/)
+    The scripts are located in the `master` branch. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
     Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
