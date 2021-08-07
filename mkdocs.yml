@@ -122,15 +122,24 @@ nav:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
         Alien: themes/addons/unraid/login-page/alien/index.md
         Fallout: themes/addons/unraid/login-page/fallout/index.md
-  - Colors:
-      Organizr Dark: colors/organizr-dark.md
-      Dark: colors/dark.md
-      Dracula: colors/dracula.md
-      Aquamarine: colors/aquamarine.md
-      Space Gray: colors/space-gray.md
-      Plex: colors/plex.md
-      Hotline: colors/hotline.md
-      Overseer: colors/overseer.md
+  - Theme Options:
+      Organizr Dark: theme-options/organizr-dark.md
+      Dark: theme-options/dark.md
+      Dracula: theme-options/dracula.md
+      Aquamarine: theme-options/aquamarine.md
+      Space Gray: theme-options/space-gray.md
+      Plex: theme-options/plex.md
+      Hotline: theme-options/hotline.md
+      Hotpink: theme-options/hotpink.md
+      Overseer: theme-options/overseer.md
+  - Community Themes:
+    - Infinity Stone Themes:
+        Mind: community-themes/mind.md
+        Soul: community-themes/soul.md
+        Reality: community-themes/reality.md
+        Power: community-themes/power.md
+        Space: community-themes/space.md
+        Time: community-themes/time.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
@@ -204,6 +213,7 @@ extra:
   themes:
     - aquamarine
     - hotline
+    - hotpink
     - dracula
     - dark
     - organizr-dark

@@ -26,11 +26,7 @@ If you want to support what I do you can take a look here.
 
 ## Themes
 
-<a href="/colors/dracula"><img src="/site_assets/dracula_banner.png" width="700px" />
-<a href="/colors/organizr-dark"><img src="/site_assets/overseer_banner.png" width="700px" />
-<a href="/colors/organizr-dark"><img src="/site_assets/organizrdark_banner.png" width="700px" />
-<a href="/colors/aquamarine"><img src="/site_assets/aquamarine_banner.png" width="700px" />
-<a href="/colors/hotline"><img src="/site_assets/hotline_banner.png" width="700px" />
-<a href="/colors/space-gray"><img src="/site_assets/spacegray_banner.png" width="700px" />
-<a href="/colors/dark"><img src="/site_assets/dark_banner.png" width="700px" />
-<a href="/colors/plex"><img src="/site_assets/plex_banner.png" width="700px"></a>
+{% set themes = config.extra.themes %}
+{% for theme in themes %}
+<a href="/theme-options/{{ theme }}"><img src="/site_assets/{{ theme }}_banner.png" width="600px" />
+{% endfor %}
