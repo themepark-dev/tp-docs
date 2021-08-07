@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="/theme-options/{{ page.title }}_banner.png"/>
+<img src="/theme-options/{{ page.title.lower() }}_banner.png"/>
 <p align="center">
     <a href="/site_assets/sonarr/overseer.png" rel="noopener"><img src="/site_assets/sonarr/overseer.png" alt="Screen Shot 1" width="49.15%" /></a>
     <a href="/site_assets/unraid/overseer.png" rel="noopener"><img src="/site_assets/unraid/overseer.png" alt="Screen Shot 2" width="49.15%" /></a>
