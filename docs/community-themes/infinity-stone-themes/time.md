@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="/community-themes/{{ page.title.lower() }}_banner.png"/>
+<img src="/community-themes/infinity-stone-themes/{{ page.title.lower() }}_banner.png"/>
 <p align="center">
     <a href="/community-themes/screenshots/sonarr_{{ page.title.lower() }}.png" rel="noopener"><img src="/community-themes/screenshots/sonarr_{{ page.title.lower() }}.png" alt="Screen Shot 1" width="49.15%" /></a>
     <a href="/community-themes/screenshots/radarr_{{ page.title.lower() }}.png" rel="noopener"><img src="/community-themes/screenshots/radarr_{{ page.title.lower() }}.png" alt="Screen Shot 2" width="49.15%" /></a>
