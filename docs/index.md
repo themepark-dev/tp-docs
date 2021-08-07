@@ -23,10 +23,3 @@ Here you will find an overview over all the themes in the repo and the documenta
 If you want to support what I do you can take a look here.
 
 [https://github.com/sponsors/GilbN](https://github.com/sponsors/GilbN)
-
-## Themes
-
-{% set themes = config.extra.themes %}
-{% for theme in themes %}
-<a href="/theme-options/{{ theme }}"><img src="/site_assets/{{ theme }}_banner.png" width="600px" />
-{% endfor %}
