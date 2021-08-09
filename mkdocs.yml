@@ -142,6 +142,8 @@ nav:
         Power: community-themes/infinity-stone-themes/power.md
         Space: community-themes/infinity-stone-themes/space.md
         Time: community-themes/infinity-stone-themes/time.md
+      OneDark:
+        community-themes/onedark/index.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
