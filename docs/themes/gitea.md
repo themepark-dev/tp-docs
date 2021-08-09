@@ -31,7 +31,8 @@ If `public` doesn't exists, create it.
 In the styles.css file add: `@import url("https://theme-park.dev/CSS/themes/gitea/<YOUR_THEME>.css");` e.g.
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/gitea/organizr-dark.css");
+@import url("https://theme-park.dev/CSS/themes/gitea/gitea-base.css");
+@import url("https://theme-park.dev/CSS/variables/dracula.css");
 ```
 
 In the `templates` folder create a folder called `custom` and add a file called `header.tmpl` with the contents: `<link rel="stylesheet" href="{{AppSubUrl}}/styles.css">`

@@ -20,9 +20,21 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 
 Go to `Dashboard` -> `General` and scroll down to `Branding`
 
-In the custom CSS input field add: `@import url("https://theme-park.dev/CSS/themes/jellyfin/<THEME>.css");` and hit save.
+In the custom CSS input field add:
 
-i.e. `@import url("https://theme-park.dev/CSS/themes/jellyfin/space-gray.css");`
+```css
+@import url("https://theme-park.dev/CSS/themes/jellyfin/jellyfin-base.css");
+@import url("https://theme-park.dev/CSS/variables/<THEME>.css");
+```
+
+and hit save.
+
+i.e.
+
+```css
+@import url("https://theme-park.dev/CSS/themes/jellyfin/jellyfin-base.css");
+@import url("https://theme-park.dev/CSS/variables/dracula.css");
+```
 
 <img src="/site_assets/{{ page.title.split()[0].lower() }}/example.png"></img>
 

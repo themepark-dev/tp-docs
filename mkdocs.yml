@@ -24,6 +24,7 @@ plugins:
         hotio.md: 'https://docs.theme-park.dev/setup/#hotio-containers'
 
 markdown_extensions:
+  - pymdownx.snippets
   - admonition
   - attr_list
   - codehilite
@@ -131,7 +132,7 @@ nav:
       Plex: theme-options/plex.md
       Hotline: theme-options/hotline.md
       Hotpink: theme-options/hotpink.md
-      Overseer: theme-options/overseer.md
+      Overseerr: theme-options/overseerr.md
   - Community Themes:
       Community Themes:
         community-themes/index.md
@@ -222,5 +223,14 @@ extra:
     - dark
     - organizr-dark
     - space-gray
-    - overseer
+    - overseerr
     - plex
+
+  community-themes:
+    - mind
+    - power
+    - reality
+    - soul
+    - space
+    - time
+    - onedark
