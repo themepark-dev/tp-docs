@@ -20,7 +20,12 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 
 Can also be installed locally: [https://filebrowser.xyz/configuration/custom-branding](https://filebrowser.xyz/configuration/custom-branding)
 
-In the `custom.css` file add `@import "https://theme-park.dev/CSS/themes/filebrowser/<THEME-NAME>.css";`
+In the `custom.css` file add:
+
+```css
+@import url("https://theme-park.dev/CSS/themes/filebrowser/filebrowser-base.css");
+@import url("https://theme-park.dev/CSS/variables/dracula.css");
+```
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}

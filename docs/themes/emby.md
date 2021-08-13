@@ -23,7 +23,8 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</body>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/emby/aquamarine.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/emby/emby-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/dracula.css">
 </body>';
 sub_filter_once on;
 ```

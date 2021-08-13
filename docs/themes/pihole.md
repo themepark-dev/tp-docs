@@ -33,7 +33,8 @@ sub_filter
 '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://theme-park.dev \'unsafe-inline\'">';
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/pihole/<THEME>.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/pihole/pihole-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
 </head>';
 sub_filter_once on;
 ```

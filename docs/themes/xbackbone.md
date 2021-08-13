@@ -23,7 +23,8 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 3. Add the HTML below in the `Custom HTML Head content` textarea. Remember to change `<THEME>` to the theme you want.
 
 ```html
-</style><link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/xbackbone/<THEME>.css" />
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/xbackbone/xbackbone-base.css"/>
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/variables/<THEME>.css"/>
 ```
 
 <p align="center">  

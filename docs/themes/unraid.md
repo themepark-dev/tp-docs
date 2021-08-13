@@ -30,7 +30,9 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 7. **Optional:** Go to `Settings` -> `Display Settings` and set `Header custom text color:` to `FFF` and `Header custom background color:` to `000`
 
 ```html
-</style><link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/unraid/<THEME>.css" />
+</style>
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/unraid/unraid-base.css" />
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/variables/<THEME>.css" />
 ```
 
 {% set addons = extra.addons %}

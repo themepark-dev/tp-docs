@@ -27,7 +27,8 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 Add
 
 ```css
-@import "https://theme-park.dev/CSS/themes/ombi/THEME_NAME.css";
+@import url("https://theme-park.dev/CSS/themes/ombi/ombi-base.css");
+@import url("https://theme-park.dev/CSS/variables/<THEME>.css");
 ```
 
 in custom css.
@@ -35,7 +36,8 @@ in custom css.
 E.g.
 
 ```css
-@import "https://theme-park.dev/CSS/themes/ombi/plex.css";
+@import url("https://theme-park.dev/CSS/themes/ombi/ombi-base.css");
+@import url("https://theme-park.dev/CSS/variables/plex.css");
 
 ```
 

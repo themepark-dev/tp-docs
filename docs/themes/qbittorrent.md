@@ -51,7 +51,7 @@ location /qbt/ {
 #### ⚠️ Issues
 
 If you get errors in the browser console, and the RSS tab stop working (See https://github.com/gilbN/theme.park/issues/132)
-You need to subfilter the `<noscript>` tag instead of the `</head>` tag. 
+You need to subfilter the `<noscript>` tag instead of the `</head>` tag.
 
 #### example
 
@@ -59,7 +59,8 @@ You need to subfilter the `<noscript>` tag instead of the `</head>` tag.
 proxy_set_header Accept-Encoding "";
 sub_filter
 '<noscript>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/THEME.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/qbittorrent/qbittorrent-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
 <noscript>';
 sub_filter_once on;
 ```
