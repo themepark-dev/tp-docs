@@ -2,14 +2,14 @@
 
 <img src="/theme-options/{{ page.title.lower() }}_banner.png"/>
 <p align="center">
-    <a href="/site_assets/sonarr/dracula.png" rel="noopener"><img src="/site_assets/sonarr/dracula.png" alt="Screen Shot 1" width="49.15%" /></a>
-    <a href="/site_assets/radarr/dracula.png" rel="noopener"><img src="/site_assets/radarr/dracula.png" alt="Screen Shot 2" width="49.15%" /></a>
-    <a href="/site_assets/lidarr/dracula.png" rel="noopener"><img src="/site_assets/lidarr/dracula.png" alt="Screen Shot 3" width="49.15%" /></a>
-    <a href="/site_assets/bazarr/dracula.png" rel="noopener"><img src="/site_assets/bazarr/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/ombi/dracula.png" rel="noopener"><img src="/site_assets/ombi/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/gitea/dracula.png" rel="noopener"><img src="/site_assets/gitea/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/nzbget/dracula.png" rel="noopener"><img src="/site_assets/nzbget/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/deluge/dracula.png" rel="noopener"><img src="/site_assets/deluge/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/plex/dracula.png" rel="noopener"><img src="/site_assets/plex/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/duplicacy/dracula.png" rel="noopener"><img src="/site_assets/duplicacy/dracula.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/sonarr_dracula.png" rel="noopener"><img src="/theme-options/screenshots/sonarr_dracula_small.png" alt="Screen Shot 1" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/radarr_dracula.png" rel="noopener"><img src="/theme-options/screenshots/radarr_dracula_small.png" alt="Screen Shot 2" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/lidarr_dracula.png" rel="noopener"><img src="/theme-options/screenshots/lidarr_dracula_small.png" alt="Screen Shot 3" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/bazarr_dracula.png" rel="noopener"><img src="/theme-options/screenshots/bazarr_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/ombi_dracula.png" rel="noopener"><img src="/theme-options/screenshots/ombi_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/nzbget_dracula.png" rel="noopener"><img src="/theme-options/screenshots/nzbget_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/deluge_dracula.png" rel="noopener"><img src="/theme-options/screenshots/deluge_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/gitea_dracula.png" rel="noopener"><img src="/theme-options/screenshots/gitea_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/plex_dracula.png" rel="noopener"><img src="/theme-options/screenshots/plex_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/duplicacy_dracula.png" rel="noopener"><img src="/theme-options/screenshots/duplicacy_dracula_small.png" alt="Screen Shot 4" width="49.15%" /></a>
 </p>

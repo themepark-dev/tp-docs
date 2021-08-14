@@ -2,14 +2,14 @@
 
 <img src="/theme-options/{{ page.title.lower() }}_banner.png"/>
 <p align="center">
-    <a href="/site_assets/sonarr/dark.png" rel="noopener"><img src="/site_assets/sonarr/dark.png" alt="Screen Shot 1" width="49.15%" /></a>
-    <a href="/site_assets/radarr/dark.png" rel="noopener"><img src="/site_assets/radarr/dark.png" alt="Screen Shot 2" width="49.15%" /></a>
-    <a href="/site_assets/lidarr/dark.png" rel="noopener"><img src="/site_assets/lidarr/dark.png" alt="Screen Shot 3" width="49.15%" /></a>
-    <a href="/site_assets/bazarr/dark.png" rel="noopener"><img src="/site_assets/bazarr/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/ombi/dark.png" rel="noopener"><img src="/site_assets/ombi/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/gitea/dark.png" rel="noopener"><img src="/site_assets/gitea/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/nzbget/dark.png" rel="noopener"><img src="/site_assets/nzbget/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/deluge/dark.png" rel="noopener"><img src="/site_assets/deluge/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/plex/dark.png" rel="noopener"><img src="/site_assets/plex/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
-    <a href="/site_assets/duplicacy/dark.png" rel="noopener"><img src="/site_assets/duplicacy/dark.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/sonarr_dark.png" rel="noopener"><img src="/theme-options/screenshots/sonarr_dark_small.png" alt="Screen Shot 1" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/radarr_dark.png" rel="noopener"><img src="/theme-options/screenshots/radarr_dark_small.png" alt="Screen Shot 2" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/lidarr_dark.png" rel="noopener"><img src="/theme-options/screenshots/lidarr_dark_small.png" alt="Screen Shot 3" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/bazarr_dark.png" rel="noopener"><img src="/theme-options/screenshots/bazarr_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/ombi_dark.png" rel="noopener"><img src="/theme-options/screenshots/ombi_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/gitea_dark.png" rel="noopener"><img src="/theme-options/screenshots/gitea_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/nzbget_dark.png" rel="noopener"><img src="/theme-options/screenshots/nzbget_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/deluge_dark.png" rel="noopener"><img src="/theme-options/screenshots/deluge_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/plex_dark.png" rel="noopener"><img src="/theme-options/screenshots/plex_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
+    <a href="/theme-options/screenshots/duplicacy_dark.png" rel="noopener"><img src="/theme-options/screenshots/duplicacy_dark_small.png" alt="Screen Shot 4" width="49.15%" /></a>
 </p>
