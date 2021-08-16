@@ -17,3 +17,7 @@ A: Community themes are theme options added by the community through pull reques
 ### [OneDark](/community-themes/onedark/)
 
 <small> By [Monklite](https://github.com/Monklite) </small>
+
+### [Hotline-Old](/community-themes/hotline-old/)
+
+<a href="/community-themes/hotline-old/"><img src="/community-themes/hotline-old/hotline-old_banner.png"/></a>
