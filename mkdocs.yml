@@ -123,7 +123,9 @@ nav:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
         Alien: themes/addons/unraid/login-page/alien/index.md
         Fallout: themes/addons/unraid/login-page/fallout/index.md
-      Plex: themes/addons/plex/index.md
+      Plex:
+        Alternative Logo: themes/addons/plex/plex-alt-logo/index.md
+        Overseerr Side Menu: themes/addons/plex/overseerr-side-menu/index.md
   - Theme Options:
       Organizr Dark: theme-options/organizr-dark.md
       Dark: theme-options/dark.md
@@ -220,7 +222,9 @@ extra:
         path: themes/addons/unraid/login-page/retro-terminal
     plex:
       Overseerr Side Menu:
-        path: themes/addons/plex
+        path: themes/addons/plex/overseerr-side-menu
+      Alternative Logo:
+        path: themes/addons/plex/plex-alt-logo
   themes:
     - aquamarine
     - hotline
