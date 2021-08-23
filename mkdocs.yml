@@ -228,10 +228,10 @@ extra:
     bazarr:
       4K Logo:
         path: themes/addons/bazarr/4k-logo
-      Bazarr Darker: 
+      Bazarr Darker:
         path: themes/addons/bazarr/bazarr-darker
     lidarr:
-      Lidarr Darker: 
+      Lidarr Darker:
         path: themes/addons/lidarr/lidarr-darker
     prowlarr:
       Prowlarr Darker:
