@@ -19,7 +19,6 @@ plugins:
         ghcr.md: 'https://github.com/users/GilbN/packages/container/package/theme.park'
         donate.md: 'https://docs.theme-park.dev/#donation'
         themes.md: 'https://docs.theme-park.dev/themes/sonarr/'
-        addons.md: 'https://docs.theme-park.dev/themes/addons/sonarr'
         docker-mods.md: 'https://docs.theme-park.dev/setup/#docker-mods'
         hotio.md: 'https://docs.theme-park.dev/setup/#hotio-containers'
 
@@ -114,6 +113,7 @@ nav:
       Petio: themes/petio.md
       Flood: themes/flood.md
   - Addons:
+      Addons: themes/addons/index.md
       Sonarr:
         4K Logo: themes/addons/sonarr/4k-logo/index.md
         Sonarr Darker: themes/addons/sonarr/sonarr-darker/index.md
