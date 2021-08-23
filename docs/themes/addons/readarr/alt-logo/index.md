@@ -13,6 +13,8 @@ Adds a audiobook logo to your Radarr css.
 
 `-e TP_ADDON=readarr-alt-logo`
 
+If adding multiple mods, enter them in an array separated by  `|`. `-e TP_ADDON=addon1|addon2`
+
 ### Nginx
 
 Examples of how to add it:
