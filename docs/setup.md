@@ -44,7 +44,7 @@ For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-cont
 !!! warning
     Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview.
 
-[https://github.com/gilbN/theme.park/tree/docker-mods](https://github.com/gilbN/theme.park/tree/docker-mods)
+[https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
 This will inject the stylesheet directly into the app. This means that you don't need to use NGINX or stylus. Since it's injected into the HTML in the app, it will work locally too.
 
