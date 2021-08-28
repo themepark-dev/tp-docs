@@ -59,7 +59,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
 | `TP_THEME` | `organizr-dark` | `Optional` The theme you want to use. Defaults to the example. |
-| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/sonarr/) 
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/) 
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
 
