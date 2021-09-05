@@ -44,7 +44,7 @@ For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-cont
 !!! warning
     Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview.
 
-[https://github.com/gilbN/theme.park/tree/docker-mods](https://github.com/gilbN/theme.park/tree/docker-mods)
+[https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
 This will inject the stylesheet directly into the app. This means that you don't need to use NGINX or stylus. Since it's injected into the HTML in the app, it will work locally too.
 
@@ -59,7 +59,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
 | `TP_THEME` | `organizr-dark` | `Optional` The theme you want to use. Defaults to the example. |
-| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/sonarr/) 
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/) 
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
 
