@@ -112,6 +112,7 @@ nav:
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
       Flood: themes/flood.md
+      Uptime-Kuma: themes/uptime-kuma.md
   - Addons:
       Addons: themes/addons/index.md
       Sonarr:

@@ -1,6 +1,6 @@
 <h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
 
-Custom [{{ page.title.split()[0] }}](https://github.com/team-petio/petio) CSS
+Custom [{{ page.title.split()[0] }}](https://github.com/petio-team/petio) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 

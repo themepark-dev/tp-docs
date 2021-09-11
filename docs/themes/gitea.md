@@ -26,16 +26,26 @@ If you want to add the theme with subfilter ect, click here: [https://docs.theme
 The theme is built on top of the `Gitea` theme, so make sure that is selected in user settings.
 ![select](/site_assets/gitea/select_theme.png)
 
-In the Gitea installation folder add a `styles.css` file inside the `public` folder.
-If `public` doesn't exists, create it.
-In the styles.css file add: `@import url("https://theme-park.dev/CSS/themes/gitea/<YOUR_THEME>.css");` e.g.
+In the `templates` folder create a folder called `custom` and add a file called `header.tmpl` with the contents: 
 
-```css
-@import url("https://theme-park.dev/CSS/themes/gitea/gitea-base.css");
-@import url("https://theme-park.dev/CSS/variables/dracula.css");
+```html
+<link rel="stylesheet" href="{{StaticUrlPrefix}}/css/theme-{{DefaultTheme}}.css">
+<link rel="stylesheet" href="{{AppSubUrl}}/css/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{.SignedUser.Theme}}.css">
 ```
+<link rel="stylesheet" href="{{AppSubUrl}}/styles.css">
+<link rel="stylesheet" href="{{AppSubUrl}}/css/gitea.css">
+<link rel="stylesheet" href="{{AppSubUrl}}/css/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{.SignedUser.Theme}}.css">
+In the ..conf/app.ini add the following.
 
-In the `templates` folder create a folder called `custom` and add a file called `header.tmpl` with the contents: `<link rel="stylesheet" href="{{AppSubUrl}}/styles.css">`
+```ini
+[ui]
+THEMES        = gitea,arc-green,plex,aquamarine,dark,dracula,hotline,organizr-dark,space-gray,hotpink,mind,onedark,overseerr,power,reality,soul,space,time
+DEFAULT_THEME = gitea
+```
 
 Restart Gitea and you should now see the theme being loaded.
 
