@@ -85,6 +85,7 @@ nav:
       Lazylibrarian 🐳: themes/lazylibrarian.md
       CalibreWeb 🐳: themes/calibreweb.md
       Transmission 🐳: themes/transmission.md
+      Mylar 3 ⚠️🐳: themes/mylar.md
       Xbackbone ⚙️: themes/xbackbone.md
       Pihole ⚠️: themes/pihole.md
       Dozzle ⚠️: themes/dozzle.md
@@ -113,7 +114,6 @@ nav:
       Petio: themes/petio.md
       Flood: themes/flood.md
       Uptime-Kuma: themes/uptime-kuma.md
-      Mylar 3 ⚠️🐳: themes/mylar.md
   - Addons:
       Addons: themes/addons/index.md
       Sonarr:
