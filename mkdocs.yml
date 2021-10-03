@@ -150,6 +150,7 @@ nav:
       Hotline: theme-options/hotline.md
       Hotpink: theme-options/hotpink.md
       Overseerr: theme-options/overseerr.md
+      Nord: theme-options/nord.md
   - Community Themes:
       Community Themes:
         community-themes/index.md
@@ -263,6 +264,7 @@ extra:
     - space-gray
     - overseerr
     - plex
+    - nord
 
   community-themes:
     - mind
