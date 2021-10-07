@@ -270,10 +270,19 @@ Now when you change the variable in the http block and restart NGINX, it will up
 If you're using Nginx Proxy Manager you can follow these steps:
 
 1. Edit the proxy host for the app you want the theme to apply to.
-2. Open the `Custom locations` tab and click `Add location`.
-3. For the location enter `/` (forward slash) and enter the `Scheme`, `Forward Hostname / IP` and `Forward Port`. (These can be the same as setup on the `Details` tab.)
-4. Click the cog so you can enter your custom NGINX configuration.
-5. Enter the code you find above under `Add this to your reverse proxy`. Don't forget to replace the app and theme name.
+2. Open the `Advanced` tab.
+3. Add the following in the `Custom Nginx Configuration` textbox.
+
+```nginx
+proxy_set_header Accept-Encoding "";
+sub_filter
+'</head>'
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/<APP_NAME>/<APP_NAME>-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
+</head>';
+sub_filter_once on;
+```
+4. Don't forget to update the `<APP_NAME>` and `<THEME>` with the correct app and theme.
 
 ![text](site_assets/setup/npm.png)
 
