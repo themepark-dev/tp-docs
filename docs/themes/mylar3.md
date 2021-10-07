@@ -1,14 +1,14 @@
-<h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }} 3</h1>
+<h1 align="center"> <img src="/site_assets/mylar3/logo.png" alt="logo" width="30" height="30"> Mylar 3</h1>
 
-Custom [{{ page.title.split()[0] }} 3](https://github.com/mylar3/mylar3) CSS
+Custom [Mylar 3](https://github.com/mylar3/mylar3) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
+![](/site_assets/mylar3/organizr-dark.png)
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/CSS/themes/mylar3/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -20,10 +20,10 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 
 !!!note
     Set `Interface` to `carbon`
-![](/site_assets/mylar/settings.png)
+![](/site_assets/mylar3/settings.png)
 
 {% set addons = extra.addons %}
-{% set title = page.title.split()[0].lower() %}
+{% set title = mylar3 %}
 {% for app, addon_name in addons.items() %}
     {% if app  ==  title %}
 
@@ -46,6 +46,6 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 {% set themes = config.extra.themes %}
 {% for theme in themes %}
 <p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png"></img>
+<a href="/site_assets/mylar3/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/mylar3/{{ theme }}.png"></img>
 </p>
 {% endfor %}
