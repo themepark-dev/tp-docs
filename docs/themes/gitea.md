@@ -30,15 +30,19 @@ In the `templates` folder create a folder called `custom` and add a file called 
 
 ```html
 <link rel="stylesheet" href="{{StaticUrlPrefix}}/css/theme-{{DefaultTheme}}.css">
-<link rel="stylesheet" href="{{AppSubUrl}}/css/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="{{AppSubUrl}}/css/{{'.SignedUser.Theme'}}.css">
 <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
-<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'.SignedUser.Theme'}}.css"> 
 ```
+
+```html
 <link rel="stylesheet" href="{{AppSubUrl}}/styles.css">
 <link rel="stylesheet" href="{{AppSubUrl}}/css/gitea.css">
-<link rel="stylesheet" href="{{AppSubUrl}}/css/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="{{AppSubUrl}}/css/{{'.SignedUser.Theme'}}.css">
 <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
-<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{.SignedUser.Theme}}.css">
+<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'.SignedUser.Theme'}}.css"> 
+```
+
 In the ..conf/app.ini add the following.
 
 ```ini
