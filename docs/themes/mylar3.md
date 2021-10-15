@@ -4,7 +4,7 @@ Custom [Mylar 3](https://github.com/mylar3/mylar3) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](/site_assets/mylar3/organizr-dark.png)
+![](/site_assets/mylar3/organizr.png)
 
 ```css
 {% set themes = config.extra.themes %}

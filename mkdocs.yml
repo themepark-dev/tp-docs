@@ -142,7 +142,7 @@ nav:
         Alternative Logo: themes/addons/plex/plex-alt-logo/index.md
         Overseerr Side Menu: themes/addons/plex/overseerr-side-menu/index.md
   - Theme Options:
-      Organizr Dark: theme-options/organizr-dark.md
+      Organizr: theme-options/organizr.md
       Dark: theme-options/dark.md
       Dracula: theme-options/dracula.md
       Aquamarine: theme-options/aquamarine.md
@@ -261,7 +261,7 @@ extra:
     - hotpink
     - dracula
     - dark
-    - organizr-dark
+    - organizr
     - space-gray
     - overseerr
     - plex

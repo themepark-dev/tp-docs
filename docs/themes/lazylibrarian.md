@@ -4,7 +4,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/lazylibrarian/lazylibrar
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
+![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
 ```css
 {% set themes = config.extra.themes %}

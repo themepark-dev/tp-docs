@@ -50,7 +50,7 @@ This will inject the stylesheet directly into the app. This means that you don't
 
 Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:<app>` e.g. `ghcr.io/gilbn/theme.park:sonarr`
 
-These are the **default** values for all envs. So if you want to use the `organizr-dark` theme, you only need to add the `DOCKER_MODS` variable.
+These are the **default** values for all envs. So if you want to use the `organizr` theme, you only need to add the `DOCKER_MODS` variable.
 
 ### Enviroment variables
 
@@ -58,7 +58,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
-| `TP_THEME` | `organizr-dark` | `Optional` The theme you want to use. Defaults to the example. |
+| `TP_THEME` | `organizr` | `Optional` The theme you want to use. Defaults to the example. |
 | `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/) 
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
@@ -211,7 +211,7 @@ In your http block add the following:
 ```nginx
 # THEME.PARK
 map $host $theme {
-    default <theme>; # e.g. default organizr-dark
+    default <theme>; # e.g. default organizr
 }
 ```
 
@@ -304,7 +304,7 @@ Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme
     RequestHeader unset Accept-Encoding
     AddOutputFilterByType SUBSTITUTE text/html
      Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/sonarr/sonarr-base.css">
-     <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/organizr-dark.css"></head>|ni'
+     <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/organizr.css"></head>|ni'
   </Location>
 ```
 

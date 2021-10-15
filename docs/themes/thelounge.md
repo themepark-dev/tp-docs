@@ -4,7 +4,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/thelounge/thelounge) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
+![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
 ```css
 https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
@@ -13,7 +13,7 @@ hotline.css
 plex.css
 dark.css
 space-gray.css
-organizr-dark.css
+organizr.css
 ```
 
 ## 🛠️ Installation
@@ -54,7 +54,7 @@ organizr-dark.css
 </p>
 
 <p align="center">
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png">Organizr Dark Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png"></img>
+<a href="/site_assets/{{ page.title.split()[0].lower() }}/organizr.png">Organizr Dark Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/organizr.png"></img>
 </p>
 
 <p align="center">

@@ -4,7 +4,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/go-gitea/gitea) CSS
 
 <p align="center"> Organizr Dark Theme </p>
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr-dark.png)
+![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
 ```css
 {% set themes = config.extra.themes %}
@@ -47,7 +47,7 @@ In the ..conf/app.ini add the following.
 
 ```ini
 [ui]
-THEMES        = gitea,arc-green,plex,aquamarine,dark,dracula,hotline,organizr-dark,space-gray,hotpink,mind,onedark,overseerr,power,reality,soul,space,time
+THEMES        = gitea,arc-green,plex,aquamarine,dark,dracula,hotline,organizr,space-gray,hotpink,mind,onedark,overseerr,power,reality,soul,space,time
 DEFAULT_THEME = gitea
 ```
 
