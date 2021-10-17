@@ -17,36 +17,48 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 ## 🛠️ Installation
 
 !!! info
-    Tested on `Version: 1.14.0`
+    Tested on `Version: 1.15.4`
 
 ### [Setup](/setup)
 
 If you want to add the theme with subfilter ect, click here: [https://docs.theme-park.dev/setup/#methods](https://docs.theme-park.dev/setup/#methods)
 
-The theme is built on top of the `Gitea` theme, so make sure that is selected in user settings if using subfiltering.
+The theme is built on top of the `Gitea` theme, so make sure that is selected in user settings if using **subfiltering**.
 ![select](/site_assets/gitea/select_theme.png)
 
 #### ⚙️ Adding the themes in Gitea
 
-In the `templates` folder create a folder called `custom` and add a file called `header.tmpl` with the contents: 
+Create a new file called `header.tmpl` and place it in `gitea/templates/custom/header.tmpl`. Create the template and custom folders if they do not exists.
+
+In the `header.tmpl` file add the following:
 
 ```html
-<link rel="stylesheet" href="{{'{{AppSubUrl}}'}}/styles.css">
-<link rel="stylesheet" href="{{'{{AppSubUrl}}'}}/css/gitea.css">
-<link rel="stylesheet" href="{{'{{AppSubUrl}}'}}/css/{{'{{SignedUser.Theme}}'}}.css">
-<link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
-<link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'{{.SignedUser.Theme}}'}}.css"> 
+{{'{{ if .IsSigned }}'}}
+  {{'{{ if and (ne .SignedUser.Theme "gitea") (ne .SignedUser.Theme "arc-green") }}'}}
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/gitea.css">
+    <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
+    <link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'{{.SignedUser.Theme}}'}}.css">
+  {{'{{end}}'}}
+{{'{{ else if and (ne DefaultTheme "gitea") (ne DefaultTheme "arc-green") }}'}}
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/css/gitea.css">
+  <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
+  <link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'{{DefaultTheme}}'}}.css">
+{{'{{end}}'}}
 ```
 
-In the ..conf/app.ini add the following.
+In the `..gitea/conf/app.ini` file add the following.
 
 ```ini
 [ui]
-THEMES = gitea,arc-green,plex,aquamarine,dark,dracula,hotline,organizr,space-gray,hotpink,mind,onedark,overseerr,power,reality,soul,space,time
+THEMES = gitea,arc-green,plex,aquamarine,dark,dracula,hotline,organizr,space-gray,hotpink,onedark,overseerr,nord
 DEFAULT_THEME = gitea
 ```
 
-Restart Gitea and you should now see the theme being loaded.
+Restart Gitea and you should now be able to select a theme in `Settings`->`Account`->`Select default theme`.
+
+Then click the `Update Theme` button.
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
