@@ -57,10 +57,10 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
-      ⚙️ Supports custom CSS: /themes/
-      ⚠️ Require Special Setup: /themes/
       🐳 Supports Docker Mods: /docker-mods/
       🔥 Supports Hotio Scripts: /hotio/
+      ⚠️ Require Special Setup: /themes/
+      ⚙️ Supports custom CSS: /themes/
       ❌ Deprecated: /themes/
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
@@ -81,40 +81,40 @@ nav:
       Jackett 🐳🔥: themes/jackett.md
       Librespeed 🐳: themes/librespeed.md
       Synclounge 🐳: themes/synclounge.md
-      TheLounge ❌🐳: themes/thelounge.md
       Lazylibrarian 🐳: themes/lazylibrarian.md
       CalibreWeb 🐳: themes/calibreweb.md
       Transmission 🐳: themes/transmission.md
-      Mylar 3 ⚠️🐳: themes/mylar3.md
+      Mylar 3 🐳⚠️: themes/mylar3.md
       Duplicati 🐳: themes/duplicati.md
       Xbackbone ⚙️: themes/xbackbone.md
-      Pihole ⚠️: themes/pihole.md
-      Dozzle ⚠️: themes/dozzle.md
+      Filebrowser ⚙️: themes/filebrowser.md
       Organizr ⚙️: themes/organizr.md
       Unraid ⚙️: themes/unraid.md
       Ombi ⚙️: themes/ombi.md
-      Grafana ❌⚙️: themes/grafana.md
-      Filebrowser ⚙️: themes/filebrowser.md
-      Monitorr ❌⚙️: themes/monitorr.md
-      Logarr ❌⚙️: themes/logarr.md
       Gitea ⚙️: themes/gitea.md
+      Pihole ⚠️: themes/pihole.md
+      Dozzle ⚠️: themes/dozzle.md
       Nzbhydra2: themes/nzbhydra2.md
       Portainer: themes/portainer.md
       Guacamole: themes/guacamole.md
       Netdata: themes/netdata.md
-      PLPP ❌: themes/plpp.md
       Requestrr: themes/requestrr.md
       Adguard: themes/adguard.md
       Gaps: themes/gaps.md
       Bitwarden: themes/bitwarden.md
       Duplicacy: themes/duplicacy.md
       Kitana: themes/kitana.md
-      Webtools ❌: themes/webtools.md
       Resilio-Sync: themes/resilio-sync.md
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
       Flood: themes/flood.md
       Uptime-Kuma: themes/uptime-kuma.md
+      TheLounge ❌🐳: themes/thelounge.md
+      Grafana ❌⚙️: themes/grafana.md
+      Monitorr ❌⚙️: themes/monitorr.md
+      Logarr ❌⚙️: themes/logarr.md
+      PLPP ❌: themes/plpp.md
+      Webtools ❌: themes/webtools.md
   - Addons:
       Addons: themes/addons/index.md
       Sonarr:
