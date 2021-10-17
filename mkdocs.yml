@@ -57,10 +57,10 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
+      ⚙️ Supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
       🔥 Supports Hotio Scripts: /hotio/
       ⚠️ Require Special Setup: /themes/
-      ⚙️ Supports custom CSS: /themes/
       ❌ Deprecated: /themes/
       Sonarr 🐳🔥: themes/sonarr.md
       Radarr 🐳🔥: themes/radarr.md
