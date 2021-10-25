@@ -3,7 +3,7 @@
 
 Q: What's the difference between `Community Themes` and the regular themes?
 
-A: Community themes are theme options added by the community through pull requests. These are not officially supported but as long as they follow the same variable structure as the other theme options it should look fine on all applications.
+A: Community themes are theme options that are not officially supported but as long as they follow the same variable structure as the other theme options it should look fine on all applications.
 
 ### Infinity Stone Themes
 
@@ -18,6 +18,8 @@ A: Community themes are theme options added by the community through pull reques
 
 <small> By [Monklite](https://github.com/Monklite) </small>
 
-### [Hotline-Old](/community-themes/hotline-old/)
+### [Blackberry Themes](/community-themes/blackberry-themes)
 
-<a href="/community-themes/hotline-old/"><img src="/community-themes/hotline-old/hotline-old_banner.png"/></a>
+<small> By [Archmonger](https://github.com/Archmonger/Blackberry-Themes) </small>
+
+### [Hotline-Old](/community-themes/hotline-old/)

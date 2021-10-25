@@ -164,6 +164,8 @@ nav:
         Time: community-themes/infinity-stone-themes/time.md
       OneDark:
         community-themes/onedark/index.md
+      Blackberry Themes:
+        community-themes/blackberry-themes/index.md
       Hotline-Old:
         community-themes/hotline-old/index.md
   - Custom Themes: custom/index.md
