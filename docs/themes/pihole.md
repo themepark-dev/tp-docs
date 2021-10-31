@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/pi-hole/pi-hole) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -33,8 +33,8 @@ sub_filter
 '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://theme-park.dev \'unsafe-inline\'">';
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/pihole/pihole-base.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/pihole/pihole-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/<THEME>.css">
 </head>';
 sub_filter_once on;
 ```

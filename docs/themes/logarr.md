@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/monitorr/logarr) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
 ```css
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -23,7 +23,7 @@ organizr.css
 Add this in the Logarr custom css box:
 
 ```css
-@import "https://theme-park.dev/CSS/themes/logarr/THEME_NAME.css";
+@import "https://theme-park.dev/css/base/logarr/THEME_NAME.css";
 ```
 
 {% set addons = extra.addons %}

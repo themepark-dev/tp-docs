@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/causefx/Organizr) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -27,8 +27,8 @@ The themes can be found in the `Marketplace` menu in Organizr.
 e.g.
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/organizr/organizr-base.css");
-@import url("https://theme-park.dev/CSS/variables/overseerr.css");
+@import url("https://theme-park.dev/css/base/organizr/organizr-base.css");
+@import url("https://theme-park.dev/css/theme-options/overseerr.css");
 ```
 
 {% set addons = extra.addons %}

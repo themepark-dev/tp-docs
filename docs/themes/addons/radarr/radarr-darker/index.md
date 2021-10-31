@@ -22,7 +22,7 @@ Examples of how to add it:
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</head>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/radarr/radarr-base.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/radarr/radarr-base.css">
 <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css">
 </head>';
 sub_filter_once on;
@@ -32,7 +32,7 @@ sub_filter_once on;
 
 ```nginx
 AddOutputFilterByType SUBSTITUTE text/html
-   Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/radarr/radarr-base.css"><link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css">
+   Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/radarr/radarr-base.css"><link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css">
 </head>';|'
 ```
 
@@ -42,7 +42,7 @@ AddOutputFilterByType SUBSTITUTE text/html
 filter rule {
     content_type text/html.*
     search_pattern </head>
-    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/themes/radarr/radarr-base.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css'></head>"
+    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/radarr/radarr-base.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css'></head>"
 }
 ```
 
@@ -51,6 +51,6 @@ filter rule {
 Just add another import line.
 
 ```css
-@import "https://theme-park.dev/CSS/themes/radarr/radarr-base.css";
+@import "https://theme-park.dev/css/base/radarr/radarr-base.css";
 @import "https://theme-park.dev/CSS/addons/radarr/radarr-darker/radarr-darker.css";
 ```

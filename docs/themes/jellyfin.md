@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/jellyfin/jellyfin) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -23,8 +23,8 @@ Go to `Dashboard` -> `General` and scroll down to `Branding`
 In the custom CSS input field add:
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/jellyfin/jellyfin-base.css");
-@import url("https://theme-park.dev/CSS/variables/<THEME>.css");
+@import url("https://theme-park.dev/css/base/jellyfin/jellyfin-base.css");
+@import url("https://theme-park.dev/css/theme-options/<THEME>.css");
 ```
 
 and hit save.
@@ -32,8 +32,8 @@ and hit save.
 i.e.
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/jellyfin/jellyfin-base.css");
-@import url("https://theme-park.dev/CSS/variables/dracula.css");
+@import url("https://theme-park.dev/css/base/jellyfin/jellyfin-base.css");
+@import url("https://theme-park.dev/css/theme-options/dracula.css");
 ```
 
 <img src="/site_assets/{{ page.title.split()[0].lower() }}/example.png"></img>
