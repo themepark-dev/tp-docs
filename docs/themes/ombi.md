@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/Ombi-app/Ombi) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -27,8 +27,8 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 Add
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/ombi/ombi-base.css");
-@import url("https://theme-park.dev/CSS/variables/<THEME>.css");
+@import url("https://theme-park.dev/css/base/ombi/ombi-base.css");
+@import url("https://theme-park.dev/css/theme-options/<THEME>.css");
 ```
 
 in custom css.
@@ -36,8 +36,8 @@ in custom css.
 E.g.
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/ombi/ombi-base.css");
-@import url("https://theme-park.dev/CSS/variables/plex.css");
+@import url("https://theme-park.dev/css/base/ombi/ombi-base.css");
+@import url("https://theme-park.dev/css/theme-options/plex.css");
 
 ```
 

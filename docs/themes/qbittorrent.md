@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/qbittorrent/qbittorrent)
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -59,8 +59,8 @@ You need to subfilter the `<noscript>` tag instead of the `</head>` tag.
 proxy_set_header Accept-Encoding "";
 sub_filter
 '<noscript>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/qbittorrent/qbittorrent-base.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/variables/<THEME>.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/qbittorrent/qbittorrent-base.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/<THEME>.css">
 <noscript>';
 sub_filter_once on;
 ```

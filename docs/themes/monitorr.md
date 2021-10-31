@@ -7,7 +7,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/monitorr/monitorr) CSS
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
 ```css
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 aquamarine.css
 hotline.css
 plex.css
@@ -24,7 +24,7 @@ organizr-dashboard.css
 Add this in the Monitorr custom css box:
 
 ```css
-@import "https://theme-park.dev/CSS/themes/monitorr/THEME_NAME.css";
+@import "https://theme-park.dev/css/base/monitorr/THEME_NAME.css";
 ```
 
 The `organizr-dashboard.css` theme will mess with your Monitorr base theme. And it will hide the settings button. Go to /monitorr/settings.php for settings.  
@@ -33,12 +33,12 @@ It is created purely for use with "minimum" version of the index.php `https://do
 !!! warning "organizr-dashboard.css"
     When viewing monitorr in Organizr iframe using `organizr-dashboard.css` it will follow the Organizr theme. 
     When viewing it outside of Organizr iframe the background will be white ect. If you don't want this you can create two reverse proxies.
-    One for monitorr organizr homepage integration and one for the monitorr dark/plex theme. And use subfilter on both instead of adding `@import "https://theme-park.dev/CSS/themes/monitorr/organizr-dashboard.css";` in the monitorr custom css.
+    One for monitorr organizr homepage integration and one for the monitorr dark/plex theme. And use subfilter on both instead of adding `@import "https://theme-park.dev/css/base/monitorr/organizr-dashboard.css";` in the monitorr custom css.
 
 Add this in the Monitorr custom css box:
 
 ```css
-@import "https://theme-park.dev/CSS/themes/monitorr/THEME_NAME.css";
+@import "https://theme-park.dev/css/base/monitorr/THEME_NAME.css";
 ```
 
 And add this in custom HTML in Organizr:

@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/filebrowser/filebrowser)
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -23,8 +23,8 @@ Can also be installed locally: [https://filebrowser.xyz/configuration/custom-bra
 In the `custom.css` file add:
 
 ```css
-@import url("https://theme-park.dev/CSS/themes/filebrowser/filebrowser-base.css");
-@import url("https://theme-park.dev/CSS/variables/dracula.css");
+@import url("https://theme-park.dev/css/base/filebrowser/filebrowser-base.css");
+@import url("https://theme-park.dev/css/theme-options/dracula.css");
 ```
 
 {% set addons = extra.addons %}

@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/WDaan/VueTorrent) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -26,7 +26,7 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</body>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/themes/vuetorrent/aquamarine.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/vuetorrent/aquamarine.css">
 </body>';
 sub_filter_once on;
 ```

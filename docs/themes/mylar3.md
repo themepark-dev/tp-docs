@@ -8,7 +8,7 @@ Custom [Mylar 3](https://github.com/mylar3/mylar3) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/mylar3/XXX.css
+https://theme-park.dev/css/base/mylar3/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}

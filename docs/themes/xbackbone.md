@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://xbackbone.app/) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -35,8 +35,8 @@ https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
 3. Add the HTML below in the `Custom HTML Head content` textarea. Remember to change `<THEME>` to the theme you want.
 
 ```html
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/themes/xbackbone/xbackbone-base.css"/>
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/CSS/variables/<THEME>.css"/>
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/base/xbackbone/xbackbone-base.css"/>
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/theme-options/<THEME>.css"/>
 ```
 
 <p align="center">  

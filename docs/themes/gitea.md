@@ -8,7 +8,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/go-gitea/gitea) CSS
 
 ```css
 {% set themes = config.extra.themes %}
-https://theme-park.dev/CSS/themes/{{ page.title.split()[0].lower() }}/XXX.css
+https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
 {% for theme in themes %}
 {{ theme }}.css
 {% endfor %}
@@ -37,14 +37,14 @@ In the `header.tmpl` file add the following:
   {{'{{ if and (ne .SignedUser.Theme "gitea") (ne .SignedUser.Theme "arc-green") }}'}}
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/css/gitea.css">
-    <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
-    <link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'{{.SignedUser.Theme}}'}}.css">
+    <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/gitea-base.css">
+    <link rel="stylesheet" href="https://theme-park.dev/css/theme-options/{{'{{.SignedUser.Theme}}'}}.css">
   {{'{{end}}'}}
 {{'{{ else if and (ne DefaultTheme "gitea") (ne DefaultTheme "arc-green") }}'}}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/css/gitea.css">
-  <link rel="stylesheet" href="https://theme-park.dev/CSS/themes/gitea/gitea-base.css">
-  <link rel="stylesheet" href="https://theme-park.dev/CSS/variables/{{'{{DefaultTheme}}'}}.css">
+  <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/gitea-base.css">
+  <link rel="stylesheet" href="https://theme-park.dev/css/theme-options/{{'{{DefaultTheme}}'}}.css">
 {{'{{end}}'}}
 ```
 

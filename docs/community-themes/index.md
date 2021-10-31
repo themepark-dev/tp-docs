@@ -5,6 +5,14 @@ Q: What's the difference between `Community Themes` and the regular themes?
 
 A: Community themes are theme options that are not officially supported but as long as they follow the same variable structure as the other theme options it should look fine on all applications.
 
+Q: How do I use community themes with docker mods?
+
+A: Add the env `TP_COMMUNITY_THEME` and set it to `"true"`.
+
+Q: How do I use these with subfiltering?
+
+A: See [Setup](/setup/#community-themes)
+
 ### Infinity Stone Themes
 
 <a href="/community-themes/infinity-stone-themes/mind/"><img src="/community-themes/infinity-stone-themes/mind_banner_small.png"/></a>
