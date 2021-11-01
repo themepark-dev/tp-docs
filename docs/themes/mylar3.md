@@ -6,14 +6,6 @@ Custom [Mylar 3](https://github.com/mylar3/mylar3) CSS
 
 ![](/site_assets/mylar3/organizr.png)
 
-```css
-{% set themes = config.extra.themes %}
-https://theme-park.dev/css/base/mylar3/XXX.css
-{% for theme in themes %}
-{{ theme }}.css
-{% endfor %}
-```
-
 ## 🛠️ Installation
 
 ### [Setup](/setup)

@@ -6,13 +6,6 @@ Custom [{{ page.title.split()[0] }}](https://github.com/pi-hole/pi-hole) CSS
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/aquamarine.png)
 
-```css
-{% set themes = config.extra.themes %}
-https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
-{% for theme in themes %}
-{{ theme }}.css
-{% endfor %}
-```
 
 ## 🛠️ Installation
 

@@ -6,16 +6,6 @@ Custom [{{ page.title.split()[0] }}](https://github.com/ukdtom/WebTools.bundle) 
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
-```css
-https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
-aquamarine.css
-hotline.css
-plex.css
-dark.css
-space-gray.css
-organizr.css
-```
-
 ## 🛠️ Installation
 
 ### [Setup](/setup)

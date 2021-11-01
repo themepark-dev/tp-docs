@@ -6,14 +6,6 @@ Custom [{{ page.title.split()[0] }}](https://github.com/AdguardTeam/AdGuardHome)
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
-```css
-{% set themes = config.extra.themes %}
-https://theme-park.dev/css/base/{{ page.title.split()[0].lower() }}/XXX.css
-{% for theme in themes %}
-{{ theme }}.css
-{% endfor %}
-```
-
 ## 🛠️ Installation
 
 ### [Setup](/setup)
