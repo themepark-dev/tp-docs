@@ -16,8 +16,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/MediaBrowser/Emby) CSS
 proxy_set_header Accept-Encoding "";
 sub_filter
 '</body>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/emby/emby-base.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/dracula.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/emby/dracula.css">
 </body>';
 sub_filter_once on;
 ```

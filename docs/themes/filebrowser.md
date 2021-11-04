@@ -16,8 +16,7 @@ Can also be installed locally: [https://filebrowser.xyz/configuration/custom-bra
 In the `custom.css` file add:
 
 ```css
-@import url("https://theme-park.dev/css/base/filebrowser/filebrowser-base.css");
-@import url("https://theme-park.dev/css/theme-options/dracula.css");
+@import url("https://theme-park.dev/css/base/filebrowser/dracula.css");
 ```
 
 {% set addons = extra.addons %}
