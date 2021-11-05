@@ -52,8 +52,7 @@ You need to subfilter the `<noscript>` tag instead of the `</head>` tag.
 proxy_set_header Accept-Encoding "";
 sub_filter
 '<noscript>'
-'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/qbittorrent/qbittorrent-base.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/<THEME>.css">
+'<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/qbittorrent/<THEME>.css">
 <noscript>';
 sub_filter_once on;
 ```

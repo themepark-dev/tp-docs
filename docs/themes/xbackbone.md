@@ -28,8 +28,7 @@ Custom [{{ page.title.split()[0] }}](https://xbackbone.app/) CSS
 3. Add the HTML below in the `Custom HTML Head content` textarea. Remember to change `<THEME>` to the theme you want.
 
 ```html
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/base/xbackbone/xbackbone-base.css"/>
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/theme-options/<THEME>.css"/>
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/base/xbackbone/<THEME>.css"/>
 ```
 
 <p align="center">  

@@ -20,8 +20,7 @@ The themes can be found in the `Marketplace` menu in Organizr.
 e.g.
 
 ```css
-@import url("https://theme-park.dev/css/base/organizr/organizr-base.css");
-@import url("https://theme-park.dev/css/theme-options/overseerr.css");
+@import url("https://theme-park.dev/css/base/organizr/overseerr.css");
 ```
 
 {% set addons = extra.addons %}

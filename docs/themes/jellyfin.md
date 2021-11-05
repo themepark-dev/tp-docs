@@ -16,8 +16,7 @@ Go to `Dashboard` -> `General` and scroll down to `Branding`
 In the custom CSS input field add:
 
 ```css
-@import url("https://theme-park.dev/css/base/jellyfin/jellyfin-base.css");
-@import url("https://theme-park.dev/css/theme-options/<THEME>.css");
+@import url("https://theme-park.dev/css/base/jellyfin/<THEME>.css");
 ```
 
 and hit save.
@@ -25,8 +24,7 @@ and hit save.
 i.e.
 
 ```css
-@import url("https://theme-park.dev/css/base/jellyfin/jellyfin-base.css");
-@import url("https://theme-park.dev/css/theme-options/dracula.css");
+@import url("https://theme-park.dev/css/base/jellyfin/nord.css");
 ```
 
 <img src="/site_assets/{{ page.title.split()[0].lower() }}/example.png"></img>

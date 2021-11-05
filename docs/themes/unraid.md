@@ -24,8 +24,7 @@ Custom [{{ page.title.split()[0] }}](https://unraid.net) CSS
 
 ```html
 </style>
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/base/unraid/unraid-base.css" />
-<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/theme-options/<THEME>.css" />
+<link type="text/css" rel="Stylesheet" href="https://theme-park.dev/css/base/unraid/<THEME>.css" />
 ```
 
 {% set addons = extra.addons %}

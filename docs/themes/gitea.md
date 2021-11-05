@@ -30,14 +30,12 @@ In the `header.tmpl` file add the following:
   {{'{{ if and (ne .SignedUser.Theme "gitea") (ne .SignedUser.Theme "arc-green") }}'}}
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/css/gitea.css">
-    <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/gitea-base.css">
-    <link rel="stylesheet" href="https://theme-park.dev/css/theme-options/{{'{{.SignedUser.Theme}}'}}.css">
+    <link rel="stylesheet" href="https://theme-park.dev/css/gitea/base/{{'{{.SignedUser.Theme}}'}}.css">
   {{'{{end}}'}}
 {{'{{ else if and (ne DefaultTheme "gitea") (ne DefaultTheme "arc-green") }}'}}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/css/gitea.css">
-  <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/gitea-base.css">
-  <link rel="stylesheet" href="https://theme-park.dev/css/theme-options/{{'{{DefaultTheme}}'}}.css">
+  <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/{{'{{DefaultTheme}}'}}.css">
 {{'{{end}}'}}
 ```
 

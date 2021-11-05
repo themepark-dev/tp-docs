@@ -20,8 +20,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/Ombi-app/Ombi) CSS
 Add
 
 ```css
-@import url("https://theme-park.dev/css/base/ombi/ombi-base.css");
-@import url("https://theme-park.dev/css/theme-options/<THEME>.css");
+@import url("https://theme-park.dev/css/base/ombi/<THEME>.css");
 ```
 
 in custom css.
@@ -29,9 +28,7 @@ in custom css.
 E.g.
 
 ```css
-@import url("https://theme-park.dev/css/base/ombi/ombi-base.css");
-@import url("https://theme-park.dev/css/theme-options/plex.css");
-
+@import url("https://theme-park.dev/css/base/ombi/nord.css");
 ```
 
 ![custom css](/site_assets/ombi/custom_css.png)

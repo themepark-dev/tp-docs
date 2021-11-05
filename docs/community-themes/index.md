@@ -1,5 +1,5 @@
 
-## FAQ 
+# FAQ
 
 Q: What's the difference between `Community Themes` and the regular themes?
 
@@ -11,9 +11,9 @@ A: Add the env `TP_COMMUNITY_THEME` and set it to `"true"`.
 
 Q: How do I use these with subfiltering?
 
-A: See [Setup](/setup/#community-themes)
+A: Add it like any other theme-option.
 
-### Infinity Stone Themes
+## Infinity Stone Themes
 
 <a href="/community-themes/infinity-stone-themes/mind/"><img src="/community-themes/infinity-stone-themes/mind_banner_small.png"/></a>
 <a href="/community-themes/infinity-stone-themes/soul/"><img src="/community-themes/infinity-stone-themes/soul_banner_small.png"/></a>
@@ -22,12 +22,12 @@ A: See [Setup](/setup/#community-themes)
 <a href="/community-themes/infinity-stone-themes/space/"><img src="/community-themes/infinity-stone-themes/space_banner_small.png"/></a>
 <a href="/community-themes/infinity-stone-themes/time/"><img src="/community-themes/infinity-stone-themes/time_banner_small.png"/></a>
 
-### [OneDark](/community-themes/onedark/)
+## [OneDark](/community-themes/onedark/)
 
 <small> By [Monklite](https://github.com/Monklite) </small>
 
-### [Blackberry Themes](/community-themes/blackberry-themes)
+## [Blackberry Themes](/community-themes/blackberry-themes)
 
 <small> By [Archmonger](https://github.com/Archmonger/Blackberry-Themes) </small>
 
-### [Hotline-Old](/community-themes/hotline-old/)
+## [Hotline-Old](/community-themes/hotline-old/)
