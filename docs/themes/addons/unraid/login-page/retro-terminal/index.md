@@ -16,7 +16,7 @@ Animated custom css for the Unraid login page.
 
 **Recommended way:**
 
-Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
+Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
 
 Add a new user script by clicking `Add new script`
 
@@ -30,7 +30,7 @@ Click or hover over the gear icon and click `Edit Script`
 
 ![edit](../assets/edit.png)
 
-Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh)
+Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh)
 
 Below the shebang(`#!/bin/bash`) are the variables you need to change for the different themes.
 
@@ -83,7 +83,7 @@ Set `ADD_JS`to `"true"` to enable or `"false"` to omit the javascript.
 
 ***You should probably have a look at the content of that file, and probably host it yourself 💀***
 
-[custom_text_header.js](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/retro-terminal/js/custom_text_header.js)
+[custom_text_header.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/retro-terminal/js/custom_text_header.js)
 
 ⚠️⚠️⚠️
 
@@ -126,7 +126,7 @@ Set the `--body-before` and `--body-after` root variables to `none`
 Fork it and change the `--logo` variable or if you're using stylus ect, just add a new `--logo` root variable below the import line.
 
 ```css
-@import url(https://theme-park.dev/CSS/addons/unraid/login-page/retro-terminal/red.css);
+@import url(https://theme-park.dev/css/addons/unraid/login-page/retro-terminal/red.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -140,7 +140,7 @@ Fork it and change the `--logo` variable or if you're using stylus ect, just add
 --body-before:#00ff771a;
 --body-after: #00ff7733;
 --body-animation: flicker;
---logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
+--logo: url(https://theme-park.dev/css/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
 --text-color: #37f592;
 --input-color: #37f592;
 --link-color: #37f592;

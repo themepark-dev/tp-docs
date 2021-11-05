@@ -13,7 +13,7 @@ Custom Alien themed css for the Unraid login page.
 
 **Recommended way:**
 
-Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
+Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
 
 Add a new user script by clicking `Add new script`
 
@@ -27,7 +27,7 @@ Click or hover over the gear icon and click `Edit Script`
 
 ![edit](../assets/edit.png)
 
-Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh)
+Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh)
 
 Below the shebang(`#!/bin/bash`) are the variables you need to change for the different themes.
 
@@ -50,7 +50,7 @@ DISABLE_THEME="false"
 
 See [screenshots](#screenshots) at the bottom.
 
-Available wallpapers [Wallpapers](https://github.com/gilbN/theme.park/tree/master/CSS/addons/unraid/login-page/alien/wallpaper)
+Available wallpapers [Wallpapers](https://github.com/gilbN/theme.park/tree/master/css/addons/unraid/login-page/alien/wallpaper)
 
 ```css
 hallway.css
@@ -87,7 +87,7 @@ You can also  inject an animated video wallpaper from the Isolation video game.
 
 ***You should probably have a look at the content of that file, and probably host it yourself 💀***
 
-[isolation.js](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/alien/js/isolation.js)
+[isolation.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/alien/js/isolation.js)
 
 ⚠️⚠️⚠️
 
@@ -120,7 +120,7 @@ To change the colors,background, logo ect you need to edit the css file. Now sin
 If you use stylus you can just replace a variable you want to change.
 
 ```css
-@import url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/isolation.css);
+@import url(https://theme-park.dev/css/addons/unraid/login-page/alien/isolation.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -131,8 +131,8 @@ If you use stylus you can just replace a variable you want to change.
 ```css
 :root {
     --main-bg: radial-gradient(ellipse at center,rgba(0, 255, 119, 0.1) 0,rgba(0,255,119,0) 100%) center center/cover no-repeat fixed, 
-    url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/wallpaper/hallway.png) center center/cover no-repeat fixed;
-    --logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
+    url(https://theme-park.dev/css/addons/unraid/login-page/alien/wallpaper/hallway.jpg) center center/cover no-repeat fixed;
+    --logo: url(https://theme-park.dev/css/addons/unraid/login-page/alien/logo/wings_green.png) center no-repeat;
     --text-color: #37f592;
     --input-color: #37f592;
     --link-color: #37f592;

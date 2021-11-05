@@ -17,7 +17,7 @@ Custom Fallout themed css for the Unraid login page.
 
 **Recommended way:**
 
-Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
+Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
 
 Add a new user script by clicking `Add new script`
 
@@ -31,7 +31,7 @@ Click or hover over the gear icon and click `Edit Script`
 
 ![edit](../assets/edit.png)
 
-Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/custom_login.sh)
+Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh)
 
 Below the shebang(`#!/bin/bash`) are the variables you need to change for the different themes.
 
@@ -54,7 +54,7 @@ DISABLE_THEME="false"
 
 See [screenshots](#screenshots) at the bottom.
 
-Available wallpapers [Wallpapers](https://github.com/gilbN/theme.park/tree/master/CSS/addons/unraid/login-page/fallout/wallpaper)
+Available wallpapers [Wallpapers](https://github.com/gilbN/theme.park/tree/master/css/addons/unraid/login-page/fallout/wallpaper)
 
 ```css
 terminal.css
@@ -81,7 +81,7 @@ You can also  inject an animated video wallpaper.
 
 1. Set `THEME` to `fallout_video.css`
 2. Set `ADD_JS` to `"true"` to enable.
-3. Choose the video you want. See: [videos](https://github.com/gilbN/theme.park/tree/master/CSS/addons/unraid/login-page/fallout/video)
+3. Choose the video you want. See: [videos](https://github.com/gilbN/theme.park/tree/master/css/addons/unraid/login-page/fallout/video)
     * Available js: `please_stand_by.js`, `vault-tec-crt.js`, `vault-tec-crt_no-scanline.js`
 4. Set `JS` to the one you want.
 
@@ -91,11 +91,11 @@ You can also  inject an animated video wallpaper.
 
 ***You should probably have a look at the content of that file, and probably host it yourself 💀***
 
-[please_stand_by.js](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/fallout/js/please_stand_by.js)
+[please_stand_by.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/fallout/js/please_stand_by.js)
 
-[vault-tec-crt.js](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/fallout/js/vault-tec-crt.js)
+[vault-tec-crt.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/fallout/js/vault-tec-crt.js)
 
-[vault-tec-crt_no-scanline.js](https://github.com/gilbN/theme.park/blob/master/CSS/addons/unraid/login-page/fallout/js/vault-tec-crt_no-scanline.js)
+[vault-tec-crt_no-scanline.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/fallout/js/vault-tec-crt_no-scanline.js)
 
 ⚠️⚠️⚠️
 
@@ -128,7 +128,7 @@ To change the colors,background, logo ect you need to edit the css file. Now sin
 If you use stylus you can just replace a variable you want to change.
 
 ```css
-@import url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/terminal.css);
+@import url(https://theme-park.dev/css/addons/unraid/login-page/fallout/terminal.css);
 :root {
 --logo: url(https://domain.com/your-snowflake-logo-here.png) center no-repeat;
 }
@@ -138,9 +138,9 @@ If you use stylus you can just replace a variable you want to change.
 
 ```css
 :root {
-    --main-bg-color: url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png),
-    url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/wallpaper/terminal.png) center center/cover no-repeat fixed;
-    --logo: url(https://theme-park.dev/CSS/addons/unraid/login-page/fallout/logo/vault-tec_green.png) center no-repeat;
+    --main-bg-color: url(https://theme-park.dev/css/addons/unraid/login-page/fallout/wallpaper/rocky-wall.png),
+    url(https://theme-park.dev/css/addons/unraid/login-page/fallout/wallpaper/terminal.jpg) center center/cover no-repeat fixed;
+    --logo: url(https://theme-park.dev/css/addons/unraid/login-page/fallout/logo/vault-tec_green.png) center no-repeat;
     --text-color: #14F074;
     --input-color: #14F074;
     --link-color: #14F074;

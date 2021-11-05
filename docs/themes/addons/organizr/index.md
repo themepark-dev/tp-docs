@@ -26,9 +26,9 @@
 
 ```css
 @import "https://theme-park.dev/css/base/organizr/organizr-base-old.css"; 
-@import "https://theme-park.dev/CSS/addons/organizr/glass/glass-base.css"; 
+@import "https://theme-park.dev/css/addons/organizr/glass/glass-base.css"; 
 :root {
-    --main-bg-color: url(https://theme-park.dev/CSS/addons/organizr/glass/example.jpg) center center/cover no-repeat fixed;
+    --main-bg-color: url(https://theme-park.dev/css/addons/organizr/glass/example.jpg) center center/cover no-repeat fixed;
     --mobile-bg-color: radial-gradient(circle, #3a3a3a, #2d2d2d, #202020, #141414, #000000) center center/cover no-repeat fixed;
 
     --link-color: #fff;
@@ -103,13 +103,13 @@ Here are the other theme colors if you want to use that instead:
 If you just want the login and lockscreen css, just add this in custom CSS:
 
 ```css
-@import "https://theme-park.dev/CSS/addons/organizr/glass/glass-login.css"; 
+@import "https://theme-park.dev/css/addons/organizr/glass/glass-login.css"; 
 ```
 
 You can change the blur background color by adding the variables above. The default is dark.
 
 ```css
-@import "https://theme-park.dev/CSS/addons/organizr/glass/glass-login.css";
+@import "https://theme-park.dev/css/addons/organizr/glass/glass-login.css";
 :root {
     --div-background-color-10: rgba(255, 255, 255, 0.10);
     --div-background-color-15: rgba(255, 255, 255, 0.15);

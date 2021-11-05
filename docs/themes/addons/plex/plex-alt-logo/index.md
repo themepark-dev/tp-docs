@@ -25,7 +25,7 @@ sub_filter
 '</head>'
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/plex/plex-base.css">
 <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/overseerr.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/plex/plex-alt-logo/plex-alt-logo.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/addons/plex/plex-alt-logo/plex-alt-logo.css">
 </head>';
 sub_filter_once on;
 ```
@@ -35,7 +35,7 @@ sub_filter_once on;
 ```nginx
 AddOutputFilterByType SUBSTITUTE text/html
    Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/plex/plex-base.css">
-   <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/overseerr.css"><link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/plex/plex-alt-logo/plex-alt-logo.css">
+   <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/theme-options/overseerr.css"><link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/addons/plex/plex-alt-logo/plex-alt-logo.css">
 </head>';|'
 ```
 
@@ -45,7 +45,7 @@ AddOutputFilterByType SUBSTITUTE text/html
 filter rule {
     content_type text/html.*
     search_pattern </head>
-    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/plex/plex-base.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/theme-options/overseerr.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/addons/plex/plex-alt-logo/plex-alt-logo.css'></head>"
+    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/plex/plex-base.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/theme-options/overseerr.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/addons/plex/plex-alt-logo/plex-alt-logo.css'></head>"
 }
 ```
 
@@ -56,5 +56,5 @@ Just add another import line.
 ```css
 @import url("https://theme-park.dev/css/base/plex/plex-base.css");
 @import url("https://theme-park.dev/css/theme-options/overseerr.css");
-@import url("https://theme-park.dev/CSS/addons/plex/plex-alt-logo/plex-alt-logo.css");
+@import url("https://theme-park.dev/css/addons/plex/plex-alt-logo/plex-alt-logo.css");
 ```
