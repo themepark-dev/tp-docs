@@ -1,6 +1,6 @@
 # Readarr Alternative Logo
 
-Adds a audiobook logo to your Radarr css.
+Adds a audiobook logo to your Readarr css.
 
 <p>
 <a href="desktop.png" rel="noopener"><img src="desktop.png" alt="Screen Shot 1" width="50%" /></a>
