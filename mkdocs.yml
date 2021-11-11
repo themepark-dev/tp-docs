@@ -5,6 +5,7 @@ site_url: https://docs.theme-park.dev
 
 repo_url: https://github.com/GilbN/theme.park/
 repo_name: GilbN/theme.park
+edit_uri: https://github.com/GilbN/tp-docs/edit/main/docs/
 
 plugins:
   - search
