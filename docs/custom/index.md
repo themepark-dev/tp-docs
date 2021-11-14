@@ -1,6 +1,6 @@
 # Custom Themes
 
-To create your own themes you only need the change the color variables in each theme. You dont need the edit the `<app>-base.css`. You can find the theme variables here [https://github.com/GilbN/theme.park/tree/master/CSS/variables](https://github.com/GilbN/theme.park/tree/master/CSS/variables)
+To create your own theme options you only need the change the color variables. You dont need the edit the `<app>-base.css`. You can find the theme variables here [https://github.com/GilbN/theme.park/tree/master/css/theme-options](https://github.com/GilbN/theme.park/tree/master/css/theme-options)
 
 You can either fork the repo and setup a [Github pages](https://pages.github.com/) site or clone it to your web server and serve the files that way.
 
