@@ -21,20 +21,16 @@ The theme is built on top of the `Gitea` theme, so make sure that is selected in
 
 #### ⚙️ Adding the themes in Gitea
 
-Create a new file called `header.tmpl` and place it in `gitea/templates/custom/header.tmpl`. Create the template and custom folders if they do not exists.
+Create a new file called `body_outer_pre.tmpl` and place it in `gitea/templates/custom/body_outer_pre.tmpl`. Create the template and custom folders if they do not exists.
 
-In the `header.tmpl` file add the following:
+In the `body_outer_pre.tmpl` file add the following:
 
 ```html
 {{'{{ if .IsSigned }}'}}
   {{'{{ if and (ne .SignedUser.Theme "gitea") (ne .SignedUser.Theme "arc-green") }}'}}
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/gitea.css">
-    <link rel="stylesheet" href="https://theme-park.dev/css/gitea/base/{{'{{.SignedUser.Theme}}'}}.css">
+    <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/{{'{{.SignedUser.Theme}}'}}.css">
   {{'{{end}}'}}
 {{'{{ else if and (ne DefaultTheme "gitea") (ne DefaultTheme "arc-green") }}'}}
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/css/gitea.css">
   <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/{{'{{DefaultTheme}}'}}.css">
 {{'{{end}}'}}
 ```
