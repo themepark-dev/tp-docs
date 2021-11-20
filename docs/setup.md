@@ -109,7 +109,7 @@ docker run -d \
 !!! info
     The scripts are located in the `master` branch. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
-    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
+    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
 Mount your script with the volume `/docker/host/98-themepark:/etc/cont-init.d/99-themepark` to execute your script on container start
 
