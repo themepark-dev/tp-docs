@@ -36,7 +36,7 @@ Prefix theme option with `blackberry-` e.g. `blackberry-abyss`
         <a href="/community-themes/screenshots/blackberry-hearth.png" rel="noopener"><img src="/community-themes/screenshots/blackberry-hearth_small.png" alt="Screen Shot 4"  /></a>
     </div>
     <div style="text-align: center; width:49.15%; padding: .4em;">
-        <p style="margin-bottom: 0;">Martini</p>
+        <p style="margin-bottom: 0;">Martian</p>
         <hr style="margin: 0 auto .5em auto; width: 80%;">
         <a href="/community-themes/screenshots/blackberry-martian.png" rel="noopener"><img src="/community-themes/screenshots/blackberry-martian_small.png" alt="Screen Shot 4"  /></a>  
     </div>
