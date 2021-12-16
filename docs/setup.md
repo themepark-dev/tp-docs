@@ -268,9 +268,10 @@ Now when you change the variable in the http block and restart NGINX, it will up
 
 If you're using Nginx Proxy Manager you can follow these steps:
 
-1. Edit the proxy host for the app you want the theme to apply to.
-2. Open the `Advanced` tab.
-3. Add the following in the `Custom Nginx Configuration` textbox.
+1. Go the Proxy Hosts list in NPM, and click the three dots on the rightmost side of the host you want to add a theme to. Select 'Edit' from the menu that appears (first item). Within the edit menu go to 'Custom locations' (second tab). In that tab click 'Add location', which will show the 'Define location' options.
+2. Enter '/' in the location bar, and then click the gear to the right of it. That will open the box at the bottom where Nginx config code can be added.
+3. Fill in the details of the host you're forwarding to. These should be the same as the ones you filled in when you created the host (i.e. the same as in the 'Details' tab (first tab) in the edit menu).
+4. Add the code below to the box at the bottom of the edit menu window. Don't forget to update the `<APP_NAME>` and `<THEME>` with the correct app and theme.
 
 ```nginx
 proxy_set_header Accept-Encoding "";
@@ -280,8 +281,6 @@ sub_filter
 </head>';
 sub_filter_once on;
 ```
-
-4. Don't forget to update the `<APP_NAME>` and `<THEME>` with the correct app and theme.
 
 ![text](site_assets/setup/npm.png)
 
