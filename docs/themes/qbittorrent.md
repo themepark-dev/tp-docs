@@ -41,12 +41,11 @@ location /qbt/ {
   }
 ```
 
-#### ⚠️ Issues
+!!! warning "Subfilter"
+    If you get errors in the browser console, and the RSS tab stop working (See [https://github.com/gilbN/theme.park/issues/132](https://github.com/gilbN/theme.park/issues/132))
+    You need to subfilter the `</body>` tag instead of the `</head>` tag.
 
-If you get errors in the browser console, and the RSS tab stop working (See https://github.com/gilbN/theme.park/issues/132)
-You need to subfilter the `</body>` tag instead of the `</head>` tag.
-
-#### example
+#### Example
 
 ```nginx
 proxy_set_header Accept-Encoding "";
@@ -56,6 +55,20 @@ sub_filter
 </body>';
 sub_filter_once on;
 ```
+
+#### Custom headers in QbitTorrent Settings
+
+If you dont' want to remove the headers using a webserver, you can also override the CSP header with a custom one.
+
+Add the following in `Add custom HTTP headers` on the `Web UI` section.
+
+```nginx
+content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self';
+```
+
+![](/site_assets/{{ page.title.split()[0].lower() }}/CSP.png)
+
+This will allow stylesheets and image sources from theme-park.dev and raw.githubusercontent.com domains.
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
