@@ -6,10 +6,18 @@ Custom [{{ page.title.split()[0] }}](https://github.com/MediaBrowser/Emby) CSS
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
 
-
 ## 🛠️ Installation
 
+### Docker Mod
+
+!!! note  "Docker Mod 🐳"
+    Set the theme to `Light` as the [mod](https://github.com/GilbN/theme.park/blob/master/docker-mods/{{ page.title.split()[0].lower() }}/root/etc/cont-init.d/98-themepark) changes the `/dashboard-ui/modules/themes/light/theme.css` file
+
+### Subfilter
+
 !!! warning Subfiltering
+    Subfiltering can make your Emby instance unavailable remotely. Seems like they have some security features, or something breaks when changing the HTML.
+
     You need to subfilter the `</body>` instead of the `</head>` tag. See example below.
 
 ```nginx
