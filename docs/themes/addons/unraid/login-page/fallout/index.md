@@ -3,13 +3,10 @@
 Custom Fallout themed css for the Unraid login page.
 
 <p align="center">
+<a href="screenshots/terminal.png" rel="noopener"><img src="screenshots/terminal.png" alt="Screen Shot 1" width="100%" /></a>
 <a href="screenshots/dirty_terminal.png" rel="noopener"><img src="screenshots/dirty_terminal.png" alt="Screen Shot 1" width="49.15%" /></a>
-
 <a href="screenshots/terminal.png" rel="noopener"><img src="screenshots/terminal.png" alt="Screen Shot 3" width="49.15%" /></a>
-
 <a href="screenshots/dirty_terminal2.png" rel="noopener"><img src="screenshots/dirty_terminal2.png" alt="Screen Shot 2" width="49.15%" /></a>
-
-
 <a href="screenshots/terminal2.png" rel="noopener"><img src="screenshots/terminal2.png" alt="Screen Shot 4" width="49.15%" /></a>
 </p>
 
