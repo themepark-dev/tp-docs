@@ -63,7 +63,7 @@ If you dont' want to remove the headers using a webserver, you can also override
 Add the following in `Add custom HTTP headers` on the `Web UI` section.
 
 ```nginx
-content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self';
+content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com use.fontawesome.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; font-src use.fontawesome.com;
 ```
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/CSP.png)
