@@ -43,7 +43,7 @@ Example: `https://theme-park.dev/css/base/sonarr/dark.css`
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
 !!! warning
-    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview.
+    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon. 
 
 [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
