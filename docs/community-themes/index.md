@@ -30,4 +30,8 @@ A: Add it like any other theme-option.
 
 <small> By [Archmonger](https://github.com/Archmonger/Blackberry-Themes) </small>
 
+## [Pine Shadow](/community-themes/pine-shadow)
+
+<small> By [Pinecone](https://github.com/Pinezerka) </small>
+
 ## [Hotline-Old](/community-themes/hotline-old/)
