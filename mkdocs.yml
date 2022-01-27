@@ -14,14 +14,14 @@ plugins:
   - macros
   - redirects:
       redirect_maps:
-        discord.md: 'https://discord.gg/HM5uUKU'
-        dockerhub.md: 'https://hub.docker.com/u/gilbn'
-        github.md: 'https://github.com/gilbn'
-        ghcr.md: 'https://github.com/users/GilbN/packages/container/package/theme.park'
-        donate.md: 'https://docs.theme-park.dev/#donation'
-        themes.md: 'https://docs.theme-park.dev/themes/sonarr/'
-        docker-mods.md: 'https://docs.theme-park.dev/setup/#docker-mods'
-        hotio.md: 'https://docs.theme-park.dev/setup/#hotio-containers'
+        discord.md: "https://discord.gg/HM5uUKU"
+        dockerhub.md: "https://hub.docker.com/u/gilbn"
+        github.md: "https://github.com/gilbn"
+        ghcr.md: "https://github.com/users/GilbN/packages/container/package/theme.park"
+        donate.md: "https://docs.theme-park.dev/#donation"
+        themes.md: "https://docs.theme-park.dev/themes/sonarr/"
+        docker-mods.md: "https://docs.theme-park.dev/setup/#docker-mods"
+        hotio.md: "https://docs.theme-park.dev/setup/#hotio-containers"
 
 markdown_extensions:
   - pymdownx.snippets
@@ -144,8 +144,7 @@ nav:
         Alternative Logo: themes/addons/plex/plex-alt-logo/index.md
         Overseerr Side Menu: themes/addons/plex/overseerr-side-menu/index.md
   - Theme Options:
-      Theme Options:
-        theme-options/index.md
+      Theme Options: theme-options/index.md
       Organizr: theme-options/organizr.md
       Dark: theme-options/dark.md
       Dracula: theme-options/dracula.md
@@ -157,8 +156,7 @@ nav:
       Overseerr: theme-options/overseerr.md
       Nord: theme-options/nord.md
   - Community Themes:
-      Community Themes:
-        community-themes/index.md
+      Community Themes: community-themes/index.md
       Infinity Stone Themes:
         Mind: community-themes/infinity-stone-themes/mind.md
         Soul: community-themes/infinity-stone-themes/soul.md
@@ -166,14 +164,10 @@ nav:
         Power: community-themes/infinity-stone-themes/power.md
         Space: community-themes/infinity-stone-themes/space.md
         Time: community-themes/infinity-stone-themes/time.md
-      OneDark:
-        community-themes/onedark/index.md
-      Blackberry Themes:
-        community-themes/blackberry-themes/index.md
-      Pine Shadow:
-        community-themes/pine-shadow/index.md
-      Hotline-Old:
-        community-themes/hotline-old/index.md
+      OneDark: community-themes/onedark/index.md
+      Blackberry Themes: community-themes/blackberry-themes/index.md
+      Pine Shadow: community-themes/pine-shadow/index.md
+      Hotline-Old: community-themes/hotline-old/index.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
@@ -210,16 +204,16 @@ extra:
   homepage: https://github.com/GilbN/theme.park
   social:
     - icon: fontawesome/solid/heart
-      link: 'https://docs.theme-park.dev/donate'
+      link: "https://docs.theme-park.dev/donate"
       name: Donate
     - icon: fontawesome/brands/discord
-      link: 'https://docs.theme-park.dev/discord'
+      link: "https://docs.theme-park.dev/discord"
       name: Discord
     - icon: fontawesome/brands/docker
-      link: 'https://github.com/users/GilbN/packages/container/package/theme.park'
+      link: "https://github.com/users/GilbN/packages/container/package/theme.park"
       name: Docker
     - icon: fontawesome/brands/github
-      link: 'https://github.com/gilbn'
+      link: "https://github.com/gilbn"
       name: GitHub
   addons:
     sonarr:
