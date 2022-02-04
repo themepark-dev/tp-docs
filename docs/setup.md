@@ -501,3 +501,18 @@ $.getScript('https://archmonger.github.io/Blackberry-Themes/Extras/theme_install
     themeInstaller("<TAB_NAME>","https://theme-park.dev/css/base/<APP_NAME>/<THEME_NAME>.css");
 });
 ```
+
+## Develop
+
+To use the develop branch you will need to replace the domain with `develop.theme-park.dev`.
+
+```nginx
+proxy_set_header Accept-Encoding "";
+sub_filter
+'</head>'
+'<link rel="stylesheet" type="text/css" href="https://develop.theme-park.dev/css/base/<APP_NAME>/<THEME>.css">
+</head>';
+sub_filter_once on;
+```
+
+Docker mods: `-e TP_DOMAIN=develop.theme-park.dev`
