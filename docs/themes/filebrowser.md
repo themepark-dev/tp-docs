@@ -11,7 +11,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/filebrowser/filebrowser)
 
 ### [Setup](/setup)
 
-Can also be installed locally: [https://filebrowser.xyz/configuration/custom-branding](https://filebrowser.xyz/configuration/custom-branding)
+Can also be installed locally: [https://filebrowser.org/configuration/custom-branding](https://filebrowser.org/configuration/custom-branding)
 
 In the `custom.css` file add:
 
