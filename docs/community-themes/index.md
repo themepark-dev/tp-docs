@@ -36,6 +36,6 @@ A: Add it like any other theme-option.
 
 ## [True Black](/community-themes/trueblack)
 
-<small> By [Drapersniper](https://github.com/Drapersniper) </small>
+<small> By [Draper](https://github.com/Drapersniper) </small>
 
 ## [Hotline-Old](/community-themes/hotline-old/)
