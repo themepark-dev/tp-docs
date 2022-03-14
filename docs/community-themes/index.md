@@ -34,4 +34,8 @@ A: Add it like any other theme-option.
 
 <small> By [Pinecone](https://github.com/Pinezerka) </small>
 
+## [True Black](/community-themes/trueblack)
+
+<small> By [Draper](https://github.com/Drapersniper) </small>
+
 ## [Hotline-Old](/community-themes/hotline-old/)
