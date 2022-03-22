@@ -166,7 +166,7 @@ There is a docker image available if you want to selfhost the css files instead 
 ```yaml
 version: "2.1"
 services:
-  sonarr:
+  theme-park:
     image: ghcr.io/gilbn/theme.park
     container_name: theme-park
     environment:
