@@ -6,6 +6,10 @@ You can either fork the repo and setup a [Github pages](https://pages.github.com
 
 You can't use the raw link from Github as Github doesn't pass the mime types. That's why all my theme urls use the https://theme-park.dev site.
 
+## Docker
+
+See [docker](/setup#docker) for more information on selfhosting a docker image
+
 ***
 
 ## Example

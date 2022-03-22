@@ -158,6 +158,82 @@ docker run --rm \
 
 [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides)
 
+## Docker
+
+There is a docker image available if you want to selfhost the css files instead of of using `https://theme-park.dev`.
+
+```yaml
+version: "2.1"
+services:
+  sonarr:
+    image: ghcr.io/gilbn/theme.park
+    container_name: theme-park
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - TP_DOMAIN=yourdomain.com #optional
+    volumes:
+      - /path/to/data:/config #optional
+    ports:
+      - 8080:80
+    restart: unless-stopped
+```
+
+```bash
+docker run -d \
+  --name=theme-park \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e TP_DOMAIN=yourdomain.com `#optional` \
+  -p 8080:80 \
+  -v /path/to/data:/config `#optional` \
+  --restart unless-stopped \
+  ghcr.io/theme.park
+```
+
+### Version Tags
+
+| Tag | Description |
+| :----: | --- |
+| `latest` | Based on latest release on the `live` branch |
+| `develop` | Based on latest commit on the `develop` branch |
+| `x.x.x` | Based on latest version tag released on github |
+
+### Application Setup
+
+CSS files can be accessed on `<your-ip>:<port>/css/base/<app>/<app>-base.css` or `<your-ip>:<port>/css/base/<app>/<theme>.css`
+
+All the CSS files can be located in `/config/www/css`
+
+If you want to add a custom theme option, you can add in `/config/www/css/theme-options` and restart the container. The container will run the `themes.py` and create all the theme option files in the different base folders.
+
+Then you can load the css by going to `<your-ip>:<port>/css/base/<app>/your-custom-theme.css`
+
+If you want to access the files using your domain, add the `TP_DOMAIN` env, and reverse proxy the container.
+
+All files will then reference that domain internally.
+
+#### Reverse proxy example
+
+```nginx
+server {
+    listen 80;
+    server_name yourdomain.com;
+    return 301 https://$server_name;
+}
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name yourdomain.com;
+
+    location / {
+    proxy_pass http://192.168.1.34:8088;
+    }
+}
+```
+
 ## Subfilter method
 
 As  most of these apps doesn't have support for custom CSS. You can get around that by using the [subfilter](http://nginx.org/en/docs/http/ngx_http_sub_module.html) module in NGINX or similar modules for other webservers.
