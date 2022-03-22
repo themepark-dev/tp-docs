@@ -5,6 +5,7 @@
 <ul>
     <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods</a><small> Adds the theme locally</small></li>
         <ul><li><a href="#hotio-containers"><img src="/site_assets/hotio.png"> Hotio containers</a></li></ul>
+        <ul><li><a href="#docker">🐋 Docker image</a><small> Selfhost the CSS files!</small></li></ul>
     <li><a href="#subfilter-method">Subfilter Method</a><small> Injects the theme through a proxy</small></li>
     <ul>
         <li><a href="#nginx">Nginx</a></li>
