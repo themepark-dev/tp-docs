@@ -164,42 +164,11 @@ docker run --rm \
 
 There is a docker image available if you want to selfhost the css files instead of of using `https://theme-park.dev`.
 
-```yaml
-version: "2.1"
-services:
-  theme-park:
-    image: ghcr.io/gilbn/theme.park
-    container_name: theme-park
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-      - TP_DOMAIN=yourdomain.com #optional
-    volumes:
-      - /path/to/data:/config #optional
-    ports:
-      - 8080:80
-    restart: unless-stopped
-```
-
-```bash
-docker run -d \
-  --name=theme-park \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=Europe/London \
-  -e TP_DOMAIN=yourdomain.com `#optional` \
-  -p 8080:80 \
-  -v /path/to/data:/config `#optional` \
-  --restart unless-stopped \
-  ghcr.io/theme.park
-```
-
 ### Version Tags
 
 | Tag | Description |
 | :----: | --- |
-| `latest` | Based on latest release on the `live` branch |
+| `latest` | Based on latest release on the `main` branch |
 | `develop` | Based on latest commit on the `develop` branch |
 | `x.x.x` | Based on latest version tag released on github |
 
@@ -218,7 +187,52 @@ If you want to access the files using your domain, add the `TP_DOMAIN` env, and 
 All files will then reference that domain internally.
 
 !!! note
-    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container you have added the `DOCKER_MODS` env. 
+    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container you have added the `DOCKER_MODS` env to.
+
+```yaml
+version: "2.1"
+services:
+  theme-park:
+    image: ghcr.io/gilbn/theme.park
+    container_name: theme-park
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - TP_DOMAIN=yourdomain.com #optional
+      - TP_SCHEME=https #optional
+    volumes:
+      - /path/to/data:/config #optional
+    ports:
+      - 8080:80
+    restart: unless-stopped
+```
+
+```bash
+docker run -d \
+  --name=theme-park \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e TP_DOMAIN=yourdomain.com `#optional` \
+  -e TP_SCHEME=https `#optional` \
+  -p 8080:80 \
+  -v /path/to/data:/config `#optional` \
+  --restart unless-stopped \
+  ghcr.io/theme.park
+```
+
+### Parameters
+
+| Parameter | Function |
+| :----: | --- |
+| `-p 8080` | web gui |
+| `-e PUID=1000` | for UserID - see below for explanation |
+| `-e PGID=1000` | for GroupID - see below for explanation |
+| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
+| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain |
+| `-e TP_SCHEME=https` | Optional - If this optional variable is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is `https`. For local access only, you can set this to http and remove the `TP_DOMAIN` env |
+| `-v /config` | Contains all relevant configuration files. |
 
 #### Reverse proxy example
 
@@ -237,6 +251,42 @@ server {
     proxy_pass http://192.168.1.34:8088;
     }
 }
+```
+
+#### Docker mods local example
+
+```yaml
+version: "2.1"
+services:
+  sonarr:
+    image: ghcr.io/linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr
+      - TP_SCHEME=http
+      - TP_DOMAIN=theme-park:8080
+    volumes:
+      - /path/to/data:/config
+      - /path/to/media:/media
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  theme-park:
+    image: ghcr.io/gilbn/theme.park
+    container_name: theme-park
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - TP_SCHEME=http
+    volumes:
+      - /path/to/data:/config
+    ports:
+      - 8080:80
+    restart: unless-stopped
 ```
 
 ## Subfilter method
