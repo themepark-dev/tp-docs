@@ -217,6 +217,9 @@ If you want to access the files using your domain, add the `TP_DOMAIN` env, and 
 
 All files will then reference that domain internally.
 
+!!! note
+    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container you have added the `DOCKER_MODS` env. 
+
 #### Reverse proxy example
 
 ```nginx
