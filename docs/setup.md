@@ -205,6 +205,7 @@ services:
       - /path/to/data:/config #optional
     ports:
       - 8080:80
+      - 4443:443
     restart: unless-stopped
 ```
 
@@ -217,6 +218,7 @@ docker run -d \
   -e TP_DOMAIN=yourdomain.com `#optional` \
   -e TP_SCHEME=https `#optional` \
   -p 8080:80 \
+  -p 4443:443 \
   -v /path/to/data:/config `#optional` \
   --restart unless-stopped \
   ghcr.io/theme.park
@@ -226,7 +228,8 @@ docker run -d \
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 8080` | web gui |
+| `-p 8080` | HTTP web gui |
+| `-p 4443` | HTTPS web gui |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
@@ -248,7 +251,7 @@ server {
     server_name yourdomain.com;
 
     location / {
-    proxy_pass http://192.168.1.34:8088;
+    proxy_pass https://192.168.1.34:4443;
     }
 }
 ```
@@ -267,7 +270,7 @@ services:
       - TZ=Europe/London
       - DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr
       - TP_SCHEME=http
-      - TP_DOMAIN=theme-park:8080
+      - TP_DOMAIN=192.168.1.99:8080
     volumes:
       - /path/to/data:/config
       - /path/to/media:/media
