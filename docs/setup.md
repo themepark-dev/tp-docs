@@ -233,8 +233,9 @@ docker run -d \
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
-| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain |
-| `-e TP_SCHEME=https` | Optional - If this optional variable is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is `https`. For local access only, you can set this to http and remove the `TP_DOMAIN` env |
+| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain. Default to `$http_host` |
+| `-e TP_SCHEME=https` | Optional - If this optional variable is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is `$scheme`. |
+| `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a subfolder instead of the root. ex `domain.com/themepark/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
 
 #### Reverse proxy example
@@ -251,7 +252,8 @@ server {
     server_name yourdomain.com;
 
     location / {
-    proxy_pass https://192.168.1.34:4443;
+    proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
+    proxy_pass http://192.168.1.34:8080;
     }
 }
 ```
@@ -270,7 +272,7 @@ services:
       - TZ=Europe/London
       - DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr
       - TP_SCHEME=http
-      - TP_DOMAIN=192.168.1.99:8080
+      - TP_DOMAIN=192.168.1.99:8080\/themepark # forward slash needs to be escaped with a \
     volumes:
       - /path/to/data:/config
       - /path/to/media:/media
@@ -284,7 +286,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - TP_SCHEME=http
     volumes:
       - /path/to/data:/config
     ports:
