@@ -286,6 +286,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
+      - TP_URLBASE=themepark
     volumes:
       - /path/to/data:/config
     ports:
