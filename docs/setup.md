@@ -238,23 +238,43 @@ docker run -d \
 | `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a subfolder instead of the root. ex `domain.com/themepark/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
 
+!!! danger "Reverse proxy HTTPS"
+    When reverse proxying using **HTTPS** you must either reverse proxy the **HTTPS** port of the **theme-park** container OR add the `TP_SCHEME` env and set it to `https`
+
 #### Reverse proxy example
 
 ```nginx
 server {
     listen 80;
-    server_name yourdomain.com;
+    server_name themes.yourdomain.com;
     return 301 https://$server_name;
 }
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    server_name yourdomain.com;
+    server_name themes.yourdomain.com;
 
     location / {
     proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
     proxy_pass http://192.168.1.34:8080;
     }
+}
+```
+
+#### Reverse proxy example subfolder
+
+```nginx
+}
+location /themes {
+    return 301 $scheme://$host/themes/;
+}
+location ^~ /themes/ {
+    #include /config/nginx/proxy.conf;
+    set $upstream_app theme-park;
+    set $upstream_port 443;
+    set $upstream_proto https;
+    proxy_set_header Host $host;
+    proxy_pass $upstream_proto://$upstream_app:$upstream_port;
 }
 ```
 
