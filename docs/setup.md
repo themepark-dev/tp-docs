@@ -172,6 +172,14 @@ There is a docker image available if you want to selfhost the css files instead 
 | `develop` | Based on latest commit on the `develop` branch |
 | `x.x.x` | Based on latest version tag released on github |
 
+The architectures supported by this image are:
+
+| Architecture | |Tags||
+| :----: | --- |---|---|
+| linux/amd64 | latest|develop|x.x.x |
+| linux/arm64 | latest|develop|x.x.x |
+| linux/arm/v7 | latest|develop|x.x.x |
+
 ### Application Setup
 
 CSS files can be accessed on `<your-ip>:<port>/css/base/<app>/<app>-base.css` or `<your-ip>:<port>/css/base/<app>/<theme>.css`
@@ -269,7 +277,6 @@ location /themes {
     return 301 $scheme://$host/themes/;
 }
 location ^~ /themes/ {
-    #include /config/nginx/proxy.conf;
     set $upstream_app theme-park;
     set $upstream_port 443;
     set $upstream_proto https;
