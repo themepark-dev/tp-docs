@@ -231,7 +231,7 @@ docker run -d \
   -p 4443:443 \
   -v /path/to/data:/config `#optional` \
   --restart unless-stopped \
-  ghcr.io/theme.park
+  ghcr.io/gilbn/theme.park
 ```
 
 ### Parameters
