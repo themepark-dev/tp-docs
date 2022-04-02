@@ -195,7 +195,7 @@ If you want to access the files using your domain, add the `TP_DOMAIN` env, and 
 All files will then reference that domain internally.
 
 !!! note
-    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container you have added the `DOCKER_MODS` env to.
+    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container (e.g sonarr) you have added the `DOCKER_MODS` env to.
 
 ```yaml
 version: "2.1"
@@ -209,6 +209,7 @@ services:
       - TZ=Europe/London
       - TP_DOMAIN=yourdomain.com #optional
       - TP_SCHEME=https #optional
+      - TP_URLBASE=themepark #optional
     volumes:
       - /path/to/data:/config #optional
     ports:
@@ -225,6 +226,7 @@ docker run -d \
   -e TZ=Europe/London \
   -e TP_DOMAIN=yourdomain.com `#optional` \
   -e TP_SCHEME=https `#optional` \
+  -e TP_URLBASE=themepark `#optional` \
   -p 8080:80 \
   -p 4443:443 \
   -v /path/to/data:/config `#optional` \
@@ -238,11 +240,11 @@ docker run -d \
 | :----: | --- |
 | `-p 8080` | HTTP web gui |
 | `-p 4443` | HTTPS web gui |
-| `-e PUID=1000` | for UserID - see below for explanation |
-| `-e PGID=1000` | for GroupID - see below for explanation |
+| `-e PUID=1000` | for UserID |
+| `-e PGID=1000` | for GroupID |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
-| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain. Default to `$http_host` |
-| `-e TP_SCHEME=https` | Optional - If this optional variable is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is `$scheme`. |
+| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain. Defaults to the nginx var `$http_host` |
+| `-e TP_SCHEME=https` | Optional - If this is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is the nginx var `$scheme`. |
 | `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a subfolder instead of the root. ex `domain.com/themepark/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
 
@@ -264,7 +266,7 @@ server {
 
     location / {
     proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
-    proxy_pass http://192.168.1.34:8080;
+    proxy_pass https://192.168.1.34:4443;
     }
 }
 ```
@@ -280,7 +282,7 @@ location ^~ /themes/ {
     set $upstream_app theme-park;
     set $upstream_port 443;
     set $upstream_proto https;
-    proxy_set_header Host $host;
+    proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
     proxy_pass $upstream_proto://$upstream_app:$upstream_port;
 }
 ```
