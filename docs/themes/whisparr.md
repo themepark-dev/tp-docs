@@ -8,9 +8,6 @@ Custom [{{ page.title.split()[0] }}](https://github.com/Whisparr/Whisparr) CSS
 
 ## 🛠️ Installation
 
-!!! note
-    Avaiable on develop only!
-
 ### [Setup](/setup)
 
 {% set addons = extra.addons %}
