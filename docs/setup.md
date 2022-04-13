@@ -170,15 +170,17 @@ There is a docker image available if you want to selfhost the css files instead 
 | :----: | --- |
 | `latest` | Based on latest release on the `main` branch |
 | `develop` | Based on latest commit on the `develop` branch |
-| `x.x.x` | Based on latest version tag released on github |
+| `testing` | Based on latest commit on the `testing` branch |
+| `x.x.x` | Based on latest version tag released on the master branch |
+|`<tag>-<hash>`| Based on the latest commit hash on the branch|
 
 The architectures supported by this image are:
 
-| Architecture | |Tags||
-| :----: | --- |---|---|
-| linux/amd64 | latest|develop|x.x.x |
-| linux/arm64 | latest|develop|x.x.x |
-| linux/arm/v7 | latest|develop|x.x.x |
+| Architecture |
+| :----: |
+| linux/amd64 |
+| linux/arm64 |
+| linux/arm/v7 |
 
 ### Application Setup
 
@@ -186,13 +188,15 @@ CSS files can be accessed on `<your-ip>:<port>/css/base/<app>/<app>-base.css` or
 
 All the CSS files can be located in `/config/www/css`
 
-If you want to add a custom theme option, you can add in `/config/www/css/theme-options` and restart the container. The container will run the `themes.py` and create all the theme option files in the different base folders.
+#### Add custom theme-options
+
+If you want to add a custom theme option, you can add in `/config/www/css/theme-options` and restart the container. The container will run `themes.py` and auto generate all the theme option files in the different base folders.
 
 Then you can load the css by going to `<your-ip>:<port>/css/base/<app>/your-custom-theme.css`
 
-If you want to access the files using your domain, add the `TP_DOMAIN` env, and reverse proxy the container.
+#### Subfolder
 
-All files will then reference that domain internally.
+You can also use `/themepark` to access the files. The subfolder path can be overridden with the `TP_URLBASE` env.
 
 !!! note
     If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container (e.g sonarr) you have added the `DOCKER_MODS` env to.
@@ -207,8 +211,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - TP_DOMAIN=yourdomain.com #optional
-      - TP_SCHEME=https #optional
       - TP_URLBASE=themepark #optional
     volumes:
       - /path/to/data:/config #optional
@@ -224,8 +226,6 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e TP_DOMAIN=yourdomain.com `#optional` \
-  -e TP_SCHEME=https `#optional` \
   -e TP_URLBASE=themepark `#optional` \
   -p 8080:80 \
   -p 4443:443 \
@@ -243,13 +243,9 @@ docker run -d \
 | `-e PUID=1000` | for UserID |
 | `-e PGID=1000` | for GroupID |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
-| `-e TP_DOMAIN=yourdomain.com` | Optional - Add your own domain. Defaults to the nginx var `$http_host` |
-| `-e TP_SCHEME=https` | Optional - If this is set, the `TP_DOMAIN` domain will be set to use this URI scheme internally in the css files. Default is the nginx var `$scheme`. |
-| `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a subfolder instead of the root. ex `domain.com/themepark/css/base/plex/overseerr.css`|
+| `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a custom subfolder instead of the default `/themepark` endpoint. ex `domain.com/<something>/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
 
-!!! danger "Reverse proxy HTTPS"
-    When reverse proxying using **HTTPS** you must either reverse proxy the **HTTPS** port of the **theme-park** container OR add the `TP_SCHEME` env and set it to `https`
 
 #### Reverse proxy example
 
@@ -265,7 +261,7 @@ server {
     server_name themes.yourdomain.com;
 
     location / {
-    proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
+    proxy_set_header Host $host;
     proxy_pass https://192.168.1.34:4443;
     }
 }
@@ -275,14 +271,14 @@ server {
 
 ```nginx
 }
-location /themes {
-    return 301 $scheme://$host/themes/;
+location /themepark {
+    return 301 $scheme://$host/themepark;
 }
-location ^~ /themes/ {
+location ^~ /themepark {
     set $upstream_app theme-park;
     set $upstream_port 443;
     set $upstream_proto https;
-    proxy_set_header Host $host; # By Using this you don't need to use TP_DOMAIN as the $host var gets passed to the upstream.
+    proxy_set_header Host $host;
     proxy_pass $upstream_proto://$upstream_app:$upstream_port;
 }
 ```
