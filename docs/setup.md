@@ -187,7 +187,7 @@ There is a docker image available if you want to selfhost the css files instead 
 
 | Tag | Description |
 | :----: | --- |
-| `latest` | Based on latest release on the `main` branch |
+| `latest` | Based on latest release on the `master` branch |
 | `develop` | Based on latest commit on the `develop` branch |
 | `testing` | Based on latest commit on the `testing` branch |
 | `x.x.x` | Based on latest version tag released on the master branch |
