@@ -8,6 +8,7 @@
     <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
       <ul>  
         <li><a href="#docker">🐋 Docker image</a><small> Selfhost the the files using our docker image</small></li>
+        <ul><li><a href="#rootless-docker-image">Rootless option</a><small> An optional rootless docker image</small></li></ul>
         <li><a href="#swag-docker-mod"><img src="/site_assets/lsio.png"> SWAG Docker Mod</a><small> Selfhost the files using our lsio docker mod for SWAG</small></li>
       </ul>
     <li><a href="#subfilter-method">Subfilter Method</a><small> Injects the theme through a proxy</small></li>
@@ -58,6 +59,8 @@ Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:<app>` e.g. `ghcr.io/gilb
 
 These are the **default** values for all envs. So if you want to use the `organizr` theme, you only need to add the `DOCKER_MODS` variable.
 
+***
+
 ### Enviroment variables
 
 | Environment Variable | Example Value | Description |
@@ -70,6 +73,8 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `TP_SCHEME` | `https` | `Optional` Defaults to example. |
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
+
+***
 
 #### ![lsio](/site_assets/lsio.png) LSIO Example
 
@@ -106,6 +111,8 @@ docker run -d \
   ghcr.io/linuxserver/sonarr
 ```
 
+***
+
 ### ![hotio](/site_assets/hotio.png) Hotio containers
 
 !!! warning
@@ -123,6 +130,8 @@ Add the variable `TP_HOTIO` and set it to `true`.
 The script will then use the correct file path inside the Hotio container.
 
 Use the different [Environment variables](#enviroment-variables) above.
+
+***
 
 #### Hotio Example
 
@@ -164,11 +173,15 @@ docker run --rm \
 
 [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides)
 
+***
+
 ## Selfhosting
 
 ### Docker
 
 There is a docker image available if you want to selfhost the css files instead of of using `https://theme-park.dev`.
+
+***
 
 #### Version Tags
 
@@ -188,17 +201,23 @@ The architectures supported by this image are:
 | linux/arm64 |
 | linux/arm/v7 |
 
+***
+
 #### Application Setup
 
 CSS files can be accessed on `<your-ip>:<port>/css/base/<app>/<app>-base.css` or `<your-ip>:<port>/css/base/<app>/<theme>.css`
 
 All the CSS files can be located in `/config/www/css`
 
+***
+
 ##### Add custom theme-options
 
 If you want to add a custom theme option, you can add in `/config/www/css/theme-options` and restart the container. The container will run `themes.py` and auto generate all the theme option files in the different base folders.
 
 Then you can load the css by going to `<your-ip>:<port>/css/base/<app>/your-custom-theme.css`
+
+***
 
 ##### Subfolder
 
@@ -240,6 +259,8 @@ docker run -d \
   ghcr.io/gilbn/theme.park
 ```
 
+***
+
 #### Parameters
 
 | Parameter | Function |
@@ -251,6 +272,8 @@ docker run -d \
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
 | `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a custom subfolder instead of the default `/themepark` endpoint. ex `domain.com/<something>/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
+
+***
 
 ##### Reverse proxy example
 
@@ -272,6 +295,8 @@ server {
 }
 ```
 
+***
+
 ##### Reverse proxy example subfolder
 
 ```nginx
@@ -287,6 +312,8 @@ location ^~ /themepark {
     proxy_pass $upstream_proto://$upstream_app:$upstream_port;
 }
 ```
+
+***
 
 ##### Docker mods local example
 
@@ -324,12 +351,26 @@ services:
     restart: unless-stopped
 ```
 
+***
+
+### Rootless docker image
+
+The people in the [k8s@home](https://github.com/k8s-at-home) community have made a rootless docker image alternative.
+
+[https://github.com/k8s-at-home/container-images/tree/main/apps/theme-park](https://github.com/k8s-at-home/container-images/tree/main/apps/theme-park)
+
+See their docs for more information. [https://docs.k8s-at-home.com/](https://docs.k8s-at-home.com/)
+
+***
+
 ### SWAG Docker Mod
 
 This will download the CSS files into your [SWAG](https://docs.linuxserver.io/general/swag) appdata folder. (`/config/www/themepark`)
 Files are downloaded using svn, so the svn package will be installed on the container.
 
 Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:swag` to your SWAG container.
+
+***
 
 #### SWAG Mod Setup
 
@@ -341,6 +382,8 @@ The mod copies two nginx conf files into `/config/proxy-confs` that you can enab
 
 The CSS files will then be available at either `themepark.domain.com` or `domain.com/themepark`
 
+***
+
 #### SWAG Enviroment variables
 
 | Environment Variable | Example Value | Description |
@@ -348,6 +391,8 @@ The CSS files will then be available at either `themepark.domain.com` or `domain
 | `TP_BRANCH` | `live_develop` | Select the branch you want to download from. Default is `live` |
 
 Available branches are `live`(master), `live_develop` and `live_testing`
+
+***
 
 ## Subfilter method
 
@@ -357,6 +402,8 @@ As  most of these apps doesn't have support for custom CSS. You can get around t
     If you don't know how to reverse proxy an application, please read this first. It's a really great article and will help you understand all the pieces!
 
     [https://blog.linuxserver.io/2019/04/25 letsencrypt-nginx-starter-guide/](https://blog.linuxserver.io/2019/04/25/letsencrypt-nginx-starter-guide/) and [https://docs.linuxserver.io/general/swag/](https://docs.linuxserver.io/general/swag/)
+
+***
 
 ### Nginx
 
@@ -376,6 +423,8 @@ sub_filter_once on;
 
 Where `APP_NAME` is the app you want to theme and `THEME` is the name of the theme. e.g. `aquamarine`
 
+***
+
 #### Nginx Example
 
 ```nginx
@@ -391,9 +440,13 @@ location /sonarr {
   }
 ```
 
+***
+
 ### Nginx Variable
 
 You can also setup NGINX to use variables to change the themes. This will update the theme on all your location blocks by just changing 1 variable. This is nice if you quickly want to change colors on all of your apps.
+
+***
 
 #### http block
 
@@ -407,6 +460,8 @@ map $host $theme {
 ```
 
 Change `<theme>` to the theme you want on all your apps. e.g. `default nord;`
+
+***
 
 #### theme-park.conf
 
@@ -427,6 +482,8 @@ Next create a new file called `theme-park.conf` and add the following code: (Not
 As you can see the URL has variables in it `$app.css` and `$theme.css`
 The `$theme` variable is set in the http block and will affect all server blocks. And the `$app` variable is set in the location block.
 
+***
+
 #### Location blocks
 
 Now in the location block use the include syntax and include the `theme-park.conf` file and set the `$app` variable, like so:
@@ -435,6 +492,8 @@ Now in the location block use the include syntax and include the `theme-park.con
     set $app <app>;
     include /config/nginx/theme-park.conf;
 ```
+
+***
 
 #### Sonarr Example
 
@@ -454,6 +513,8 @@ location /sonarr {
 ```
 
 Now when you change the variable in the http block and restart NGINX, it will update the theme for all your apps!
+
+***
 
 ### Nginx Proxy Manager
 
@@ -475,6 +536,8 @@ sub_filter_once on;
 
 ![text](site_assets/setup/npm.png)
 
+***
+
 ### Apache
 
 ```apache
@@ -482,6 +545,8 @@ RequestHeader unset Accept-Encoding
 AddOutputFilterByType SUBSTITUTE text/html
 Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/<APP_NAME>/<THEME>.css"></head>|ni'
 ```
+
+***
 
 #### Apache Example
 
@@ -495,6 +560,8 @@ Substitute 's|</head>|<link rel="stylesheet" type="text/css" href="https://theme
   </Location>
 ```
 
+***
+
 ### Caddy
 
 ```nginx
@@ -504,6 +571,8 @@ filter rule {
     replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/<APP_NAME>/<THEME>.css'></head>"
 }
 ```
+
+***
 
 #### Caddy Example
 
@@ -523,6 +592,8 @@ proxy /tautulli 127.0.0.1:8181 {
     }
 ```
 
+***
+
 #### Caddy Docker labels
 
 ```json
@@ -531,6 +602,8 @@ proxy /tautulli 127.0.0.1:8181 {
 "caddy.filter.search_pattern": "</head>"
 "caddy.filter.replacement": "\"<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/tautulli/nord.css'></head>\""
 ```
+
+***
 
 ### Caddy v2
 
@@ -544,6 +617,8 @@ There are two ways to [extend Caddy](https://caddyserver.com/docs/extending-cadd
 
 - [Docker](https://hub.docker.com/_/caddy)
 - [Bare metal](https://caddyserver.com/docs/download)
+
+***
 
 #### Caddy Docker Image
 
@@ -564,6 +639,8 @@ COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 Then run `docker build -t caddy:latest .` to build the image. After we update the `Caddyfile` below, we can (re)start the container by running `docker run -d -p 80:80 -p 443:443 caddy:latest` as an example.
 
+***
+
 #### Bare metal
 
 !!! info
@@ -577,6 +654,8 @@ xcaddy build \
 ```
 
 You can confirm the module is available by using `xcaddy list-modules`.
+
+***
 
 #### Updating the `Caddyfile`
 
@@ -631,6 +710,8 @@ reverse_proxy 127.0.0.1:8080 {
 }
 ```
 
+***
+
 #### Subfolder/directory example
 
 ```nginx
@@ -652,6 +733,8 @@ reverse_proxy 127.0.0.1:8080 {
 Feel free to make any adjustments! Thanks everyone for the help!
 
 Also for reference: [Caddy v2 structure](https://caddyserver.com/docs/caddyfile/concepts#structure)
+
+***
 
 ## Stylus method
 
@@ -678,6 +761,8 @@ Link to Chrome extention:
 Link to Firefox extention:
 
 [https://addons.mozilla.org/en-US/firefox/addon/styl-us/](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+
+***
 
 ## Blackberry Theme Installer method
 
