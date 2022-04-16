@@ -5,7 +5,11 @@
 <ul>
     <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods</a><small> Adds the theme locally</small></li>
         <ul><li><a href="#hotio-containers"><img src="/site_assets/hotio.png"> Hotio containers</a></li></ul>
-        <ul><li><a href="#docker">🐋 Docker image</a><small> Selfhost the CSS files!</small></li></ul>
+    <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
+      <ul>  
+        <li><a href="#docker">🐋 Docker image</a><small> Selfhost the the files using our docker image</small></li>
+        <li><a href="#swag-docker-mod"><img src="/site_assets/lsio.png"> SWAG Docker Mod</a><small> Selfhost the files using our lsio docker mod for SWAG</small></li>
+      </ul>
     <li><a href="#subfilter-method">Subfilter Method</a><small> Injects the theme through a proxy</small></li>
     <ul>
         <li><a href="#nginx">Nginx</a></li>
@@ -44,7 +48,7 @@ Example: `https://theme-park.dev/css/base/sonarr/dark.css`
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
 !!! warning
-    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon. 
+    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon.
 
 [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
@@ -160,11 +164,13 @@ docker run --rm \
 
 [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides)
 
-## Docker
+## Selfhosting
+
+### Docker
 
 There is a docker image available if you want to selfhost the css files instead of of using `https://theme-park.dev`.
 
-### Version Tags
+#### Version Tags
 
 | Tag | Description |
 | :----: | --- |
@@ -182,19 +188,19 @@ The architectures supported by this image are:
 | linux/arm64 |
 | linux/arm/v7 |
 
-### Application Setup
+#### Application Setup
 
 CSS files can be accessed on `<your-ip>:<port>/css/base/<app>/<app>-base.css` or `<your-ip>:<port>/css/base/<app>/<theme>.css`
 
 All the CSS files can be located in `/config/www/css`
 
-#### Add custom theme-options
+##### Add custom theme-options
 
 If you want to add a custom theme option, you can add in `/config/www/css/theme-options` and restart the container. The container will run `themes.py` and auto generate all the theme option files in the different base folders.
 
 Then you can load the css by going to `<your-ip>:<port>/css/base/<app>/your-custom-theme.css`
 
-#### Subfolder
+##### Subfolder
 
 You can also use `/themepark` to access the files. The subfolder path can be overridden with the `TP_URLBASE` env.
 
@@ -234,7 +240,7 @@ docker run -d \
   ghcr.io/gilbn/theme.park
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Function |
 | :----: | --- |
@@ -246,8 +252,7 @@ docker run -d \
 | `-e TP_URLBASE=subfolder`| Optional - This will make the CSS files accessible on a custom subfolder instead of the default `/themepark` endpoint. ex `domain.com/<something>/css/base/plex/overseerr.css`|
 | `-v /config` | Contains all relevant configuration files. |
 
-
-#### Reverse proxy example
+##### Reverse proxy example
 
 ```nginx
 server {
@@ -267,7 +272,7 @@ server {
 }
 ```
 
-#### Reverse proxy example subfolder
+##### Reverse proxy example subfolder
 
 ```nginx
 }
@@ -283,7 +288,7 @@ location ^~ /themepark {
 }
 ```
 
-#### Docker mods local example
+##### Docker mods local example
 
 ```yaml
 version: "2.1"
@@ -318,6 +323,31 @@ services:
       - 8080:80
     restart: unless-stopped
 ```
+
+### SWAG Docker Mod
+
+This will download the CSS files into your [SWAG](https://docs.linuxserver.io/general/swag) appdata folder. (`/config/www/themepark`)
+Files are downloaded using svn, so the svn package will be installed on the container.
+
+Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:swag` to your SWAG container.
+
+#### SWAG Mod Setup
+
+The mod copies two nginx conf files into `/config/proxy-confs` that you can enable.
+
+`themepark.subdomain.conf.sample`
+
+`themepark.subfolder.conf.sample`
+
+The CSS files will then be available at either `themepark.domain.com` or `domain.com/themepark`
+
+#### SWAG Enviroment variables
+
+| Environment Variable | Example Value | Description |
+| -------------------- | ------------- | ----------- |
+| `TP_BRANCH` | `live_develop` | Select the branch you want to download from. Default is `live` |
+
+Available branches are `live`(master), `live_develop` and `live_testing`
 
 ## Subfilter method
 
@@ -515,7 +545,7 @@ There are two ways to [extend Caddy](https://caddyserver.com/docs/extending-cadd
 - [Docker](https://hub.docker.com/_/caddy)
 - [Bare metal](https://caddyserver.com/docs/download)
 
-#### Docker
+#### Caddy Docker Image
 
 You will have to create your own Caddy image that includes the `caddy2-filter`.
 
