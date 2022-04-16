@@ -21,8 +21,7 @@
         <li><a href="#apache">Apache</a></li>
         <li><a href="#caddy">Caddy</a></li>
         <li><a href="#caddy-v2">Caddy V2</a></li>
-        <li><a href="https://github.com/traefik/plugin-rewritebody">Traefik:</a> <a
-                href="https://github.com/gilbN/theme.park/issues/42">See this issue</a></li>
+        <li><a href="https://github.com/packruler/rewrite-body/wiki/Examples#themepark-support">Traefik</a></li>
         <li><a href="#community-themes">Community Themes</a></li>
     </ul>
     <li><a href="#stylus-method">Stylus Method</a><small> Injects the theme through a browser extension</small></li>
