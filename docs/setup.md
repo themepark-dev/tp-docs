@@ -22,10 +22,11 @@
         <li><a href="#caddy">Caddy</a></li>
         <li><a href="#caddy-v2">Caddy V2</a></li>
         <li><a href="https://github.com/packruler/rewrite-body/wiki/Examples#themepark-support">Traefik</a></li>
-        <li><a href="#community-themes">Community Themes</a></li>
     </ul>
     <li><a href="#stylus-method">Stylus Method</a><small> Injects the theme through a browser extension</small></li>
     <li><a href="#blackberry-theme-installer-method">Blackberry Theme Installer</a><small> Injects the theme using Javascript (Made for Organizr)</small></li>
+    <li><a href="#develop">Develop</a></li>
+    <li><a href="/community-themes/">Community Themes</a></li>
 </ul>
 
 ***
