@@ -736,7 +736,6 @@ Also for reference: [Caddy v2 structure](https://caddyserver.com/docs/caddyfile/
 
 ***
 
-
 ### Traefik
 
 >
@@ -751,7 +750,7 @@ Below are a few examples of file content that add support for adding themes via 
 
 #### traefik.yml
 
-Add the following to your static `traefik` config. 
+Add the following to your static `traefik` config.
 
 ```yaml
 pilot:
@@ -763,6 +762,7 @@ experimental:
       modulename: "github.com/packruler/rewrite-body"
       version: "v0.5.1"
 ```
+
 ***
 
 #### (dynamic)/middleware.yml
@@ -773,7 +773,7 @@ Basic dynamic template
 # We are able to utilize Go templates (https://pkg.go.dev/text/template) in here which can make defining these much easier
 
 # You can add the following line (including the comment flag (`#`) so YAML processing doesn't freak out
-# {{ $theme := "nord" }}
+# {{'{{ $theme := "nord" }}'}}
 
 http:
   middlewares:
@@ -783,26 +783,26 @@ http:
           rewrites:
             - regex: </head>
               # Now we can reference that variable in our regex replacement for easy consistency
-              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/sonarr/{{ $theme }}.css"></head>
+              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/sonarr/{{'{{ $theme }}'}}.css"></head>
 ```
 
 Efficient/Lazy dynamic template :grin:: (warning this will make your YAML editor very unhappy but it will work fine)
 
 ```yaml
 # Replace `nord` with your theme of choice!
-{{ $theme := "nord" }}
+{{ '{{ $theme := "nord" }}' }}
 
 http:
   middlewares:
     #  Add any suppported base apps you would like to include in your auto generated middle set. "sonarr" and "radarr are the examples here.
-    {{ range $index, $app := list "sonarr" "radarr" }}
-    {{ $app }}-theme:
+    {{'{{ range $index, $app := list "sonarr" "radarr" }}'}}
+    {{'{{ $app }}'}}-theme:
       plugin:
         rewritebody:
           rewrites:
             - regex: </head>
-              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/{{ $app }}/{{ $theme }}.css"></head>
-    {{ end }}
+              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/{{'{{ $app }}'}}/{{'{{ $theme }}'}}.css"></head>
+    {{'{{ end }}'}}
 ```
 
 ***
