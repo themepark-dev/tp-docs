@@ -10,9 +10,6 @@ Custom [{{ page.title.split()[0] }}](https://github.com/NginxProxyManager/nginx-
 
 ### [Setup](/setup)
 
-!!!note
-    Only available on develop.
-
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
 {% for app, addon_name in addons.items() %}
