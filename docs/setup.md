@@ -66,7 +66,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | Environment Variable | Example Value | Description |
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
-| `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. |
+| `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. If you selfhost and use subfolder, you must escape the forward slash. `domain.com\/themepark` |
 | `TP_THEME` | `organizr` | `Optional` The theme you want to use. Defaults to the example. |
 | `TP_COMMUNITY_THEME` | `true` | `Optional` Set to true if you are using a [community theme option](/community-themes/) |
 | `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/) |
