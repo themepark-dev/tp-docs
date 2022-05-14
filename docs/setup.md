@@ -302,9 +302,9 @@ server {
 ```nginx
 }
 location /themepark {
-    return 301 $scheme://$host/themepark;
+    return 301 $scheme://$host/themepark/;
 }
-location ^~ /themepark {
+location ^~ /themepark/ {
     set $upstream_app theme-park;
     set $upstream_port 443;
     set $upstream_proto https;
