@@ -300,7 +300,6 @@ server {
 ##### Reverse proxy example subfolder
 
 ```nginx
-}
 location /themepark {
     return 301 $scheme://$host/themepark/;
 }
