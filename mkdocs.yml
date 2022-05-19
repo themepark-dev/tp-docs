@@ -135,6 +135,8 @@ nav:
         Lidarr Darker: themes/addons/lidarr/lidarr-darker/index.md
       Prowlarr:
         Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker/index.md
+      Whisparr:
+        Whisparr Darker: themes/addons/whisparr/whisparr-darker/index.md
       Organizr: themes/addons/organizr/index.md
       Unraid:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
@@ -243,6 +245,9 @@ extra:
     prowlarr:
       Prowlarr Darker:
         path: themes/addons/prowlarr/prowlarr-darker
+    whisparr:
+      Whisparr Darker:
+        path: themes/addons/whisparr/whisparr-darker
     organizr:
       Organizr Glass:
         path: themes/addons/organizr
