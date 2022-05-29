@@ -275,6 +275,7 @@ extra:
     - overseerr
     - plex
     - nord
+    - maroon
 
   community_themes:
     - mind
