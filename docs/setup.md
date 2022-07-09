@@ -69,7 +69,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. If you selfhost and use subfolder, you must escape the forward slash. `domain.com\/themepark` |
 | `TP_THEME` | `organizr` | `Optional` The theme you want to use. Defaults to the example. |
 | `TP_COMMUNITY_THEME` | `true` | `Optional` Set to true if you are using a [community theme option](/community-themes/) |
-| `TP_ADDON` | `radarr-4k-logo` | `Optional` See addon [wiki](/themes/addons/) |
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` Multiple addons can be added using  the pipe `\|` symbol as a separator. Ex: `radarr-4k-logo\|radarr-darker` See addon [wiki](/themes/addons/) for all addons |
 | `TP_SCHEME` | `https` | `Optional` Defaults to example. |
 | `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
