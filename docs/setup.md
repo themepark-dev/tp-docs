@@ -3,7 +3,7 @@
 ## Methods
 
 <ul>
-    <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods</a><small> Adds the theme locally</small></li>
+    <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods for linuxserver.io images</a><small> Adds the theme locally</small></li>
         <ul><li><a href="#hotio-containers"><img src="/site_assets/hotio.png"> Hotio containers</a></li></ul>
     <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
       <ul>  
