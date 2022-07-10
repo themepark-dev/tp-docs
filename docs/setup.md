@@ -126,14 +126,26 @@ docker run -d \
 
 Download and mount your script with the volume `/your/docker/host/98-themepark:/etc/cont-init.d/99-themepark` to execute your script on container start
 
-Add the variable `TP_HOTIO` and set it to `true`.
-The script will then use the correct file path inside the Hotio container.
+#### Download script
 
-Use the different [Environment variables](#enviroment-variables) above.
+This script will download all mods into the path you choose.
+
+Defaults to `/tmp/theme-park-mods` is no path argument is passed.
+
+```bash
+  sudo apt-get jq curl
+  sudo bash -c "$(curl -fsSL https://theme-park.dev/fetch.sh)" /your/save/path
+```
 
 ***
 
 #### Hotio Example
+
+Add the variable `TP_HOTIO` and set it to `true`.
+
+The script will then use the correct file path inside the Hotio container.
+
+Use the different [Environment variables](#enviroment-variables) above.
 
 ```yaml
 version: "3.7"
