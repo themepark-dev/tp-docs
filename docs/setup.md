@@ -133,7 +133,7 @@ This script will download all mods into the path you choose.
 Defaults to `/tmp/theme-park-mods` is no path argument is passed.
 
 ```bash
-  sudo apt-get jq curl
+  sudo apt-get install jq curl
   sudo bash -c "$(curl -fsSL https://theme-park.dev/fetch.sh)" /your/save/path
 ```
 
