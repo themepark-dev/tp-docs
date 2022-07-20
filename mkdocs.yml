@@ -57,7 +57,7 @@ nav:
   - Home: index.md
   - Setup: setup.md
   - Themes:
-      ⚙️ Supports custom CSS: /themes/
+      ⚙️ App supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
       🔥 Supports Hotio Scripts: /hotio/
       ⚠️ Require Special Setup: /themes/
@@ -67,7 +67,7 @@ nav:
       Lidarr 🐳🔥: themes/lidarr.md
       Readarr 🐳🔥: themes/readarr.md
       Prowlarr 🐳🔥: themes/prowlarr.md
-      Whisparr: themes/whisparr.md
+      Whisparr 🐳🔥: themes/whisparr.md
       Bazarr 🐳🔥: themes/bazarr.md
       Plex 🐳🔥: themes/plex.md
       Jellyfin ⚙️: themes/jellyfin.md
