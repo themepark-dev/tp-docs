@@ -44,6 +44,27 @@ All apps have {{ themes|length }} official [themes](/theme-options/organizr/) an
 
 Example: `https://theme-park.dev/css/base/sonarr/dark.css`
 
+## Ibracorp video overview
+
+<div class="iframe-container">
+<style>
+  .iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iH7o_YHuPo0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Docker mods
 
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
