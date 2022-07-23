@@ -138,10 +138,10 @@ docker run -d \
 
 !!! warning
     The `DOCKER_MODS` variable does not work on Hotio Containers!
-    The script must be mounted using a volume mount.
+    The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
 
 !!! info
-    The scripts are located in the `master` branch. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
+    The scripts are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
 
     Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
@@ -149,7 +149,7 @@ Download and mount your script with the volume `/your/docker/host/98-themepark:/
 
 #### Download script
 
-This script will download all mods into the path you choose.
+This script will download all mods/scripts into the path you choose.
 
 Defaults to `/tmp/theme-park-mods` is no path argument is passed.
 
@@ -157,6 +157,7 @@ Defaults to `/tmp/theme-park-mods` is no path argument is passed.
   sudo apt-get install jq curl
   sudo bash -c "$(curl -fsSL https://theme-park.dev/fetch.sh)" /your/save/path
 ```
+The script will rename all files to `98-themepark-<app>` ex: `98-themepark-sonarr`
 
 ***
 
@@ -186,7 +187,7 @@ services:
       - TP_THEME=plex
     volumes:
       - /<host_folder_config>:/config
-      - /docker/host/98-themepark:/etc/cont-init.d/99-themepark
+      - /your/save/path/98-themepark-sonarr:/etc/cont-init.d/99-themepark
 ```
 
 ```bash
@@ -200,11 +201,38 @@ docker run --rm \
     -e TP_HOTIO="true" \
     -e TP_THEME=plex \
     -v /<host_folder_config>:/config \
-    -v /docker/host/98-themepark:/etc/cont-init.d/99-themepark \
+    -v /your/save/path/98-themepark-sonarr:/etc/cont-init.d/99-themepark \
     hotio/sonarr
 ```
+##### Hotio FAQ
 
-[https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides)
+??? question "The script exits with [cont-init.d] 99-themepark: exited 127."
+    A typical error can look like:
+
+        [cont-init.d] 98-themepark: executing... 
+        exec: fatal: unable to exec bash
+        : No such file or directory
+        [cont-init.d] 98-themepark: exited 127.
+
+    Or
+
+        [cont-init.d] 99-themepark: executing...
+        foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/99-themepark: Permission denied
+        [cont-init.d] 99-themepark: exited 127.
+
+    !!! info "No such file or directory bash"
+        If the line before the exit says: `: No such file or directory`
+
+        The file you have created, most likely have CRLF line endings. This typically happens when you create the file using Windows.
+
+        If you created the file using Notepad++, you can convert the file to LF. (`Edit -> EOL Conversion -> Unix (LF)`)
+
+    !!! info "foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/99-themepark: Permission denied"
+        This means what the error says, permission denied.
+        
+        Make sure that the file can be executed.
+
+        `chmod +x yourfile`
 
 ***
 
@@ -257,7 +285,7 @@ Then you can load the css by going to `<your-ip>:<port>/css/base/<app>/your-cust
 You can also use `/themepark` to access the files. The subfolder path can be overridden with the `TP_URLBASE` env.
 
 !!! note
-    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container (e.g sonarr) you have added the `DOCKER_MODS` env to.
+    If you want to use `DOCKER_MODS` and this container locally without a domain, you can add the `TP_SCHEME=http` env to the container (e.g sonarr) you have added the `DOCKER_MODS` env to. See example here: [Docker mods local example](#docker-mods-local-example): 
 
 ```yaml
 version: "2.1"
