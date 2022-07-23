@@ -802,7 +802,7 @@ Also for reference: [Caddy v2 structure](https://caddyserver.com/docs/caddyfile/
 !!! info
     Thank you [packruler](https://github.com/packruler) for the write up!
 
-We rely on packruler's [Rewrite Body](https://github.com/packruler/rewrite-body) plugin to support rewriting page content for theming.
+We rely on packruler's [traefik-themepark](https://github.com/packruler/traefik-themepark) plugin to support rewriting page content for theming.
 
 Below are a few examples of file content that add support for adding themes via Traefik.
 
