@@ -802,7 +802,7 @@ Also for reference: [Caddy v2 structure](https://caddyserver.com/docs/caddyfile/
 !!! info
     Thank you [packruler](https://github.com/packruler) for the write up!
 
-We rely on packruler's [Rewrite Body](https://github.com/packruler/rewrite-body) plugin to support rewriting page content for theming.
+We rely on packruler's [traefik-themepark](https://github.com/packruler/traefik-themepark) plugin to support rewriting page content for theming.
 
 Below are a few examples of file content that add support for adding themes via Traefik.
 
@@ -813,14 +813,11 @@ Below are a few examples of file content that add support for adding themes via 
 Add the following to your static `traefik` config.
 
 ```yaml
-pilot:
-  token = "xxxx" # Update to your pilot token
-
 experimental:
   plugins:
-    rewrite-body:
-      modulename: "github.com/packruler/rewrite-body"
-      version: "v0.5.1"
+    theme-park:
+      modulename: "github.com/packruler/traefik-themepark"
+      version: "v1.1.0"
 ```
 
 ***
@@ -830,59 +827,15 @@ experimental:
 Basic dynamic template
 
 ```yaml
-# We are able to utilize Go templates (https://pkg.go.dev/text/template) in here which can make defining these much easier
-
-# You can add the following line (including the comment flag (`#`) so YAML processing doesn't freak out
-# {{'{{ $theme := "nord" }}'}}
-
 http:
   middlewares:
     sonarr-theme:
       plugin:
-        rewrite-body:
-          rewrites:
-            - regex: </head>
-              # Now we can reference that variable in our regex replacement for easy consistency
-              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/sonarr/{{'{{ $theme }}'}}.css"></head>
-```
-
-Efficient/Lazy dynamic template :grin:: (warning this will make your YAML editor very unhappy but it will work fine)
-
-```yaml
-# Replace `nord` with your theme of choice!
-{{ '{{ $theme := "nord" }}' }}
-
-http:
-  middlewares:
-    #  Add any suppported base apps you would like to include in your auto generated middle set. "sonarr" and "radarr are the examples here.
-    {{'{{ range $index, $app := list "sonarr" "radarr" }}'}}
-    {{'{{ $app }}'}}-theme:
-      plugin:
-        rewritebody:
-          rewrites:
-            - regex: </head>
-              replacement: <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/{{'{{ $app }}'}}/{{'{{ $theme }}'}}.css"></head>
-    {{'{{ end }}'}}
-```
-
-***
-
-#### (dynamic)/headers.yml (optional)
-
-```yaml
-# This is an example of how to set request headers to prioritize supported encoding.
-
-http:
-  middlewares:
-    theme-headers:
-      headers:
-        customRequestHeaders:
-          accept-encoding: gzip;1.0,deflate;0.5,identity;0.1
-
-    # Here is an example middleware to add headers for qBittorrent support
-    qBittorrent-headers:
-      headers:
-        content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com use.fontawesome.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; font-src use.fontawesome.com;
+        theme-park:
+          app: sonarr
+          theme: nord
+          # baseUrl is optional if you want to use a self-hosted version of theme.park
+          baseUrl: https://theme-park.domain.tld
 ```
 
 ***
