@@ -41,6 +41,7 @@ Remember to also set `ADD_JS` to `false` if you are not using the `isolation_vid
 TYPE="alien"
 THEME="hallway2.css"
 DOMAIN="theme-park.dev"
+SCHEME="https"
 ADD_JS="false"
 JS="isolation.js"
 DISABLE_THEME="false"
