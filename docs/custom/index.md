@@ -12,19 +12,57 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
 
 ***
 
-## Example
+## Custom Github Setup
+
+1. Start with forking the the repo to the account you want. 
+
+2. Next head over to your theme.park fork and change the domain in the  [CNAME](https://github.com/GilbN/theme.park/blob/master/CNAME) file to a custom domain if you have one or `<user>.github.io` ie `gilbn.github.io`
+
+    1. Click on `Settings`, then select `Pages` on the left side menu.
+        Set your Source as `Deploy from a branch` and select the `live` branch.
+
+        ![](build.png)
+
+    2. If you don't have a branch named `live` in your drop down, head over to the `Actions` tab, select `Minify CSS and deploy to live branch` and click on `Run workflow` select `master` and click run. 
+
+        ![](minifyanddeploy.png)
+
+        This [workflow](https://github.com/GilbN/theme.park/blob/master/.github/workflows/minify-and-deploy.yml) will in short:
+
+        1. Run the [themes.py](https://github.com/GilbN/theme.park/blob/master/themes.py) script.
+
+        2. [Minify](https://developer.mozilla.org/en-US/docs/Glossary/minification) the css files.
+
+        3. Deploy the all the files it creates (> 1500 files) to the `live` branch.
+
+        !!! Note
+            If you add a custom domain, you access the files with `custom.com/css/base...` if you use the default `github.io` domain you will need to append `theme.park` or whatever you named the repo when you forked it. ie `gilbn.github.io/theme.park/css/...`
+
+            You can read more about how to add a custom domain here: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+    3. The execution of the themes.py script is important as it creates all the theme files in all the base folders -> https://github.com/GilbN/theme.park/tree/live/css/base/. These files contains css `@imports` to both the base.css file and the theme-option.css file. By doing this you can easily use the files by using `user.github.io/theme.park/css/base/<app>/<theme-option>` ie https://gilbn.github.io/theme.park/css/base/radarr/plex.css. If you compare the `master` and `live` branch you can see master only contains the base css file.
+
+3. After the deploy action is finished, you should be able to access https://username.github.io/theme.park/css/base/radarr/nord.css.
+
+4. If you want to add a custom theme option, copy one of the files in `/css/theme-options/` and start editing the color variables. Commit and push new file and the themes.py script will create a `your-custom.css` file in all the `/css/base/<app>` folders. 
+
+    !!! Warning
+        If you see variables that look like this: `--some-var: 123, 123, 123` don't change this syntax. If you do you will break how the base css files uses that variable.
+
+## Custom theme option example
 
 Open the theme css file you  want to change and look at the variables available.
-Copy them to a new file. Remember to also include the `@import` line.
-
-!!! info
-    If you have forked the repo and want to stay up to date with any changes I make, use the `https://theme-park.dev` URL and not your own!
+Copy them to a new file.
 
 Add the theme to your service and load the page.
 If you press `F12` and go to the `Elements` tab and scroll down you should see the variables in the root pseudo-class.
 Try and disable one of them and you'll see what each variable does.
 
 ![custom](/site_assets/custom_themes.png)
+
+!!! note "Tip"
+    If you want to have persistent changes while testing out color options, you can use the [stylus](/setup/#stylus-method) plugin for testing.
+    Just add the content from the theme-option file and start changing stuff.
 
 The `--main-bg-color` will "always" be the  background color.
 And the `--modal-bg-color` will "always" be the background for the popup modals.
