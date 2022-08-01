@@ -10,6 +10,24 @@ Custom [{{ page.title.split()[0] }}](https://github.com/NginxProxyManager/nginx-
 
 ### [Setup](/setup)
 
+#### Docker
+
+Download the script from the theme.park repo `docker-mods/nginx-proxy-manager/root/etc/cont-init.d/98-themepark` and save it on your host.
+
+Mount the file to `/etc/cont-init.d/98-themepark` like so:
+
+```yml
+    volumes:
+      - /your/save/path/98-themepark-npm:/etc/cont-init.d/99-themepark
+```
+
+```bash
+    -v /your/save/path/98-themepark-npm:/etc/cont-init.d/99-themepark
+```
+
+!!! Warning
+    Make sure the file is executable! `chmod +x 98-themepark-npm`
+
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
 {% for app, addon_name in addons.items() %}

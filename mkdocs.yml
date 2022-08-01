@@ -59,7 +59,7 @@ nav:
   - Themes:
       ⚙️ App supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
-      🔥 Supports Hotio Scripts: /hotio/
+      🔥 Supports Hotio/S6 Scripts: /hotio/
       ⚠️ Require Special Setup: /themes/
       ❌ Deprecated: /themes/
       Sonarr 🐳🔥: themes/sonarr.md
@@ -88,6 +88,7 @@ nav:
       Transmission 🐳: themes/transmission.md
       Mylar 3 🐳⚠️: themes/mylar3.md
       Duplicati 🐳: themes/duplicati.md
+      Nginx-Proxy-Manager 🔥: themes/nginx-proxy-manager.md
       Xbackbone ⚙️: themes/xbackbone.md
       Filebrowser ⚙️: themes/filebrowser.md
       Organizr ⚙️: themes/organizr.md
@@ -111,7 +112,6 @@ nav:
       Petio: themes/petio.md
       Flood: themes/flood.md
       Uptime-Kuma: themes/uptime-kuma.md
-      Nginx-Proxy-Manager: themes/nginx-proxy-manager.md
       TheLounge ❌🐳: themes/thelounge.md
       Grafana ❌⚙️: themes/grafana.md
       Monitorr ❌⚙️: themes/monitorr.md
