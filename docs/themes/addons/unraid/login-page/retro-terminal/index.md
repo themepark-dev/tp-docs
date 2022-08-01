@@ -42,6 +42,7 @@ The default values are the ones below
 TYPE="retro-terminal"
 THEME="green.css"
 DOMAIN="theme-park.dev"
+SCHEME="https"
 ADD_JS="true"
 JS="custom_text_header.js"
 DISABLE_THEME="false"

@@ -42,6 +42,7 @@ Remember to also set `ADD_JS` to `false` if you are not using the `fallout_video
 TYPE="fallout"
 THEME="dirty_terminal2.css"
 DOMAIN="theme-park.dev"
+SCHEME="https"
 ADD_JS="false"
 JS="please_stand_by.js"
 DISABLE_THEME="false"
