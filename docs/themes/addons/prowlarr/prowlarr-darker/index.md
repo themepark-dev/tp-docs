@@ -54,3 +54,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/prowlarr/prowlarr-base.css";
 @import "https://theme-park.dev/css/addons/prowlarr/prowlarr-darker/prowlarr-darker.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    prowlarr-darker:
+        plugin:
+            themepark:
+                app: prowlarr
+                theme: base
+                addons:
+                    - darker
+```

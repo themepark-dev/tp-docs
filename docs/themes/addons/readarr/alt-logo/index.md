@@ -55,3 +55,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/readarr/THEME.css";
 @import "https://theme-park.dev/css/addons/readarr/readarr-alt-logo/readarr-alt-logo.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    readarr-alt-logo:
+        plugin:
+            themepark:
+                app: readarr
+                theme: base
+                addons:
+                    - alt-logo
+```

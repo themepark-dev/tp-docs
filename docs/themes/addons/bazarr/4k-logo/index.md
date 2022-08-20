@@ -53,3 +53,28 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/bazarr/THEME.css";
 @import "https://theme-park.dev/css/addons/bazarr/bazarr-4k-logo/bazarr-4k-logo.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    bazarr-4k-log:
+        plugin:
+            themepark:
+                # The name of the supported application listed on https://docs.theme-park.dev/themes.
+                app: bazarr
+
+                # The name of the supported theme listed on https://docs.theme-park.dev/theme-options/ or https://docs.theme-park.dev/community-themes/
+                theme: dark
+
+                # This currently only supports '4k-logo' and 'darker' addons. Future addons that follow a similar syntax will work as well.
+                # For refernce: https://docs.theme-park.dev/themes/addons/
+                addons:
+                    - 4k-logo
+```
