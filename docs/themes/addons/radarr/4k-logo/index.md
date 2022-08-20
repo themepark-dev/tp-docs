@@ -57,3 +57,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/radarr/THEME.css";
 @import "https://theme-park.dev/css/addons/radarr/radarr-4k-logo/radarr-4k-logo.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    radarr-4k-logo:
+        plugin:
+            themepark:
+                app: radarr
+                theme: base
+                addons:
+                    - 4k-logo
+```

@@ -54,3 +54,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/bazarr/bazarr-base.css";
 @import "https://theme-park.dev/css/addons/bazarr/bazarr-darker/bazarr-darker.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    bazarr-darker:
+        plugin:
+            themepark:
+                app: bazarr
+                theme: base
+                addons:
+                    - darker
+```

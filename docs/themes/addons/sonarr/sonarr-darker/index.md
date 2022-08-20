@@ -54,3 +54,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/sonarr/sonarr-base.css";
 @import "https://theme-park.dev/css/addons/sonarr/sonarr-darker/sonarr-darker.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    sonarr-darker:
+        plugin:
+            themepark:
+                app: sonarr
+                theme: base
+                addons:
+                    - darker
+```

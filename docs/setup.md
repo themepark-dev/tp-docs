@@ -817,7 +817,7 @@ experimental:
   plugins:
     theme-park:
       modulename: "github.com/packruler/traefik-themepark"
-      version: "v1.1.0"
+      version: "v1.2.0"
 ```
 
 ***
@@ -829,13 +829,35 @@ Basic dynamic template
 ```yaml
 http:
   middlewares:
-    sonarr-theme:
+    sonarr-dark:
       plugin:
-        theme-park:
+        themepark:
+          # The name of the supported application listed on https://docs.theme-park.dev/themes.
           app: sonarr
-          theme: nord
+
+          # The name of the supported theme listed on https://docs.theme-park.dev/theme-options/ or https://docs.theme-park.dev/community-themes/
+          theme: dark
+
           # baseUrl is optional if you want to use a self-hosted version of theme.park
           baseUrl: https://theme-park.domain.tld
+
+          # This currently only supports '4k-logo' and 'darker' addons. Future addons that follow a similar syntax will work as well.
+          # For refernce: https://docs.theme-park.dev/themes/addons/
+          addons:
+            - 4k-logo
+    radarr-theme:
+      plugin:
+        themepark:
+          # The name of the supported application listed on https://docs.theme-park.dev/themes.
+          app: radarr
+
+          # If using the 'darker' addon the theme MUST be excluded or set to 'base'
+          theme: base
+
+          # Multiple addons can be included at the same time
+          addons:
+            - darker
+            - 4k-logo
 ```
 
 ***

@@ -54,3 +54,22 @@ Just add another import line.
 @import "https://theme-park.dev/css/base/lidarr/lidarr-base.css";
 @import "https://theme-park.dev/css/addons/lidarr/lidarr-darker/lidarr-darker.css";
 ```
+
+### Traefik
+
+>
+!!! warning
+    Added in traefik-themepark version `v1.2.0`
+
+Use <a href="/setup/#traefik" rel="noopener">traefik-themepark middleware</a>. 
+
+```yaml
+middlewares:
+    lidarr-darker:
+        plugin:
+            themepark:
+                app: lidarr
+                theme: base
+                addons:
+                    - darker
+```
