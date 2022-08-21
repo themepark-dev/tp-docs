@@ -27,6 +27,7 @@
     <li><a href="#blackberry-theme-installer-method">Blackberry Theme Installer</a><small> Injects the theme using Javascript (Made for Organizr)</small></li>
     <li><a href="#develop">Develop</a></li>
     <li><a href="/community-themes/">Community Themes</a></li>
+    <li><a href="/custom/#custom-github-setup">Custom Github Setup</a></li>
 </ul>
 
 ***
