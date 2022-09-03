@@ -17,6 +17,8 @@ Add a 4K logo to your Sonarr css.
 
 `-e TP_ADDON=sonarr-4k-logo`
 
+If adding multiple mods, enter them in an array separated by  `|`. `-e TP_ADDON=addon1|addon2`
+
 ### Nginx
 
 Examples of how to add it:
