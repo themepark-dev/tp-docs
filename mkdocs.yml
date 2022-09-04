@@ -21,7 +21,7 @@ plugins:
         donate.md: "https://docs.theme-park.dev/#donation"
         themes.md: "https://docs.theme-park.dev/themes/sonarr/"
         docker-mods.md: "https://docs.theme-park.dev/setup/#docker-mods"
-        hotio.md: "https://docs.theme-park.dev/setup/#hotio-containers"
+        hotio.md: "https://docs.theme-park.dev/setup/#hotio-containers-s6-overlay-images"
 
 markdown_extensions:
   - pymdownx.snippets
@@ -59,7 +59,7 @@ nav:
   - Themes:
       ⚙️ App supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
-      🔥 Supports Hotio/S6 Scripts: /hotio/
+      🔥 Supports Hotio / S6-Overlay images: /hotio/
       ⚠️ Require Special Setup: /themes/
       ❌ Deprecated: /themes/
       Sonarr 🐳🔥: themes/sonarr.md
