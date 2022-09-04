@@ -147,6 +147,9 @@ docker run -d \
 
     Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
+!!! note
+    Make sure the script is executable! The [download script](#download-script) will `chmod +x` all files, but if you download manually, you need to run the chmod command on the file.
+
 Download and mount your script with the volume `/your/docker/host/98-themepark:/etc/cont-init.d/98-themepark` to execute your script on container start
 
 #### Download script
@@ -154,6 +157,8 @@ Download and mount your script with the volume `/your/docker/host/98-themepark:/
 This script will download all mods/scripts into the path you choose.
 
 Defaults to `/tmp/theme-park-mods` is no path argument is passed.
+
+See script contents here: https://github.com/GilbN/theme.park/blob/master/fetch.sh
 
 ```bash
   sudo apt-get install jq curl
