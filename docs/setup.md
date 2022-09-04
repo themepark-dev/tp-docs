@@ -4,7 +4,7 @@
 
 <ul>
     <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods for linuxserver.io images</a><small> Adds the theme locally</small></li>
-        <ul><li><a href="#hotio-containers"><img src="/site_assets/hotio.png"> Hotio containers</a></li></ul>
+        <ul><li><a href="#hotio-containers-s6-overlay-images"><img src="/site_assets/hotio.png"> Hotio containers / S6-Overlay images</a></li></ul>
     <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
       <ul>  
         <li><a href="#docker">🐋 Docker image</a><small> Selfhost the the files using our docker image</small></li>
@@ -135,18 +135,19 @@ docker run -d \
 
 ***
 
-### ![hotio](/site_assets/hotio.png) Hotio containers
+### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay images
 
 !!! warning
-    The `DOCKER_MODS` variable does not work on Hotio Containers!
+    The `DOCKER_MODS` variable does not work on Hotio Containers / S6-Overlay images!
     The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
 
 !!! info
     The scripts are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
+    You can download all the scripts using the [download script below](#download-script)
 
     Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
-Download and mount your script with the volume `/your/docker/host/98-themepark:/etc/cont-init.d/99-themepark` to execute your script on container start
+Download and mount your script with the volume `/your/docker/host/98-themepark:/etc/cont-init.d/98-themepark` to execute your script on container start
 
 #### Download script
 
@@ -188,7 +189,7 @@ services:
       - TP_THEME=plex
     volumes:
       - /<host_folder_config>:/config
-      - /your/save/path/98-themepark-sonarr:/etc/cont-init.d/99-themepark
+      - /your/save/path/98-themepark-sonarr:/etc/cont-init.d/98-themepark
 ```
 
 ```bash
@@ -202,12 +203,12 @@ docker run --rm \
     -e TP_HOTIO="true" \
     -e TP_THEME=plex \
     -v /<host_folder_config>:/config \
-    -v /your/save/path/98-themepark-sonarr:/etc/cont-init.d/99-themepark \
+    -v /your/save/path/98-themepark-sonarr:/etc/cont-init.d/98-themepark \
     hotio/sonarr
 ```
 ##### Hotio FAQ
 
-??? question "The script exits with [cont-init.d] 99-themepark: exited 127."
+??? question "The script exits with [cont-init.d] 98-themepark: exited 127."
     A typical error can look like:
 
         [cont-init.d] 98-themepark: executing... 
@@ -217,9 +218,9 @@ docker run --rm \
 
     Or
 
-        [cont-init.d] 99-themepark: executing...
-        foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/99-themepark: Permission denied
-        [cont-init.d] 99-themepark: exited 127.
+        [cont-init.d] 98-themepark: executing...
+        foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/98-themepark: Permission denied
+        [cont-init.d] 98-themepark: exited 127.
 
     !!! info "No such file or directory bash"
         If the line before the exit says: `: No such file or directory`
@@ -228,7 +229,7 @@ docker run --rm \
 
         If you created the file using Notepad++, you can convert the file to LF. (`Edit -> EOL Conversion -> Unix (LF)`)
 
-    !!! info "foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/99-themepark: Permission denied"
+    !!! info "foreground: warning: unable to spawn /var/run/s6/etc/cont-init.d/98-themepark: Permission denied"
         This means what the error says, permission denied.
         
         Make sure that the file can be executed.
