@@ -138,7 +138,7 @@ docker run -d \
 ### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay images
 
 !!! warning
-    The `DOCKER_MODS` variable does not work on Hotio Containers / S6-Overlay images!
+    The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay images (Except LSIO images)!
     The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
 
 !!! info
