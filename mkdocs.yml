@@ -97,6 +97,8 @@ nav:
       Gitea ⚙️: themes/gitea.md
       Pihole ⚠️: themes/pihole.md
       Dozzle ⚠️: themes/dozzle.md
+      Bitwarden ⚠️: themes/bitwarden.md
+      Vaultwarden ⚠️: themes/bitwarden/#vaultwarden
       Nzbhydra2: themes/nzbhydra2.md
       Portainer: themes/portainer.md
       Guacamole: themes/guacamole.md
@@ -104,7 +106,6 @@ nav:
       Requestrr: themes/requestrr.md
       Adguard: themes/adguard.md
       Gaps: themes/gaps.md
-      Bitwarden: themes/bitwarden.md
       Duplicacy: themes/duplicacy.md
       Kitana: themes/kitana.md
       Resilio-Sync: themes/resilio-sync.md
