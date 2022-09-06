@@ -84,7 +84,7 @@ server {
 
         set $app bitwarden;
         set $theme nord;
-        set $tp_domain vaultwarden.domain.com/themepark # You can also do: $scheme://$host/themepark
+        set $tp_domain vaultwarden.domain.com/themepark; # You can also do: $scheme://$host/themepark
 
         proxy_set_header Accept-Encoding ""; 
         sub_filter
