@@ -123,6 +123,7 @@ nav:
       Addons: themes/addons/index.md
       Sonarr:
         4K Logo: themes/addons/sonarr/4k-logo/index.md
+        Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo/index.md
         Sonarr Darker: themes/addons/sonarr/sonarr-darker/index.md
         Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo/index.md
       Radarr:
@@ -226,6 +227,8 @@ extra:
     sonarr:
       4K Logo:
         path: themes/addons/sonarr/4k-logo
+      Sonarr 4K Text Logo:
+        path: themes/addons/sonarr/sonarr-4k-text-logo
       Sonarr Darker:
         path: themes/addons/sonarr/sonarr-darker
       Sonarr Text Logo:
