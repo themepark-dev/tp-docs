@@ -68,7 +68,7 @@ Example: `https://theme-park.dev/css/base/sonarr/dark.css`
 
 ## Docker mods
 
-For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
+[Linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers can inject the theme.park stylesheets directly using `DOCKER_MODS`.
 
 !!! warning
     Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon.
@@ -138,19 +138,19 @@ docker run -d \
 ### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay images
 
 !!! warning
-    The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay images (Except LSIO images)!
-    The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
+    The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay images!
+    The themepark script must be mounted to the container using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
 
 !!! info
-    The scripts are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
-    You can download all the scripts using the [download script below](#download-script)
+    If you want to manually download the themepark scripts they are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
+    You can also download all of the themepark scripts using the [download script below](#download-script)
 
-    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
+    Navigate to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
 !!! note
-    Make sure the script is executable! The [download script](#download-script) will `chmod +x` all files, but if you download manually, you need to run the chmod command on the file.
+    Make sure the themepark scripts are executable! The [download script](#download-script) will automatically `chmod +x` all of the themepark scripts, but if you download them manually you need to run the chmod command on the scripts afterwards.
 
-Download and mount your script with the volume `/your/docker/host/98-themepark:/etc/cont-init.d/98-themepark` to execute your script on container start
+Once the themepark scripts are saved locally, mount the appropriate themepark script with the volume `/your/docker/host/98-themepark-<script>:/etc/cont-init.d/98-themepark` to execute the themepark script on container start
 
 #### Download script
 
@@ -158,13 +158,13 @@ This script will download all mods/scripts into the path you choose.
 
 Defaults to `/tmp/theme-park-mods` is no path argument is passed.
 
-See script contents here: https://github.com/GilbN/theme.park/blob/master/fetch.sh
+See the contents of the download script here: https://github.com/GilbN/theme.park/blob/master/fetch.sh
 
 ```bash
   sudo apt-get install jq curl
   sudo bash -c "$(curl -fsSL https://theme-park.dev/fetch.sh)" /your/save/path
 ```
-The script will rename all files to `98-themepark-<app>` ex: `98-themepark-sonarr`
+This script will rename all of the downloaded files to `98-themepark-<app>` ex: `98-themepark-sonarr`
 
 ***
 
