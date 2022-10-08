@@ -4,7 +4,7 @@
 
 <ul>
     <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods for linuxserver.io images</a><small> Adds the theme locally</small></li>
-        <ul><li><a href="#hotio-containers-s6-overlay-images"><img src="/site_assets/hotio.png"> Hotio containers / S6-Overlay images</a></li></ul>
+        <ul><li><a href="#hotio-containers-s6-overlay-v3-images"><img src="/site_assets/hotio.png"> Hotio containers / S6-Overlay images (V3)</a></li></ul>
     <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
       <ul>  
         <li><a href="#docker">🐋 Docker image</a><small> Selfhost the the files using our docker image</small></li>
@@ -135,11 +135,15 @@ docker run -d \
 
 ***
 
-### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay images
+### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay (V3) images
 
 !!! warning
-    The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay images (Except LSIO images)!
-    The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides). 
+    The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay(V3) images (Except LSIO images)!
+    The script must be mounted using a volume mount. See [https://hotio.dev/faq/#guides](https://hotio.dev/faq/#guides).
+
+!!! note
+    The scripts does not support S6-Overlay V2. You will need to update the shebang.
+    Replace the shebang with  `#!/usr/bin/with-contenv bash`
 
 !!! info
     The scripts are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
