@@ -243,7 +243,7 @@ extra:
         path: themes/addons/radarr/4k-logo
       Radarr Darker:
         path: themes/addons/radarr/radarr-darker
-      Alternative Calendar: 
+      Alternative Calendar:
         path: themes/addons/radarr/alt-calendar
     readarr:
       Alternative Audiobook Logo:
