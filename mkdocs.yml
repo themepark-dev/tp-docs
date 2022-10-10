@@ -129,18 +129,22 @@ nav:
       Radarr:
         4K Logo: themes/addons/radarr/4k-logo/index.md
         Radarr Darker: themes/addons/radarr/radarr-darker/index.md
+        Alternative Calendar: themes/addons/radarr/alt-calendar/index.md
       Readarr:
         Alternative Logo: themes/addons/readarr/alt-logo/index.md
         Readarr Darker: themes/addons/readarr/readarr-darker/index.md
+        Alternative Calendar: themes/addons/readarr/alt-calendar/index.md
       Bazarr:
         4K Logo: themes/addons/bazarr/4k-logo/index.md
         Bazarr Darker: themes/addons/bazarr/bazarr-darker/index.md
       Lidarr:
         Lidarr Darker: themes/addons/lidarr/lidarr-darker/index.md
+        Alternative Calendar: themes/addons/lidarr/alt-calendar/index.md
       Prowlarr:
         Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker/index.md
       Whisparr:
         Whisparr Darker: themes/addons/whisparr/whisparr-darker/index.md
+        Alternative Calendar: themes/addons/whisparr/alt-calendar/index.md
       Organizr: themes/addons/organizr/index.md
       Unraid:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
@@ -239,11 +243,15 @@ extra:
         path: themes/addons/radarr/4k-logo
       Radarr Darker:
         path: themes/addons/radarr/radarr-darker
+      Alternative Calendar: 
+        path: themes/addons/radarr/alt-calendar
     readarr:
       Alternative Audiobook Logo:
         path: themes/addons/readarr/alt-logo
       Readarr Darker:
         path: themes/addons/readarr/readarr-darker
+      Alternative Calendar:
+        path: themes/addons/readarr/alt-calendar
     bazarr:
       4K Logo:
         path: themes/addons/bazarr/4k-logo
@@ -252,12 +260,16 @@ extra:
     lidarr:
       Lidarr Darker:
         path: themes/addons/lidarr/lidarr-darker
+      Alternative Calendar:
+        path: themes/addons/lidarr/alt-calendar
     prowlarr:
       Prowlarr Darker:
         path: themes/addons/prowlarr/prowlarr-darker
     whisparr:
       Whisparr Darker:
         path: themes/addons/whisparr/whisparr-darker
+      Alternative Calendar:
+        path: themes/addons/whisparr/alt-calendar
     organizr:
       Organizr Glass:
         path: themes/addons/organizr
