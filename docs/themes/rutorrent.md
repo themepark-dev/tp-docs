@@ -11,6 +11,9 @@ Custom [{{ page.title.split()[0] }}](https://github.com/Novik/ruTorrent) CSS
 
 ### [Setup](/setup)
 
+!!! warning "Supported Version"
+    This theme does not support versions > 3.10. 
+
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
 {% for app, addon_name in addons.items() %}
