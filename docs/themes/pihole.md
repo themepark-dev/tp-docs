@@ -22,13 +22,12 @@ Custom [{{ page.title.split()[0] }}](https://github.com/pi-hole/pi-hole) CSS
 ```nginx
 proxy_set_header Accept-Encoding "";
 sub_filter
-'<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\'; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'">'
-'<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; base-uri \'none\'; child-src \'self\'; form-action \'self\'; frame-src \'self\'; font-src \'self\'; connect-src \'self\'; img-src \'self\' https://raw.githubusercontent.com; manifest-src \'self\'; script-src \'self\' \'unsafe-inline\'; style-src \'self\' https://raw.githubusercontent.com https://theme-park.dev \'unsafe-inline\'">';
-sub_filter
 '</head>'
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/pihole/<THEME>.css">
 </head>';
 sub_filter_once on;
+proxy_hide_header Content-Security-Policy;
+add_header Content-Security-Policy "default-src 'none'; base-uri 'none'; child-src 'self'; form-action 'self'; frame-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' https://raw.githubusercontent.com; manifest-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://raw.githubusercontent.com https://theme-park.dev 'unsafe-inline'";
 ```
 
 {% set addons = extra.addons %}
