@@ -12,6 +12,7 @@ plugins:
   - git-revision-date-localized
   - awesome-pages
   - macros
+  - include-markdown
   - redirects:
       redirect_maps:
         discord.md: "https://discord.gg/HM5uUKU"
@@ -62,12 +63,12 @@ nav:
       🔥 Supports Hotio / S6-Overlay images: /hotio/
       ⚠️ Require Special Setup: /themes/
       ❌ Deprecated: /themes/
-      Sonarr 🐳🔥: themes/sonarr.md
-      Radarr 🐳🔥: themes/radarr.md
-      Lidarr 🐳🔥: themes/lidarr.md
-      Readarr 🐳🔥: themes/readarr.md
-      Prowlarr 🐳🔥: themes/prowlarr.md
-      Whisparr 🐳🔥: themes/whisparr.md
+      Sonarr 🐳🔥⚠️: themes/sonarr.md
+      Radarr 🐳🔥⚠️: themes/radarr.md
+      Lidarr 🐳🔥⚠️: themes/lidarr.md
+      Readarr 🐳🔥⚠️: themes/readarr.md
+      Prowlarr 🐳🔥⚠️: themes/prowlarr.md
+      Whisparr 🐳🔥⚠️: themes/whisparr.md
       Bazarr 🐳🔥: themes/bazarr.md
       Plex 🐳🔥: themes/plex.md
       Jellyfin ⚙️: themes/jellyfin.md
