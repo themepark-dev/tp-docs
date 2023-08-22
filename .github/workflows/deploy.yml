@@ -1,0 +1,23 @@
+name: Deploy docs to GitHub Pages via mkdocs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.1.0
+        with:
+          python-version: 3.x
+      - run: pip install -r docs/requirements.txt
+      - run: mkdocs gh-deploy --force
+      - name: Clear CF Cache
+        run: |
+          curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_CACHE_PURGE }}" \
+          -H "Content-Type:application/json"
