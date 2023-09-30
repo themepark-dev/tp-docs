@@ -42,7 +42,7 @@ location /qbt/ {
 ```
 
 !!! warning "Subfilter"
-    If you get errors in the browser console, and the RSS tab stop working (See [https://github.com/gilbN/theme.park/issues/132](https://github.com/gilbN/theme.park/issues/132))
+    If you get errors in the browser console, and the RSS tab stop working (See [https://github.com/themepark-dev/theme.park/issues/132](https://github.com/themepark-dev/theme.park/issues/132))
     You need to subfilter the `</body>` tag instead of the `</head>` tag.
 
 #### Example

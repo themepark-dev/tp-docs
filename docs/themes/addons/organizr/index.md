@@ -74,7 +74,7 @@ Here are the other theme colors if you want to use that instead:
 <img src="plex_banner.png" width="600px" />
 
 ```css
---mobile-bg-color: url("https://raw.githubusercontent.com/gilbN/theme.park/master/Resources/blur-noise.png"), url("https://raw.githubusercontent.com/gilbN/theme.park/master/Resources/preset-light2.png") center center/cover no-repeat fixed;
+--mobile-bg-color: url("https://raw.githubusercontent.com/themepark-dev/theme.park/master/Resources/blur-noise.png"), url("https://raw.githubusercontent.com/themepark-dev/theme.park/master/Resources/preset-light2.png") center center/cover no-repeat fixed;
 ```
 
 !!! note

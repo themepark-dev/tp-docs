@@ -16,7 +16,7 @@ Animated custom css for the Unraid login page.
 
 **Recommended way:**
 
-Install using the [bash script](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
+Install using the [bash script](https://github.com/themepark-dev/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh) and the plugin [CA User Scripts](https://forums.unraid.net/topic/48286-plugin-ca-user-scripts/)
 
 Add a new user script by clicking `Add new script`
 
@@ -30,7 +30,7 @@ Click or hover over the gear icon and click `Edit Script`
 
 ![edit](../assets/edit.png)
 
-Paste the contents of the bash script: [custom_login.sh](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh)
+Paste the contents of the bash script: [custom_login.sh](https://github.com/themepark-dev/theme.park/blob/master/css/addons/unraid/login-page/custom_login.sh)
 
 Below the shebang(`#!/bin/bash`) are the variables you need to change for the different themes.
 
@@ -84,7 +84,7 @@ Set `ADD_JS`to `"true"` to enable or `"false"` to omit the javascript.
 
 ***You should probably have a look at the content of that file, and probably host it yourself 💀***
 
-[custom_text_header.js](https://github.com/gilbN/theme.park/blob/master/css/addons/unraid/login-page/retro-terminal/js/custom_text_header.js)
+[custom_text_header.js](https://github.com/themepark-dev/theme.park/blob/master/css/addons/unraid/login-page/retro-terminal/js/custom_text_header.js)
 
 ⚠️⚠️⚠️
 

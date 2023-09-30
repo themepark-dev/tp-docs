@@ -1,3 +1,3 @@
 # tp-docs
 
-Wiki for [https://github.com/GilbN/theme.park/](https://github.com/GilbN/theme.park/)
+Wiki for [https://github.com/themepark-dev/theme.park/](https://github.com/themepark-dev/theme.park/)
