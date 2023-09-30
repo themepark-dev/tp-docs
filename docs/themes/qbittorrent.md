@@ -11,6 +11,9 @@ Custom [{{ page.title.split()[0] }}](https://github.com/qbittorrent/qbittorrent)
 
 ### [Setup](/setup)
 
+!!! warning "LSIO Docker Mod / S6-Overlay script"
+    After running the script the first time, you must restart the container.
+
 !!! warning "Subfilter CSP"
     As Qbittorrent will block the theme with its content security policy you need to change or remove the CSP header.
     Add this in your reverse proxy to remove the headers:
@@ -19,6 +22,16 @@ Custom [{{ page.title.split()[0] }}](https://github.com/qbittorrent/qbittorrent)
 proxy_hide_header "x-webkit-csp";
 proxy_hide_header "content-security-policy";
 proxy_hide_header "X-Frame-Options";
+```
+
+#### Custom headers in QbitTorrent Settings
+
+If you don't want to remove the headers using a webserver, you can also override the CSP header with a custom one.
+
+Add the following in `Add custom HTTP headers` on the `Web UI` section.
+
+```nginx
+content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com use.fontawesome.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; font-src use.fontawesome.com;
 ```
 
 #### Nginx variable example
@@ -54,16 +67,6 @@ sub_filter
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/qbittorrent/<THEME>.css">
 </body>';
 sub_filter_once on;
-```
-
-#### Custom headers in QbitTorrent Settings
-
-If you dont' want to remove the headers using a webserver, you can also override the CSP header with a custom one.
-
-Add the following in `Add custom HTTP headers` on the `Web UI` section.
-
-```nginx
-content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' theme-park.dev raw.githubusercontent.com use.fontawesome.com; img-src 'self' theme-park.dev raw.githubusercontent.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; font-src use.fontawesome.com;
 ```
 
 ![](/site_assets/{{ page.title.split()[0].lower() }}/CSP.png)

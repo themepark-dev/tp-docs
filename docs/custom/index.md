@@ -14,7 +14,7 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
 
 ## Custom Github Setup
 
-1. Start with forking the the repo to the account you want. 
+1. Start with forking the the repo to the account you want.
 
 2. Next head over to your theme.park fork and change the domain in the  [CNAME](https://github.com/themepark-dev/theme.park/blob/master/CNAME) file to a custom domain if you have one or `<user>.github.io` ie `gilbn.github.io`
 
@@ -23,7 +23,7 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
 
         ![](build.png)
 
-    2. If you don't have a branch named `live` in your drop down, head over to the `Actions` tab, select `Minify CSS and deploy to live branch` and click on `Run workflow` select `master` and click run. 
+    2. If you don't have a branch named `live` in your drop down, head over to the `Actions` tab, select `Minify CSS and deploy to live branch` and click on `Run workflow` select `master` and click run.
 
         ![](minifyanddeploy.png)
 
