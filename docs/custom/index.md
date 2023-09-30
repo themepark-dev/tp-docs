@@ -1,6 +1,6 @@
 # Custom Themes
 
-To create your own theme options you only need the change the color variables. You dont need the edit the `<app>-base.css`. You can find the theme variables here [https://github.com/GilbN/theme.park/tree/master/css/theme-options](https://github.com/GilbN/theme.park/tree/master/css/theme-options)
+To create your own theme options you only need the change the color variables. You dont need the edit the `<app>-base.css`. You can find the theme variables here [https://github.com/themepark-dev/theme.park/tree/master/css/theme-options](https://github.com/themepark-dev/theme.park/tree/master/css/theme-options)
 
 You can either fork the repo and setup a [Github pages](https://pages.github.com/) site or clone it to your web server and serve the files that way.
 
@@ -16,7 +16,7 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
 
 1. Start with forking the the repo to the account you want.
 
-2. Next head over to your theme.park fork and change the domain in the  [CNAME](https://github.com/GilbN/theme.park/blob/master/CNAME) file to a custom domain if you have one or `<user>.github.io` ie `gilbn.github.io`
+2. Next head over to your theme.park fork and change the domain in the  [CNAME](https://github.com/themepark-dev/theme.park/blob/master/CNAME) file to a custom domain if you have one or `<user>.github.io` ie `gilbn.github.io`
 
     1. Click on `Settings`, then select `Pages` on the left side menu.
         Set your Source as `Deploy from a branch` and select the `live` branch.
@@ -30,9 +30,9 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
         !!! Warning
             Make sure the workflow has read and write write permissions to the repo. Go to: Repo -> Settings -> Actions -> General, scroll down to `Workflow permissions`and check `Read and write permissions` then hit `Save`
 
-        This [workflow](https://github.com/GilbN/theme.park/blob/master/.github/workflows/minify-and-deploy.yml) will in short:
+        This [workflow](https://github.com/themepark-dev/theme.park/blob/master/.github/workflows/minify-and-deploy.yml) will in short:
 
-        1. Run the [themes.py](https://github.com/GilbN/theme.park/blob/master/themes.py) script.
+        1. Run the [themes.py](https://github.com/themepark-dev/theme.park/blob/master/themes.py) script.
 
         2. [Minify](https://developer.mozilla.org/en-US/docs/Glossary/minification) the css files.
 
@@ -43,7 +43,7 @@ See [docker](/setup#docker) for more information on selfhosting a docker image
 
             You can read more about how to add a custom domain here: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
-    3. The execution of the themes.py script is important as it creates all the theme files in all the base folders -> https://github.com/GilbN/theme.park/tree/live/css/base/. These files contains css `@imports` to both the base.css file and the theme-option.css file. By doing this you can easily use the files by using `user.github.io/theme.park/css/base/<app>/<theme-option>` ie https://gilbn.github.io/theme.park/css/base/radarr/plex.css. If you compare the `master` and `live` branch you can see master only contains the base css file.
+    3. The execution of the themes.py script is important as it creates all the theme files in all the base folders -> https://github.com/themepark-dev/theme.park/tree/live/css/base/. These files contains css `@imports` to both the base.css file and the theme-option.css file. By doing this you can easily use the files by using `user.github.io/theme.park/css/base/<app>/<theme-option>` ie https://gilbn.github.io/theme.park/css/base/radarr/plex.css. If you compare the `master` and `live` branch you can see master only contains the base css file.
 
 3. After the deploy action is finished, you should be able to access https://username.github.io/theme.park/css/base/radarr/nord.css.
 

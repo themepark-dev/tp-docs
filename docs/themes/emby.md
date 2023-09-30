@@ -11,7 +11,7 @@ Custom [{{ page.title.split()[0] }}](https://github.com/MediaBrowser/Emby) CSS
 ### Docker Mod
 
 !!! note  "Docker Mod 🐳"
-    Set the theme to `Light` as the [mod](https://github.com/GilbN/theme.park/blob/master/docker-mods/{{ page.title.split()[0].lower() }}/root/etc/cont-init.d/98-themepark) changes the `/dashboard-ui/modules/themes/light/theme.css` file
+    Set the theme to `Light` as the [mod](https://github.com/themepark-dev/theme.park/blob/master/docker-mods/{{ page.title.split()[0].lower() }}/root/etc/cont-init.d/98-themepark) changes the `/dashboard-ui/modules/themes/light/theme.css` file
 
 ### Subfilter
 

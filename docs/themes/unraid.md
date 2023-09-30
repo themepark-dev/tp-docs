@@ -33,7 +33,7 @@ This documentation provides instructions on how to use the Theme-Park Theme CSS 
 
 ##### Installation
 
-1. Download the script file from the [GitHub repository](https://github.com/GilbN/theme.park/tree/master/css/addons/unraid/local.sh).
+1. Download the script file from the [GitHub repository](https://github.com/themepark-dev/theme.park/tree/master/css/addons/unraid/local.sh).
 2. Save the script file to a location on your Unraid server.
 
 ##### Usage
@@ -80,7 +80,7 @@ For more information about using the `Theme Engine` plugin, refer to the plugin'
 
 **Note:** Always make sure to back up your files and configurations before making any changes to your Unraid setup.
 
-For the latest updates and more information, you can visit the [GitHub repository](https://github.com/GilbN/theme.park/tree/master/css/addons/unraid/local.sh).
+For the latest updates and more information, you can visit the [GitHub repository](https://github.com/themepark-dev/theme.park/tree/master/css/addons/unraid/local.sh).
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}

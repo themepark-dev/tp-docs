@@ -73,11 +73,11 @@ For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-cont
 !!! warning
     Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon.
 
-[https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
+[https://github.com/themepark-dev/theme.park/tree/master/docker-mods](https://github.com/themepark-dev/theme.park/tree/master/docker-mods)
 
 This will inject the stylesheet directly into the app. This means that you don't need to use NGINX or stylus. Since it's injected into the HTML in the app, it will work locally too.
 
-Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:<app>` e.g. `ghcr.io/gilbn/theme.park:sonarr`
+Add the variable `DOCKER_MODS=ghcr.io/themepark-dev/theme.park:<app>` e.g. `ghcr.io/themepark-dev/theme.park:sonarr`
 
 These are the **default** values for all envs. So if you want to use the `organizr` theme, you only need to add the `DOCKER_MODS` variable.
 
@@ -87,7 +87,7 @@ These are the **default** values for all envs. So if you want to use the `organi
 
 | Environment Variable | Example Value | Description |
 | -------------------- | ------------- | ----------- |
-| `DOCKER_MODS` | `ghcr.io/gilbn/theme.park:<app>` | Replace <app\> |
+| `DOCKER_MODS` | `ghcr.io/themepark-dev/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. If you selfhost and use subfolder, you must escape the forward slash. `domain.com\/themepark` |
 | `TP_THEME` | `organizr` | `Optional` The [theme-option](/theme-options) you want to use. Defaults to the example. |
 | `TP_COMMUNITY_THEME` | `true` | `Optional` Set to true if you are using a [community theme option](/community-themes/) |
@@ -110,7 +110,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr
+      - DOCKER_MODS=ghcr.io/themepark-dev/theme.park:sonarr
     volumes:
       - /path/to/data:/config
       - /path/to/media:/media
@@ -125,7 +125,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr \
+  -e DOCKER_MODS=ghcr.io/themepark-dev/theme.park:sonarr \
   -p 8989:8989 \
   -v /path/to/data:/config \
   -v /path/to/media:/media \
@@ -146,10 +146,10 @@ docker run -d \
     Replace the shebang with  `#!/usr/bin/with-contenv bash`
 
 !!! info
-    The scripts are located in the docker-mods folder. [https://github.com/GilbN/theme.park/tree/master/docker-mods](https://github.com/GilbN/theme.park/tree/master/docker-mods)
+    The scripts are located in the docker-mods folder. [https://github.com/themepark-dev/theme.park/tree/master/docker-mods](https://github.com/themepark-dev/theme.park/tree/master/docker-mods)
     You can download all the scripts using the [download script below](#download-script)
 
-    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/GilbN/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
+    Go to `<app>/root/etc/cont-init.d/` to find the different scripts. e.g. [/sonarr/root/etc/cont-init.d/98-themepark](https://github.com/themepark-dev/theme.park/blob/master/docker-mods/sonarr/root/etc/cont-init.d/98-themepark)
 
 !!! note
     Make sure the script is executable! The [download script](#download-script) will `chmod +x` all files, but if you download manually, you need to run the chmod command on the file.
@@ -162,7 +162,7 @@ This script will download all mods/scripts into the path you choose.
 
 Defaults to `/tmp/theme-park-mods` is no path argument is passed.
 
-See script contents here: https://github.com/GilbN/theme.park/blob/master/fetch.sh
+See script contents here: https://github.com/themepark-dev/theme.park/blob/master/fetch.sh
 
 ```bash
   sudo apt-get install jq curl
@@ -302,7 +302,7 @@ You can also use `/themepark` to access the files. The subfolder path can be ove
 version: "2.1"
 services:
   theme-park:
-    image: ghcr.io/gilbn/theme.park
+    image: ghcr.io/themepark-dev/theme.park
     container_name: theme-park
     environment:
       - PUID=1000
@@ -328,7 +328,7 @@ docker run -d \
   -p 4443:443 \
   -v /path/to/data:/config `#optional` \
   --restart unless-stopped \
-  ghcr.io/gilbn/theme.park
+  ghcr.io/themepark-dev/theme.park
 ```
 
 ***
@@ -398,7 +398,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - DOCKER_MODS=ghcr.io/gilbn/theme.park:sonarr
+      - DOCKER_MODS=ghcr.io/themepark-dev/theme.park:sonarr
       - TP_SCHEME=http
       - TP_DOMAIN=192.168.1.99:8080\/themepark # forward slash needs to be escaped with a \
     volumes:
@@ -408,7 +408,7 @@ services:
       - 8989:8989
     restart: unless-stopped
   theme-park:
-    image: ghcr.io/gilbn/theme.park
+    image: ghcr.io/themepark-dev/theme.park
     container_name: theme-park
     environment:
       - PUID=1000
@@ -439,7 +439,7 @@ See their docs for more information. [https://docs.k8s-at-home.com/](https://doc
 This will download the CSS files into your [SWAG](https://docs.linuxserver.io/general/swag) appdata folder. (`/config/www/themepark`)
 Files are downloaded using svn, so the svn package will be installed on the container.
 
-Add the variable `DOCKER_MODS=ghcr.io/gilbn/theme.park:swag` to your SWAG container.
+Add the variable `DOCKER_MODS=ghcr.io/themepark-dev/theme.park:swag` to your SWAG container.
 
 ***
 
