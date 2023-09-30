@@ -1,5 +1,5 @@
 name: Deploy docs to GitHub Pages via mkdocs
-
+permissions: write-all
 on:
   push:
     branches:
