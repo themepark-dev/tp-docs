@@ -22,24 +22,28 @@ A: Add it like any other theme-option.
 <a href="/community-themes/infinity-stone-themes/space/"><img src="/community-themes/infinity-stone-themes/space_banner_small.png"/></a>
 <a href="/community-themes/infinity-stone-themes/time/"><img src="/community-themes/infinity-stone-themes/time_banner_small.png"/></a>
 
-## [OneDark](/community-themes/onedark/)
+## [Catppuccin](catppuccin/index.md)
+
+<small> By [sgoudham](https://github.com/sgoudham) </small>
+
+## [OneDark](onedark/index.md)
 
 <small> By [Monklite](https://github.com/Monklite) </small>
 
-## [Blackberry Themes](/community-themes/blackberry-themes)
+## [Blackberry Themes](blackberry-themes/index.md)
 
 <small> By [Archmonger](https://github.com/Archmonger/Blackberry-Themes) </small>
 
-## [Pine Shadow](/community-themes/pine-shadow)
+## [Pine Shadow](pine-shadow/index.md)
 
 <small> By [Pinecone](https://github.com/Pinezerka) </small>
 
-## [True Black](/community-themes/trueblack)
+## [True Black](trueblack/index.md)
 
 <small> By [Draper](https://github.com/Drapersniper) </small>
 
-## [Ibracorp](/community-themes/ibracorp)
+## [Ibracorp](ibracorp/index.md)
 
 <small> By [MountainGod]https://github.com/MountainGod2) </small>
 
-## [Hotline-Old](/community-themes/hotline-old/)
+## [Hotline-Old](hotline-old/index.md)

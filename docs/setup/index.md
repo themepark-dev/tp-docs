@@ -3,13 +3,13 @@
 ## Methods
 
 <ul>
-    <li><a href="#docker-mods"><img src="/site_assets/lsio.png"> Docker Mods for linuxserver.io images</a><small> Adds the theme locally</small></li>
-        <ul><li><a href="#hotio-containers-s6-overlay-v3-images"><img src="/site_assets/hotio.png"> Hotio containers / S6-Overlay images (V3)</a></li></ul>
+    <li><a href="#docker-mods"><img src="../site_assets/lsio.png"> Docker Mods for linuxserver.io images</a><small> Adds the theme locally</small></li>
+        <ul><li><a href="#hotio-containers-s6-overlay-v3-images"><img src="../site_assets/hotio.png"> Hotio containers / S6-Overlay images (V3)</a></li></ul>
     <li><a href="#selfhosting">Selfhost Method</a><small> Selfhost the files</small></li>
       <ul>  
         <li><a href="#docker">🐋 Docker image</a><small> Selfhost the the files using our docker image</small></li>
         <ul><li><a href="#rootless-docker-image">Rootless option</a><small> An optional rootless docker image</small></li></ul>
-        <li><a href="#swag-docker-mod"><img src="/site_assets/lsio.png"> SWAG Docker Mod</a><small> Selfhost the files using our lsio docker mod for SWAG</small></li>
+        <li><a href="#swag-docker-mod"><img src="../site_assets/lsio.png"> SWAG Docker Mod</a><small> Selfhost the files using our lsio docker mod for SWAG</small></li>
       </ul>
     <li><a href="#subfilter-method">Subfilter Method</a><small> Injects the theme through a proxy</small></li>
     <ul>
@@ -33,7 +33,7 @@
 ***
 {% set themes = config.extra.themes %}
 {% set cthemes = config.extra.community_themes %}
-All apps have {{ themes|length }} official [themes](/theme-options/organizr/) and {{ cthemes|length }} [community-themes](/community-themes) to choose from.
+All apps have {{ themes|length }} official [themes](theme-options/index.md) and {{ cthemes|length }} [community-themes](community-themes/index.md) to choose from.
 
 `https://theme-park.dev/css/base/<APP_NAME>/<THEME_NAME>.css`
 
@@ -71,7 +71,7 @@ Example: `https://theme-park.dev/css/base/sonarr/dark.css`
 For [linuxserver.io](https://blog.linuxserver.io/2019/09/14/customizing-our-containers) containers to inject theme.park stylesheets.
 
 !!! warning
-    Not all apps support this installation method. See the list to the left on the [themes](/themes/sonarr) overview. Look for the 🐳 icon.
+    Not all apps support this installation method. See the list to the left on the [themes](themes/sonarr.md) overview. Look for the 🐳 icon.
 
 [https://github.com/themepark-dev/theme.park/tree/master/docker-mods](https://github.com/themepark-dev/theme.park/tree/master/docker-mods)
 
@@ -89,16 +89,16 @@ These are the **default** values for all envs. So if you want to use the `organi
 | -------------------- | ------------- | ----------- |
 | `DOCKER_MODS` | `ghcr.io/themepark-dev/theme.park:<app>` | Replace <app\> |
 | `TP_DOMAIN` | `theme-park.dev` | `Optional` Defaults to the example. If you selfhost and use subfolder, you must escape the forward slash. `domain.com\/themepark` |
-| `TP_THEME` | `organizr` | `Optional` The [theme-option](/theme-options) you want to use. Defaults to the example. |
-| `TP_COMMUNITY_THEME` | `true` | `Optional` Set to true if you are using a [community theme option](/community-themes/) |
-| `TP_ADDON` | `radarr-4k-logo` | `Optional` Multiple addons can be added using  the pipe `|` symbol as a separator. Ex: `radarr-4k-logo|radarr-darker` See addon [wiki](/themes/addons/) for all addons |
+| `TP_THEME` | `organizr` | `Optional` The [theme-option](../theme-options/index.md) you want to use. Defaults to the example. |
+| `TP_COMMUNITY_THEME` | `true` | `Optional` Set to true if you are using a [community theme option](../community-themes/index.md) |
+| `TP_ADDON` | `radarr-4k-logo` | `Optional` Multiple addons can be added using  the pipe `|` symbol as a separator. Ex: `radarr-4k-logo|radarr-darker` See addon [wiki](../themes/addons/index.md) for all addons |
 | `TP_SCHEME` | `https` | `Optional` Defaults to example. |
-| `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers)(Setup#-hotio-containers) |
+| `TP_HOTIO` | `true` | `Optional` See [Hotio Containers](#hotio-containers-s6-overlay-v3-images) |
 | `TP_DISABLE_THEME` | `true` | `Optional` Only used on some mods (Qbt) |
 
 ***
 
-#### ![lsio](/site_assets/lsio.png) LSIO Example
+#### ![lsio](../site_assets/lsio.png) LSIO Example
 
 ```yaml
 version: "2.1"
@@ -135,7 +135,7 @@ docker run -d \
 
 ***
 
-### ![hotio](/site_assets/hotio.png) Hotio containers / S6-Overlay (V3) images
+### ![hotio](../site_assets/hotio.png) Hotio containers / S6-Overlay (V3) images
 
 !!! warning
     The `DOCKER_MODS` variable does not work on Hotio images / S6-Overlay(V3) images (Except LSIO images)!
@@ -605,7 +605,7 @@ sub_filter
 sub_filter_once on;
 ```
 
-![text](site_assets/setup/npm.png)
+![text](../site_assets/setup/npm.png)
 
 ***
 
@@ -889,7 +889,7 @@ Example:
 @import "https://theme-park.dev/css/base/sonarr/nord.css";
 ```
 
-![example](site_assets/setup/stylus.png)
+![example](../site_assets/setup/stylus.png)
 
 Link to Chrome extention:
 

@@ -8,7 +8,7 @@ You can't use the raw link from Github as Github doesn't pass the mime types. Th
 
 ## Docker
 
-See [docker](/setup#docker) for more information on selfhosting a docker image
+See [docker](../setup#docker) for more information on selfhosting a docker image
 
 ***
 
@@ -61,10 +61,10 @@ Add the theme to your service and load the page.
 If you press `F12` and go to the `Elements` tab and scroll down you should see the variables in the root pseudo-class.
 Try and disable one of them and you'll see what each variable does.
 
-![custom](/site_assets/custom_themes.png)
+![custom](../site_assets/custom_themes.png)
 
 !!! note "Tip"
-    If you want to have persistent changes while testing out color options, you can use the [stylus](/setup/#stylus-method) plugin for testing.
+    If you want to have persistent changes while testing out color options, you can use the [stylus](../setup/#stylus-method) plugin for testing.
     Just add the content from the theme-option file and start changing stuff.
 
 The `--main-bg-color` will "always" be the  background color.
@@ -75,10 +75,10 @@ And the `--modal-bg-color` will "always" be the background for the popup modals.
 
 If you add a gradient from one of the links below, remember to not overwrite the `center center/cover no-repeat fixed` in the variables. Doing so might make the colors look a little wierd on small objects like drop down menus.
 
-![custom](/site_assets/custom_themes.gif)
+![custom](../site_assets/custom_themes.gif)
 
 When you're done add the theme like you normally would.
-[theme.park Setup](/setup)
+[theme.park Setup](../setup)
 
 ***
 

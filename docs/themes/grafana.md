@@ -1,14 +1,9 @@
-<h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }} (Deprecated)</h1>
+{% set github_link = "https://github.com/grafana" %}
+{% set deprecated = True %}
 
-Custom [{{ page.title.split()[0] }}](https://github.com/grafana) CSS
+{% include-markdown "../themes/title.md" %}
 
-<p align="center"> Organizr Dark Theme </p>
-
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
-
-## 🛠️ Installation
-
-### [Setup](/setup)
+{% include-markdown "../themes/installation.md" %}
 
 Can be installed with reverse-proxy/ Stylus ect. (See wiki)
 
@@ -29,13 +24,13 @@ NOTE: When viewing Grafana in Organizr iframe using `organizr-dashboard.css` it 
 !!! note
     Click the `kiosk` button and use that link if you don't want to show the top bar and side bar inside Organizr! There are two modes, one where the side menu and variables ect disappear and one where just the panels are visible.
 
-![view](/site_assets/grafana/view.png)
+![view](../site_assets/grafana/view.png)
 
 Check out my Varken dashboard here: https://grafana.com/dashboards/9558
 
 ### Custom HTML for Organizr Homepage
 
-![](/site_assets/grafana/3.png)
+![](../site_assets/grafana/3.png)
 
 ??? info "Expand"
 
@@ -48,7 +43,7 @@ Check out my Varken dashboard here: https://grafana.com/dashboards/9558
 
     The URL can be found by clicking **share** on the panel you want to add.
 
-    ![embed](/site_assets/grafana/4.png)
+    ![embed](../site_assets/grafana/4.png)
 
     If you dont want the ***Panel name*** text, just remove the `<h5><span>` line entirely.
 
@@ -149,30 +144,6 @@ Check out my Varken dashboard here: https://grafana.com/dashboards/9558
     </div>
     ```
 
-{% set addons = extra.addons %}
-{% set title = page.title.split()[0].lower() %}
-{% for app, addon_name in addons.items() %}
-    {% if app  ==  title %}
+{% include-markdown "../themes/addons/addons.md" %}
 
-### Addons
-
-        {% for el in addon_name.items() %}
-            {% set name =  el[0]  %}
-            {% for p in el[1].items() %}
-            {% set path = p[1] %}
-
-### [{{ name }}](/{{ path }})
-
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
-## Screenshots
-
-{% set themes = config.extra.themes %}
-{% for theme in themes %}
-<p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png"></img>
-</p>
-{% endfor %}
+{% include-markdown "../themes/screenshots.md" %}

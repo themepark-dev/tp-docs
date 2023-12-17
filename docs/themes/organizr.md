@@ -1,13 +1,8 @@
-<h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
+{% set github_link = "https://github.com/causefx/Organizr" %}
 
-Custom [{{ page.title.split()[0] }}](https://github.com/causefx/Organizr) CSS
+{% include-markdown "../themes/title.md" %}
 
-<p align="center">Dark Theme </p>
-
-![](/site_assets/{{ page.title.split()[0].lower() }}/dark.png)
-
-
-## 🛠️ Installation
+{% include-markdown "../themes/installation.md" %}
 
 The themes can be found in the `Marketplace` menu in Organizr.
 
@@ -23,30 +18,6 @@ e.g.
 @import url("https://theme-park.dev/css/base/organizr/overseerr.css");
 ```
 
-{% set addons = extra.addons %}
-{% set title = page.title.split()[0].lower() %}
-{% for app, addon_name in addons.items() %}
-    {% if app  ==  title %}
+{% include-markdown "../themes/addons/addons.md" %}
 
-### Addons
-
-        {% for el in addon_name.items() %}
-            {% set name =  el[0]  %}
-            {% for p in el[1].items() %}
-            {% set path = p[1] %}
-
-### [{{ name }}](/{{ path }})
-
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
-## Screenshots
-
-{% set themes = config.extra.themes %}
-{% for theme in themes %}
-<p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png"></img>
-</p>
-{% endfor %}
+{% include-markdown "../themes/screenshots.md" %}

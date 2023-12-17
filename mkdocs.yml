@@ -19,10 +19,10 @@ plugins:
         dockerhub.md: "https://hub.docker.com/u/gilbn"
         github.md: "https://github.com/gilbn"
         ghcr.md: "https://github.com/users/GilbN/packages/container/package/theme.park"
-        donate.md: "https://docs.theme-park.dev/#donation"
-        themes.md: "https://docs.theme-park.dev/themes/sonarr/"
-        docker-mods.md: "https://docs.theme-park.dev/setup/#docker-mods"
-        hotio.md: "https://docs.theme-park.dev/setup/#hotio-containers-s6-overlay-images"
+        donate.md: "index.md#donation"
+        themes.md: "themes/sonarr.md"
+        docker-mods.md: "setup/index.md#docker-mods"
+        hotio.md: "setup/index.md#hotio-containers-s6-overlay-images"
 
 markdown_extensions:
   - pymdownx.snippets
@@ -56,7 +56,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Setup: setup.md
+  - Setup: setup/index.md
   - Themes:
       ⚙️ App supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
@@ -169,6 +169,13 @@ nav:
       Maroon: theme-options/maroon.md
   - Community Themes:
       Community Themes: community-themes/index.md
+      Catppuccin: community-themes/catppuccin/index.md
+      OneDark: community-themes/onedark/index.md
+      Blackberry Themes: community-themes/blackberry-themes/index.md
+      Pine Shadow: community-themes/pine-shadow/index.md
+      TrueBlack: community-themes/trueblack/index.md
+      Ibracorp: community-themes/ibracorp/index.md
+      Hotline-Old: community-themes/hotline-old/index.md
       Infinity Stone Themes:
         Mind: community-themes/infinity-stone-themes/mind.md
         Soul: community-themes/infinity-stone-themes/soul.md
@@ -176,12 +183,6 @@ nav:
         Power: community-themes/infinity-stone-themes/power.md
         Space: community-themes/infinity-stone-themes/space.md
         Time: community-themes/infinity-stone-themes/time.md
-      OneDark: community-themes/onedark/index.md
-      Blackberry Themes: community-themes/blackberry-themes/index.md
-      Pine Shadow: community-themes/pine-shadow/index.md
-      TrueBlack: community-themes/trueblack/index.md
-      Ibracorp: community-themes/ibracorp/index.md
-      Hotline-Old: community-themes/hotline-old/index.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
