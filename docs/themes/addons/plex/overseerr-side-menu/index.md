@@ -24,7 +24,7 @@ proxy_set_header Accept-Encoding "";
 sub_filter
 '</head>'
 '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/plex/overseerr.css">
-<link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/plex/overseerr-side-menu/overseerr-side-menu.css">
+<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/addons/plex/overseerr-side-menu/overseerr-side-menu.css">
 </head>';
 sub_filter_once on;
 ```
@@ -34,7 +34,7 @@ sub_filter_once on;
 ```nginx
 AddOutputFilterByType SUBSTITUTE text/html
    Substitute 's|</head> '<link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/base/plex/overseerr.css">
-   <link rel="stylesheet" type="text/css" href="https://theme-park.dev/CSS/addons/plex/overseerr-side-menu/overseerr-side-menu.css">
+   <link rel="stylesheet" type="text/css" href="https://theme-park.dev/css/addons/plex/overseerr-side-menu/overseerr-side-menu.css">
 </head>';|'
 ```
 
@@ -44,7 +44,7 @@ AddOutputFilterByType SUBSTITUTE text/html
 filter rule {
     content_type text/html.*
     search_pattern </head>
-    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/plex/overseerr.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/CSS/addons/plex/overseerr-side-menu/overseerr-side-menu.css'></head>"
+    replacement "<link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/base/plex/overseerr.css'><link rel='stylesheet' type='text/css' href='https://theme-park.dev/css/addons/plex/overseerr-side-menu/overseerr-side-menu.css'></head>"
 }
 ```
 
@@ -54,5 +54,5 @@ Just add another import line.
 
 ```css
 @import url("https://theme-park.dev/css/base/plex/overseerr.css");
-@import url("https://theme-park.dev/CSS/addons/plex/overseerr-side-menu/overseerr-side-menu.css");
+@import url("https://theme-park.dev/css/addons/plex/overseerr-side-menu/overseerr-side-menu.css");
 ```
