@@ -11,7 +11,7 @@
 3. Enable `Advanced View`
 4. Set `Enable Theme Engine:` to `No`
 5. Scroll down and set `Enable custom styling (below):` to `Yes`
-6. Add the HTML below in the `Custom styling (advanced):` textarea. Remember to change `<THEME>` to the theme you want.
+6. Add the HTML below in the `Custom styling (advanced):` textarea. Remember to change `<THEME>` to the theme you want in lowercase.
 
 7. **Optional:** Go to `Settings` -> `Display Settings` and set `Header custom text color:` to `FFF` and `Header custom background color:` to `000`
 
