@@ -123,29 +123,29 @@ nav:
   - Addons:
       Addons: themes/addons/index.md
       Sonarr:
-        4K Logo: themes/addons/sonarr/4k-logo/index.md
-        Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo/index.md
-        Sonarr Darker: themes/addons/sonarr/sonarr-darker/index.md
-        Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo/index.md
+        Sonarr 4K Logo: themes/addons/sonarr/sonarr-4k-logo
+        Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo
+        Sonarr Darker: themes/addons/sonarr/sonarr-darker
+        Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo
       Radarr:
-        4K Logo: themes/addons/radarr/4k-logo/index.md
-        Radarr Darker: themes/addons/radarr/radarr-darker/index.md
-        Alternative Calendar: themes/addons/radarr/alt-calendar/index.md
+        Radarr 4K Logo: themes/addons/radarr/radarr-4k-logo
+        Radarr Darker: themes/addons/radarr/radarr-darker
+        Alternative Calendar: themes/addons/radarr/radarr-alt-calendar
       Readarr:
-        Alternative Logo: themes/addons/readarr/alt-logo/index.md
-        Readarr Darker: themes/addons/readarr/readarr-darker/index.md
-        Alternative Calendar: themes/addons/readarr/alt-calendar/index.md
+        Readarr Alternative Logo: themes/addons/readarr/readarr-alt-logo
+        Readarr Darker: themes/addons/readarr/readarr-darker
+        Readarr Alternative Calendar: themes/addons/readarr/readarr-alt-calendar
       Bazarr:
-        4K Logo: themes/addons/bazarr/4k-logo/index.md
-        Bazarr Darker: themes/addons/bazarr/bazarr-darker/index.md
+        Bazarr 4K Logo: themes/addons/bazarr/bazarr-4k-logo
+        Bazarr Darker: themes/addons/bazarr/bazarr-darker
       Lidarr:
-        Lidarr Darker: themes/addons/lidarr/lidarr-darker/index.md
-        Alternative Calendar: themes/addons/lidarr/alt-calendar/index.md
+        Lidarr Darker: themes/addons/lidarr/lidarr-darker
+        Lidarr Alternative Calendar: themes/addons/lidarr/lidarr-alt-calendar
       Prowlarr:
-        Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker/index.md
+        Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker
       Whisparr:
-        Whisparr Darker: themes/addons/whisparr/whisparr-darker/index.md
-        Alternative Calendar: themes/addons/whisparr/alt-calendar/index.md
+        Whisparr Darker: themes/addons/whisparr/whisparr-darker
+        Whisparr Alternative Calendar: themes/addons/whisparr/whisparr-alt-calendar
       Organizr: themes/addons/organizr/index.md
       Unraid:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
