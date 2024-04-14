@@ -4,6 +4,9 @@
 
 {% include-markdown "../themes/installation.md" %}
 
+!!! note
+     Set theme to dark on the UI settings page.
+
 {% include-markdown "../themes/addons/addons.md" %}
 
 {% include-markdown "../themes/screenshots.md" %}
