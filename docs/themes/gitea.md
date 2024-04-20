@@ -5,7 +5,7 @@
 {% include-markdown "../themes/installation.md" %}
 
 !!! info
-    Tested on `Version: 1.15.4`
+    Tested on `Version: 1.21.11`
 
 If you want to add the theme with subfilter ect, click here: [https://docs.theme-park.dev/setup/#methods](https://docs.theme-park.dev/setup/#methods)
 
@@ -14,18 +14,28 @@ The theme is built on top of the `Gitea` theme, so make sure that is selected in
 
 #### ⚙️ Adding the themes in Gitea
 
-Create a new file called `body_outer_pre.tmpl` and place it in `gitea/templates/custom/body_outer_pre.tmpl`. Create the template and custom folders if they do not exists.
+Follow the directions in the [Gitea docs](https://docs.gitea.com/administration/customizing-gitea?_highlight=tmpl#customizing-the-look-of-gitea)
 
-In the `body_outer_pre.tmpl` file add the following:
+In the `theme-<theme>.css` files you create, add the following: `@import "https://theme-park.dev/css/base/gitea/<theme>.css";`
 
-```html
-{{'{{ if .IsSigned }}'}}
-  {{'{{ if and (ne .SignedUser.Theme "gitea") (ne .SignedUser.Theme "arc-green") }}'}}
-    <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/{{'{{.SignedUser.Theme}}'}}.css">
-  {{'{{end}}'}}
-{{'{{ else if and (ne DefaultTheme "gitea") (ne DefaultTheme "arc-green") }}'}}
-  <link rel="stylesheet" href="https://theme-park.dev/css/base/gitea/{{'{{DefaultTheme}}'}}.css">
-{{'{{end}}'}}
+### example
+
+**theme-nord.css**
+
+```css
+@import "https://theme-park.dev/css/base/gitea/nord.css";
+:root {
+  --is-dark-theme:true;
+}
+```
+
+
+If it's a dark theme you are using add the following CSS to the file.
+
+```css
+:root {
+  --is-dark-theme:true;
+}
 ```
 
 In the `..gitea/conf/app.ini` file add the following.
