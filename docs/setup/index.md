@@ -160,7 +160,7 @@ Download and mount your script with the volume `/your/docker/host/98-themepark:/
 
 This script will download all mods/scripts into the path you choose.
 
-Defaults to `/tmp/theme-park-mods` is no path argument is passed.
+Defaults to `/tmp/theme-park-mods` if no path argument is passed.
 
 See script contents here: https://github.com/themepark-dev/theme.park/blob/master/fetch.sh
 
