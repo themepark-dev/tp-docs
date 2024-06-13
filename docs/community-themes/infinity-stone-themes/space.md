@@ -1,3 +1,5 @@
+Use `space` Cap sensitive
+
 <p align="center">
 
 <img src="/community-themes/infinity-stone-themes/{{ page.title.lower() }}_banner.png"/>
