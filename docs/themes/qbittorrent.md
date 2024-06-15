@@ -4,8 +4,9 @@
 
 {% include-markdown "../themes/installation.md" %}
 
-!!! warning "LSIO Docker Mod / S6-Overlay script"
-    After running the script the first time, you must restart the container.
+!!! info "ENV"
+    - Use `QBITTORRENT_VERSION`=`x.x.x` if you need to use a specific version of the qbittorrent UI.
+    - Use `TP_DISABLE_THEME`=`true` to revert and restore all changes if something is broken. 
 
 !!! warning "Subfilter CSP"
     As Qbittorrent will block the theme with its content security policy you need to change or remove the CSP header.
