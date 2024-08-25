@@ -28,6 +28,7 @@
     <li><a href="#develop">Develop</a></li>
     <li><a href="/community-themes/">Community Themes</a></li>
     <li><a href="/custom/#custom-github-setup">Custom Github Setup</a></li>
+    <li><a href="#manually-download">Manual Download</a></li>
 </ul>
 
 ***
@@ -678,6 +679,8 @@ proxy /tautulli 127.0.0.1:8181 {
 
 ### Caddy v2
 
+!!! warning
+  This plugin will not work if the software uses websockets. See (https://github.com/sjtug/caddy2-filter/issues/10)
 >
 !!! info
     Thank you [jef](https://github.com/jef) for the write up!
@@ -929,3 +932,16 @@ sub_filter_once on;
 ```
 
 Docker mods: `-e TP_DOMAIN=develop.theme-park.dev`
+
+
+## Manually Download
+
+If you want to manually download the css files used in this project, you can find all css files in the [`/css`](https://github.com/themepark-dev/theme.park/tree/master/css) folder on github.
+
+The base files can be found in the [`/base`](https://github.com/themepark-dev/theme.park/tree/master/css/base) folder, and the theme option files (that contains the css to actually give it some color) can be found in the [`/theme-options`](https://github.com/themepark-dev/theme.park/tree/master/css/theme-options) folder.
+
+
+The [`/defaults`](https://github.com/themepark-dev/theme.park/tree/master/css/defaults) contains a couple of extra files that you will also need depending on the base css file you are downloading. (See the imports in each base file)
+
+!!! Tip
+    I reccomend to switch to the [`live`](https://github.com/themepark-dev/theme.park/tree/live/css) or [`develop`](https://github.com/themepark-dev/theme.park/tree/develop/css) branch on github when downloading the base files as those base files have the contents of the the imports directly in them, so you don't need the `placeholders.css` or `transparent.css` css files etc. 
