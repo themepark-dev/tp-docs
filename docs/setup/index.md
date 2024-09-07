@@ -829,7 +829,7 @@ Add the following to your static `traefik` config.
 ```yaml
 experimental:
   plugins:
-    theme-park:
+    themepark:
       modulename: "github.com/packruler/traefik-themepark"
       version: "v1.2.0"
 ```
