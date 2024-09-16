@@ -132,10 +132,12 @@ nav:
         Radarr 4K Logo: themes/addons/radarr/radarr-4k-logo
         Radarr Darker: themes/addons/radarr/radarr-darker
         Alternative Calendar: themes/addons/radarr/radarr-alt-calendar
+        Radarr Anime Logo: themes/addons/radarr/radarr-anime-logo
       Readarr:
         Readarr Alternative Logo: themes/addons/readarr/readarr-alt-logo
         Readarr Darker: themes/addons/readarr/readarr-darker
         Readarr Alternative Calendar: themes/addons/readarr/readarr-alt-calendar
+        Readarr Text Logo: themes/addons/readarr/readarr-text-logo
       Bazarr:
         Bazarr 4K Logo: themes/addons/bazarr/bazarr-4k-logo
         Bazarr Darker: themes/addons/bazarr/bazarr-darker
@@ -144,6 +146,7 @@ nav:
         Lidarr Alternative Calendar: themes/addons/lidarr/lidarr-alt-calendar
       Prowlarr:
         Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker
+        Prowlarr Text Logo: themes/addons/prowlarr/prowlarr-text-logo
       Whisparr:
         Whisparr Darker: themes/addons/whisparr/whisparr-darker
         Whisparr Alternative Calendar: themes/addons/whisparr/whisparr-alt-calendar
@@ -254,6 +257,8 @@ extra:
         path: themes/addons/radarr/radarr-darker
       Alternative Calendar:
         path: themes/addons/radarr/radarr-alt-calendar
+      Radarr Anime Logo:
+        path: themes/addons/radarr/radarr-anime-logo
     readarr:
       Alternative Audiobook Logo:
         path: themes/addons/readarr/readarr-alt-logo
@@ -261,6 +266,8 @@ extra:
         path: themes/addons/readarr/readarr-darker
       Alternative Calendar:
         path: themes/addons/readarr/readarr-alt-calendar
+      Readarr Text Logo:
+        path: themes/addons/readarr/readarr-text-logo
     bazarr:
       Bazarr 4K Logo:
         path: themes/addons/bazarr/bazarr-4k-logo
@@ -274,6 +281,8 @@ extra:
     prowlarr:
       Prowlarr Darker:
         path: themes/addons/prowlarr/prowlarr-darker
+      Prowlarr Text Logo:
+        path: themes/addons/prowlarr/prowlarr-text-logo
     whisparr:
       Whisparr Darker:
         path: themes/addons/whisparr/whisparr-darker
