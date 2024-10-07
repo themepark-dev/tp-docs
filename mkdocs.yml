@@ -128,16 +128,22 @@ nav:
         Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo
         Sonarr Darker: themes/addons/sonarr/sonarr-darker
         Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo
+        Sonarr 4K Favicon: themes/addons/sonarr/sonarr-4k-favicon
+        Sonarr Anime Favicon: themes/addons/sonarr/sonarr-anime-favicon
+        Sonarr Anime Blue Favicon: themes/addons/sonarr/sonarr-anime-blue-favicon
       Radarr:
         Radarr 4K Logo: themes/addons/radarr/radarr-4k-logo
         Radarr Darker: themes/addons/radarr/radarr-darker
         Alternative Calendar: themes/addons/radarr/radarr-alt-calendar
         Radarr Anime Logo: themes/addons/radarr/radarr-anime-logo
+        Radarr 4K Favicon: themes/addons/radarr/radarr-4k-favicon
+        Radarr Anime Favicon: themes/addons/radarr/radarr-anime-favicon
       Readarr:
         Readarr Alternative Logo: themes/addons/readarr/readarr-alt-logo
         Readarr Darker: themes/addons/readarr/readarr-darker
         Readarr Alternative Calendar: themes/addons/readarr/readarr-alt-calendar
         Readarr Text Logo: themes/addons/readarr/readarr-text-logo
+        Readarr Alt Favicon: themes/addons/readarr/readarr-alt-favicon
       Bazarr:
         Bazarr 4K Logo: themes/addons/bazarr/bazarr-4k-logo
         Bazarr Darker: themes/addons/bazarr/bazarr-darker
@@ -250,6 +256,12 @@ extra:
         path: themes/addons/sonarr/sonarr-darker
       Sonarr Text Logo:
         path: themes/addons/sonarr/sonarr-text-logo
+      Sonarr 4K Favicon:
+        path: themes/addons/sonarr/sonarr-4k-favicon
+      Sonarr Anime Favicon:
+        path: themes/addons/sonarr/sonarr-anime-favicon
+      Sonarr Anime Blue Favicon:
+        path: themes/addons/sonarr/sonarr-anime-blue-favicon
     radarr:
       Radarr 4K Logo:
         path: themes/addons/radarr/radarr-4k-logo
@@ -259,6 +271,10 @@ extra:
         path: themes/addons/radarr/radarr-alt-calendar
       Radarr Anime Logo:
         path: themes/addons/radarr/radarr-anime-logo
+      Radarr 4K Favicon:
+        path: themes/addons/radarr/radarr-4k-favicon
+      Radarr Anime Favicon:
+        path: themes/addons/radarr/radarr-anime-favicon
     readarr:
       Alternative Audiobook Logo:
         path: themes/addons/readarr/readarr-alt-logo
@@ -268,6 +284,8 @@ extra:
         path: themes/addons/readarr/readarr-alt-calendar
       Readarr Text Logo:
         path: themes/addons/readarr/readarr-text-logo
+      Readarr Alt Favicon:
+        path: themes/addons/readarr/readarr-alt-favicon
     bazarr:
       Bazarr 4K Logo:
         path: themes/addons/bazarr/bazarr-4k-logo
