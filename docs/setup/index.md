@@ -1,5 +1,71 @@
 # Setup
 
+## How the hell do I add a theme to my app?
+
+There are a lot of different ways you can add a theme to an app. Some methods works for all apps and others only work for specific apps. 
+
+The different categories are:
+
+### Subfiltering
+  
+  This modifies a webserver response by replacing one specified string by another. This means we can inject a style sheet at the edge and override the CSS that way. This is supported by nginx, caddy and træfik. 
+  
+  Read more [here](#subfilter-method)
+  
+  This method should always work for all apps.
+
+!!! info
+    Some apps require a special way to inject the css. This is marked with the ⚠️ icon.
+
+!!! note
+    If the theme does not have one of the 3 icons (🐳🔥⚙️), this is the method to use.
+
+### ⚙️ Built in CSS support
+    
+  If the app has the cog icon, the app has native support for changing the CSS. Details on how will be different for each app, and should be described in detail on the app page.
+
+### 🐳 Linuxserver Docker Mods
+  
+  This is by far the best and simplest way of changing the CSS. Unfortunately not all apps have a linuxserver container so only a handful of apps supports this method. And even if there is a linuxserver container available, it does not mean it supports injecting the CSS.
+
+  For example the `linuxserver/overseerr` image does not support it as there are no HTML files to edit. This is a limitation of how the app is built, and not something I can change. 
+
+  Read more [here](#docker-mods) 
+
+### 🔥 Hotio/S6-Overlay Images (V3)
+
+  Hotio images do not support docker mods like linuxserver does, but we can mount scripts to the container so they run at startup of the container. and inject the css.
+
+  Read more [here](#hotio-containers-s6-overlay-v3-images)
+
+### Stylus Browser Extension
+
+  This uses a browser extension to inject the CSS on the client. This means it will only work for for that specific browser session.
+
+  Read more [here](#stylus-method)
+
+### Blackberry Theme Installer for Organizr
+
+  This provides an easy to use method of using JS to theme your Organizr tabs. This will only work if your Organizr tab is on a subdirectory (does not work with subdomains). These themes will only be applied when viewed within Organizr.
+
+  Read more [here](#blackberry-theme-installer-method) 
+
+## Selfhosting
+
+  You can selfhost all the CSS files instead of loading them from `theme-park.dev`. 
+
+  Read more [here](#selfhosting)
+
+## Manual download
+
+  Click [here](#manually-download) if you want to manually download the css files used in this project.
+
+## More theme options
+
+  Community themes are theme options that have been added by community members. 
+  
+  Check them out [here!](/community-themes/)
+
 ## Methods
 
 <ul>
