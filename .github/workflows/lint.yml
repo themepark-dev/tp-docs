@@ -6,7 +6,7 @@ jobs:
   editorconfig-checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: editorconfig-checker
         run: |
           docker run --rm -v ${GITHUB_WORKSPACE}:/check mstruebing/editorconfig-checker
