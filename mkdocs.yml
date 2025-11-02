@@ -325,6 +325,9 @@ extra:
         path: themes/addons/plex/overseerr-side-menu
       Alternative Logo:
         path: themes/addons/plex/plex-alt-logo
+    authelia:
+      Login Logo:
+        path: themes/addons/authelia/authelia-login-logo
   themes:
     - aquamarine
     - hotline
