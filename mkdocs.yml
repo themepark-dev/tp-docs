@@ -100,6 +100,7 @@ nav:
       Dozzle ⚠️: themes/dozzle.md
       Bitwarden ⚠️: themes/bitwarden.md
       Vaultwarden ⚠️: themes/bitwarden/#vaultwarden
+      Authelia ⚠️: themes/authelia.md
       Nzbhydra2: themes/nzbhydra2.md
       Portainer: themes/portainer.md
       Guacamole: themes/guacamole.md
@@ -165,6 +166,8 @@ nav:
       Plex:
         Alternative Logo: themes/addons/plex/plex-alt-logo/index.md
         Overseerr Side Menu: themes/addons/plex/overseerr-side-menu/index.md
+      Authelia:
+        Login Logo: themes/addons/authelia/authelia-login-logo/index.md
   - Theme Options:
       Theme Options: theme-options/index.md
       Organizr: theme-options/organizr.md
