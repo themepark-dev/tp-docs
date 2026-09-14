@@ -63,6 +63,8 @@ proxy_hide_header "content-security-policy";
 
 ## Screenshots
 
+Dozzle v11.0.1.
+
 {% set themes = config.extra.themes %}
 {% for theme in themes %}
 <p align="center">  
