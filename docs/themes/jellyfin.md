@@ -9,6 +9,9 @@ Custom [{{ page.title.split()[0] }}](https://github.com/jellyfin/jellyfin) CSS
 
 ## 🛠️ Installation
 
+Choose one method below. Use subfiltering if you want the dashboard
+themed too.
+
 ### Built-in Custom CSS
 
 These screenshots show Jellyfin 12.0.
@@ -26,21 +29,22 @@ For example, Nord:
 @import url("https://theme-park.dev/css/base/jellyfin/nord.css");
 ```
 
-### Include the dashboard
+### Subfiltering, including the dashboard
 
 Jellyfin 12 does not load its Custom CSS setting in the admin dashboard.
-To theme those pages too, use [reverse-proxy subfiltering](/setup/#nginx).
-For nginx, inject the chosen theme into the web client HTML:
+To theme those pages too, use [subfiltering](/setup/#subfiltering) instead of
+the built-in method. Remove any theme.park import from **Custom CSS code**
+and save before switching.
 
-```nginx
-proxy_set_header Accept-Encoding "";
-sub_filter '</head>' '<link rel="stylesheet" href="https://theme-park.dev/css/base/jellyfin/nord.css"></head>';
-sub_filter_once on;
+Follow the setup guide for your reverse proxy and inject this stylesheet into
+the web client HTML, replacing `<THEME>` with your selected theme option:
+
+```text
+https://theme-park.dev/css/base/jellyfin/<THEME>.css
 ```
 
-Add this to the location that serves the web client. Keep API, media, and
-WebSocket proxy configuration separate. Use one injection method to avoid
-loading duplicate themes.
+Keep injection out of API, media, and WebSocket responses. Subfiltering themes
+both regular pages and the dashboard without a second import in Jellyfin.
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
