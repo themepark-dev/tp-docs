@@ -9,25 +9,38 @@ Custom [{{ page.title.split()[0] }}](https://github.com/jellyfin/jellyfin) CSS
 
 ## 🛠️ Installation
 
-### Setup
+### Built-in Custom CSS
 
-Go to `Dashboard` -> `General` and scroll down to `Branding`
+These screenshots show Jellyfin 12.0.
 
-In the custom CSS input field add:
+Open **Dashboard > Branding** and add this to **Custom CSS code**, replacing
+`<THEME>` with a [theme option](/theme-options/). Save your changes.
 
 ```css
 @import url("https://theme-park.dev/css/base/jellyfin/<THEME>.css");
 ```
 
-and hit save.
-
-i.e.
+For example, Nord:
 
 ```css
 @import url("https://theme-park.dev/css/base/jellyfin/nord.css");
 ```
 
-<img src="/site_assets/{{ page.title.split()[0].lower() }}/example.png"></img>
+### Include the dashboard
+
+Jellyfin 12 does not load its Custom CSS setting in the admin dashboard.
+To theme those pages too, use [reverse-proxy subfiltering](/setup/#nginx).
+For nginx, inject the chosen theme into the web client HTML:
+
+```nginx
+proxy_set_header Accept-Encoding "";
+sub_filter '</head>' '<link rel="stylesheet" href="https://theme-park.dev/css/base/jellyfin/nord.css"></head>';
+sub_filter_once on;
+```
+
+Add this to the location that serves the web client. Keep API, media, and
+WebSocket proxy configuration separate. Use one injection method to avoid
+loading duplicate themes.
 
 {% set addons = extra.addons %}
 {% set title = page.title.split()[0].lower() %}
