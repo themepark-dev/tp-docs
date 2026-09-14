@@ -144,6 +144,7 @@ nav:
       Prowlarr:
         Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker/index.md
       Whisparr:
+        Whisparr 4K Logo: themes/addons/whisparr/whisparr-4k-logo/index.md
         Whisparr Darker: themes/addons/whisparr/whisparr-darker/index.md
         Alternative Calendar: themes/addons/whisparr/alt-calendar/index.md
       Organizr: themes/addons/organizr/index.md
@@ -267,6 +268,8 @@ extra:
       Prowlarr Darker:
         path: themes/addons/prowlarr/prowlarr-darker
     whisparr:
+      Whisparr 4K Logo:
+        path: themes/addons/whisparr/whisparr-4k-logo
       Whisparr Darker:
         path: themes/addons/whisparr/whisparr-darker
       Alternative Calendar:
