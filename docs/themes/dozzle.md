@@ -37,4 +37,6 @@ proxy_hide_header "content-security-policy";
 
 {% include-markdown "../themes/addons/addons.md" %}
 
+Dozzle v11.0.1.
+
 {% include-markdown "../themes/screenshots.md" %}
