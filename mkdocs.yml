@@ -19,10 +19,10 @@ plugins:
         dockerhub.md: "https://hub.docker.com/u/gilbn"
         github.md: "https://github.com/gilbn"
         ghcr.md: "https://github.com/users/GilbN/packages/container/package/theme.park"
-        donate.md: "https://docs.theme-park.dev/#donation"
-        themes.md: "https://docs.theme-park.dev/themes/sonarr/"
-        docker-mods.md: "https://docs.theme-park.dev/setup/#docker-mods"
-        hotio.md: "https://docs.theme-park.dev/setup/#hotio-containers-s6-overlay-images"
+        donate.md: "index.md#donation"
+        themes.md: "themes/sonarr.md"
+        docker-mods.md: "setup/index.md#docker-mods"
+        hotio.md: "setup/index.md#hotio-containers-s6-overlay-images"
 
 markdown_extensions:
   - pymdownx.snippets
@@ -56,7 +56,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Setup: setup.md
+  - Setup: setup/index.md
   - Themes:
       ⚙️ App supports custom CSS: /themes/
       🐳 Supports Docker Mods: /docker-mods/
@@ -100,6 +100,7 @@ nav:
       Dozzle ⚠️: themes/dozzle.md
       Bitwarden ⚠️: themes/bitwarden.md
       Vaultwarden ⚠️: themes/bitwarden/#vaultwarden
+      Authelia ⚠️: themes/authelia.md
       Nzbhydra2: themes/nzbhydra2.md
       Portainer: themes/portainer.md
       Guacamole: themes/guacamole.md
@@ -113,7 +114,10 @@ nav:
       Moviematch: themes/moviematch.md
       Petio: themes/petio.md
       Flood: themes/flood.md
+      Audiobookshelf: themes/audiobookshelf.md
       Uptime-Kuma: themes/uptime-kuma.md
+      Docmost: themes/docmost.md
+      LLDAP: themes/lldap.md
       TheLounge ❌🐳: themes/thelounge.md
       Grafana ❌⚙️: themes/grafana.md
       Monitorr ❌⚙️: themes/monitorr.md
@@ -123,30 +127,39 @@ nav:
   - Addons:
       Addons: themes/addons/index.md
       Sonarr:
-        4K Logo: themes/addons/sonarr/4k-logo/index.md
-        Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo/index.md
-        Sonarr Darker: themes/addons/sonarr/sonarr-darker/index.md
-        Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo/index.md
+        Sonarr 4K Logo: themes/addons/sonarr/sonarr-4k-logo
+        Sonarr 4K Text Logo: themes/addons/sonarr/sonarr-4k-text-logo
+        Sonarr Darker: themes/addons/sonarr/sonarr-darker
+        Sonarr Text Logo: themes/addons/sonarr/sonarr-text-logo
+        Sonarr 4K Favicon: themes/addons/sonarr/sonarr-4k-favicon
+        Sonarr Anime Favicon: themes/addons/sonarr/sonarr-anime-favicon
+        Sonarr Anime Blue Favicon: themes/addons/sonarr/sonarr-anime-blue-favicon
       Radarr:
-        4K Logo: themes/addons/radarr/4k-logo/index.md
-        Radarr Darker: themes/addons/radarr/radarr-darker/index.md
-        Alternative Calendar: themes/addons/radarr/alt-calendar/index.md
+        Radarr 4K Logo: themes/addons/radarr/radarr-4k-logo
+        Radarr Darker: themes/addons/radarr/radarr-darker
+        Alternative Calendar: themes/addons/radarr/radarr-alt-calendar
+        Radarr Anime Logo: themes/addons/radarr/radarr-anime-logo
+        Radarr 4K Favicon: themes/addons/radarr/radarr-4k-favicon
+        Radarr Anime Favicon: themes/addons/radarr/radarr-anime-favicon
       Readarr:
-        Alternative Logo: themes/addons/readarr/alt-logo/index.md
-        Readarr Darker: themes/addons/readarr/readarr-darker/index.md
-        Alternative Calendar: themes/addons/readarr/alt-calendar/index.md
+        Readarr Alternative Logo: themes/addons/readarr/readarr-alt-logo
+        Readarr Darker: themes/addons/readarr/readarr-darker
+        Readarr Alternative Calendar: themes/addons/readarr/readarr-alt-calendar
+        Readarr Text Logo: themes/addons/readarr/readarr-text-logo
+        Readarr Alt Favicon: themes/addons/readarr/readarr-alt-favicon
       Bazarr:
-        4K Logo: themes/addons/bazarr/4k-logo/index.md
-        Bazarr Darker: themes/addons/bazarr/bazarr-darker/index.md
+        Bazarr 4K Logo: themes/addons/bazarr/bazarr-4k-logo
+        Bazarr Darker: themes/addons/bazarr/bazarr-darker
       Lidarr:
-        Lidarr Darker: themes/addons/lidarr/lidarr-darker/index.md
-        Alternative Calendar: themes/addons/lidarr/alt-calendar/index.md
+        Lidarr Darker: themes/addons/lidarr/lidarr-darker
+        Lidarr Alternative Calendar: themes/addons/lidarr/lidarr-alt-calendar
       Prowlarr:
-        Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker/index.md
+        Prowlarr Darker: themes/addons/prowlarr/prowlarr-darker
+        Prowlarr Text Logo: themes/addons/prowlarr/prowlarr-text-logo
       Whisparr:
         Whisparr 4K Logo: themes/addons/whisparr/whisparr-4k-logo/index.md
-        Whisparr Darker: themes/addons/whisparr/whisparr-darker/index.md
-        Alternative Calendar: themes/addons/whisparr/alt-calendar/index.md
+        Whisparr Darker: themes/addons/whisparr/whisparr-darker
+        Whisparr Alternative Calendar: themes/addons/whisparr/whisparr-alt-calendar
       Organizr: themes/addons/organizr/index.md
       Unraid:
         Retro Terminal: themes/addons/unraid/login-page/retro-terminal/index.md
@@ -155,6 +168,8 @@ nav:
       Plex:
         Alternative Logo: themes/addons/plex/plex-alt-logo/index.md
         Overseerr Side Menu: themes/addons/plex/overseerr-side-menu/index.md
+      Authelia:
+        Login Logo: themes/addons/authelia/authelia-login-logo/index.md
   - Theme Options:
       Theme Options: theme-options/index.md
       Organizr: theme-options/organizr.md
@@ -170,6 +185,13 @@ nav:
       Maroon: theme-options/maroon.md
   - Community Themes:
       Community Themes: community-themes/index.md
+      Catppuccin: community-themes/catppuccin/index.md
+      OneDark: community-themes/onedark/index.md
+      Blackberry Themes: community-themes/blackberry-themes/index.md
+      Pine Shadow: community-themes/pine-shadow/index.md
+      TrueBlack: community-themes/trueblack/index.md
+      Ibracorp: community-themes/ibracorp/index.md
+      Hotline-Old: community-themes/hotline-old/index.md
       Infinity Stone Themes:
         Mind: community-themes/infinity-stone-themes/mind.md
         Soul: community-themes/infinity-stone-themes/soul.md
@@ -177,12 +199,6 @@ nav:
         Power: community-themes/infinity-stone-themes/power.md
         Space: community-themes/infinity-stone-themes/space.md
         Time: community-themes/infinity-stone-themes/time.md
-      OneDark: community-themes/onedark/index.md
-      Blackberry Themes: community-themes/blackberry-themes/index.md
-      Pine Shadow: community-themes/pine-shadow/index.md
-      TrueBlack: community-themes/trueblack/index.md
-      Ibracorp: community-themes/ibracorp/index.md
-      Hotline-Old: community-themes/hotline-old/index.md
   - Custom Themes: custom/index.md
   - Support: /discord
   - Donate: /donate
@@ -232,48 +248,72 @@ extra:
       name: GitHub
   addons:
     sonarr:
-      4K Logo:
-        path: themes/addons/sonarr/4k-logo
+      Overview:
+        path: themes/addons/sonarr
+      Sonarr 4K Logo:
+        path: themes/addons/sonarr/sonarr-4k-logo
       Sonarr 4K Text Logo:
         path: themes/addons/sonarr/sonarr-4k-text-logo
+      Sonarr Anime Logo:
+        path: themes/addons/sonarr/sonarr-anime-logo
+      Sonarr Anime Text Logo:
+        path: themes/addons/sonarr/sonarr-anime-text-logo
       Sonarr Darker:
         path: themes/addons/sonarr/sonarr-darker
       Sonarr Text Logo:
         path: themes/addons/sonarr/sonarr-text-logo
+      Sonarr 4K Favicon:
+        path: themes/addons/sonarr/sonarr-4k-favicon
+      Sonarr Anime Favicon:
+        path: themes/addons/sonarr/sonarr-anime-favicon
+      Sonarr Anime Blue Favicon:
+        path: themes/addons/sonarr/sonarr-anime-blue-favicon
     radarr:
-      4K Logo:
-        path: themes/addons/radarr/4k-logo
+      Radarr 4K Logo:
+        path: themes/addons/radarr/radarr-4k-logo
       Radarr Darker:
         path: themes/addons/radarr/radarr-darker
       Alternative Calendar:
-        path: themes/addons/radarr/alt-calendar
+        path: themes/addons/radarr/radarr-alt-calendar
+      Radarr Anime Logo:
+        path: themes/addons/radarr/radarr-anime-logo
+      Radarr 4K Favicon:
+        path: themes/addons/radarr/radarr-4k-favicon
+      Radarr Anime Favicon:
+        path: themes/addons/radarr/radarr-anime-favicon
     readarr:
       Alternative Audiobook Logo:
-        path: themes/addons/readarr/alt-logo
+        path: themes/addons/readarr/readarr-alt-logo
       Readarr Darker:
         path: themes/addons/readarr/readarr-darker
       Alternative Calendar:
-        path: themes/addons/readarr/alt-calendar
+        path: themes/addons/readarr/readarr-alt-calendar
+      Readarr Text Logo:
+        path: themes/addons/readarr/readarr-text-logo
+      Readarr Alt Favicon:
+        path: themes/addons/readarr/readarr-alt-favicon
     bazarr:
-      4K Logo:
-        path: themes/addons/bazarr/4k-logo
+      Bazarr 4K Logo:
+        path: themes/addons/bazarr/bazarr-4k-logo
       Bazarr Darker:
         path: themes/addons/bazarr/bazarr-darker
     lidarr:
       Lidarr Darker:
         path: themes/addons/lidarr/lidarr-darker
       Alternative Calendar:
-        path: themes/addons/lidarr/alt-calendar
+        path: themes/addons/lidarr/lidarr-alt-calendar
     prowlarr:
       Prowlarr Darker:
         path: themes/addons/prowlarr/prowlarr-darker
+      Prowlarr Text Logo:
+        path: themes/addons/prowlarr/prowlarr-text-logo
     whisparr:
       Whisparr 4K Logo:
         path: themes/addons/whisparr/whisparr-4k-logo
       Whisparr Darker:
         path: themes/addons/whisparr/whisparr-darker
       Alternative Calendar:
-        path: themes/addons/whisparr/alt-calendar
+        path: themes/addons/whisparr/whisparr-alt-calendar
     organizr:
       Organizr Glass:
         path: themes/addons/organizr
@@ -289,6 +329,9 @@ extra:
         path: themes/addons/plex/overseerr-side-menu
       Alternative Logo:
         path: themes/addons/plex/plex-alt-logo
+    authelia:
+      Login Logo:
+        path: themes/addons/authelia/authelia-login-logo
   themes:
     - aquamarine
     - hotline
