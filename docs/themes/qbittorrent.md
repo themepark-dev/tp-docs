@@ -1,18 +1,12 @@
-<h1 align="center"> <img src="/site_assets/{{ page.title.split()[0].lower() }}/logo.png" alt="logo" width="30" height="30"> {{ page.title.split()[0] }}</h1>
+{% set github_link = "https://github.com/qbittorrent/qbittorrent" %}
 
-Custom [{{ page.title.split()[0] }}](https://github.com/qbittorrent/qbittorrent) CSS
+{% include-markdown "../themes/title.md" %}
 
-<p align="center"> Organizr Dark Theme </p>
+{% include-markdown "../themes/installation.md" %}
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/organizr.png)
-
-
-## 🛠️ Installation
-
-### [Setup](/setup)
-
-!!! warning "LSIO Docker Mod / S6-Overlay script"
-    After running the script the first time, you must restart the container.
+!!! info "ENV"
+    - Use `QBITTORRENT_VERSION`=`x.x.x` if you need to use a specific version of the qbittorrent UI.
+    - Use `TP_DISABLE_THEME`=`true` to revert and restore all changes if something is broken. 
 
 !!! warning "Subfilter CSP"
     As Qbittorrent will block the theme with its content security policy you need to change or remove the CSP header.
@@ -69,34 +63,10 @@ sub_filter
 sub_filter_once on;
 ```
 
-![](/site_assets/{{ page.title.split()[0].lower() }}/CSP.png)
+![](../site_assets/{{ page.title.split()[0].lower() }}/CSP.png)
 
 This will allow stylesheets and image sources from theme-park.dev and raw.githubusercontent.com domains.
 
-{% set addons = extra.addons %}
-{% set title = page.title.split()[0].lower() %}
-{% for app, addon_name in addons.items() %}
-    {% if app  ==  title %}
+{% include-markdown "../themes/addons/addons.md" %}
 
-### Addons
-
-        {% for el in addon_name.items() %}
-            {% set name =  el[0]  %}
-            {% for p in el[1].items() %}
-            {% set path = p[1] %}
-
-### [{{ name }}](/{{ path }})
-
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
-## Screenshots
-
-{% set themes = config.extra.themes %}
-{% for theme in themes %}
-<p align="center">  
-<a href="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png">{{ theme.capitalize() }} Theme<img src="/site_assets/{{ page.title.split()[0].lower() }}/{{ theme }}.png"></img>
-</p>
-{% endfor %}
+{% include-markdown "../themes/screenshots.md" %}

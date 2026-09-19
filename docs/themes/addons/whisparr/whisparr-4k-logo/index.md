@@ -14,7 +14,7 @@ loading screen, and login page. Supports Whisparr v2 and v3.
 Add `TP_ADDON=whisparr-4k-logo` to your existing theme.park configuration and
 recreate the container. Separate multiple addons with `|`.
 
-For Hotio, follow the [startup script setup](../../../../setup.md#hotio-containers-s6-overlay-v3-images)
+For Hotio, follow the [startup script setup](../../../../setup/index.md#hotio-containers-s6-overlay-v3-images)
 and set `TP_HOTIO=true`.
 
 ### Reverse proxy
